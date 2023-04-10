@@ -26,12 +26,20 @@ namespace LCC_ENROLLMENT_SYSTEM
         {
             CustomFonts.init();
             InitializeComponent();
-            var controls = sidemenuPanel.Controls;
-            foreach (var control in controls)
+            /*var controls = sidemenuPanel.Controls;*/
+            /*foreach (var control in controls)
             {
                 ((SidemenuButton)control).Click += tabLink_Click;
-            }
-            studentTabComponent.loadStudents();
+            }*/
+            /*studentsTabComponent.LoadStudents();*/
+
+            /*collapsibleMenu1.MenuItems = new List<CollapsibleMenu.MenuItemButton>()
+            {
+                new CollapsibleMenu.MenuItemButton(){ Text = "Elementary"},
+                new CollapsibleMenu.MenuItemButton(){ Text = "Junior HighSchool"}
+            };*/
+
+            enrollmentMenuToggler.OnToggle = enrollmentMenuToggler_Click;
         }
 
         private void tabLink_Click(object sender, EventArgs e)
@@ -47,11 +55,11 @@ namespace LCC_ENROLLMENT_SYSTEM
 
         private void clearActiveTabLink()
         {
-            var controls = sidemenuPanel.Controls;
+           /* var controls = sidemenuPanel.Controls;
             foreach (var control in controls)
             {
                 ((SidemenuButton)control).Active = false;
-            }
+            }*/
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -170,6 +178,68 @@ namespace LCC_ENROLLMENT_SYSTEM
         private void dataGridViewStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+        private void Reload()
+        {
+
+        }
+
+        private void btnOption_Click(object sender, EventArgs e)
+        {
+            OptionLevelForm optionLevelForm = new();
+            var result = optionLevelForm.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                this.Hide();
+                this.Reload();
+                LoadingForm loadingForm = new();
+                loadingForm.ShowDialog();
+                this.Show();
+            }
+        }
+
+        private void dashboardTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void sidemenuButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dashboardCard1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuButton1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void collapsibleMenu1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enrollmentMenuToggler_Click(object sender, EventArgs e)
+        {
+            enrollmentMenuToggler.Toggled = !enrollmentMenuToggler.Toggled;
+            int h = EnrollmentMenuLayout.Controls[0].Height + 5;
+            if (enrollmentMenuToggler.Toggled)
+            {
+                EnrollmentMenuLayout.Height = EnrollmentMenuLayout.Controls.Count * h;
+            }
+            else
+            {
+                EnrollmentMenuLayout.Height = h;
+            }
         }
     }
 }

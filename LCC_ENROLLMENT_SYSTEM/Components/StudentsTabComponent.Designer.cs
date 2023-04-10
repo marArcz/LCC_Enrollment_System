@@ -139,6 +139,7 @@
             this.textBoxSearch.PlaceholderText = "Search for student name:";
             this.textBoxSearch.Size = new System.Drawing.Size(329, 22);
             this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged_1);
             // 
             // panel5
             // 
@@ -162,13 +163,14 @@
             this.btnDelete.FontSize = 10F;
             this.btnDelete.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(299, 5);
+            this.btnDelete.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.delete;
+            this.btnDelete.Location = new System.Drawing.Point(299, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(105, 68);
             this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete Selected";
             this.btnDelete.TextColor = System.Drawing.Color.Black;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -184,13 +186,14 @@
             this.btnUpdate.FontSize = 10F;
             this.btnUpdate.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(188, 5);
+            this.btnUpdate.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.edit__1_;
+            this.btnUpdate.Location = new System.Drawing.Point(188, 3);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(105, 68);
             this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Update Student";
             this.btnUpdate.TextColor = System.Drawing.Color.Black;
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -205,11 +208,11 @@
             this.btnAdd.FontSize = 10F;
             this.btnAdd.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(77, 5);
+            this.btnAdd.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.plus__1_;
+            this.btnAdd.Location = new System.Drawing.Point(77, 3);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(105, 68);
             this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Add New Student";
             this.btnAdd.TextColor = System.Drawing.Color.Black;
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.customButton2_Click);
@@ -306,7 +309,6 @@
             this.btnNext.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnNext.BorderRadius = 0;
             this.btnNext.BorderSize = 0;
-            this.btnNext.Enabled = false;
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -405,6 +407,7 @@
             this.comboBoxRows.Name = "comboBoxRows";
             this.comboBoxRows.Size = new System.Drawing.Size(94, 28);
             this.comboBoxRows.TabIndex = 10;
+            this.comboBoxRows.SelectedIndexChanged += new System.EventHandler(this.comboBoxRows_SelectedIndexChanged);
             // 
             // dataGridViewStudents
             // 
@@ -436,6 +439,8 @@
             this.dataGridViewStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewStudents.Size = new System.Drawing.Size(882, 530);
             this.dataGridViewStudents.TabIndex = 11;
+            this.dataGridViewStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudents_CellContentClick);
+            this.dataGridViewStudents.SelectionChanged += new System.EventHandler(this.dataGridViewStudents_SelectionChanged);
             // 
             // id
             // 
@@ -446,7 +451,7 @@
             // 
             // id_no
             // 
-            this.id_no.HeaderText = "IDNO";
+            this.id_no.HeaderText = "ID NO";
             this.id_no.Name = "id_no";
             this.id_no.ReadOnly = true;
             // 
@@ -529,6 +534,7 @@
         private Panel panel3;
         private TextBox textBoxSearch;
         private DataGridView dataGridViewStudents;
+        private CustomControls.CustomButton btnRefresh;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn id_no;
         private DataGridViewTextBoxColumn Lastname;
@@ -537,6 +543,5 @@
         private DataGridViewTextBoxColumn Sex;
         private DataGridViewTextBoxColumn Age;
         private DataGridViewTextBoxColumn Address;
-        private CustomControls.CustomButton btnRefresh;
     }
 }

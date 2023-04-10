@@ -29,7 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnDelete = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
+            this.btnUpdate = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
+            this.btnAdd = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.customButton1 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -43,32 +51,26 @@
             this.section = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.customButton4 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
+            this.customButton5 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.customButton3 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.customButton2 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.customLabel4 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.customLabel3 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.comboBoxRows = new System.Windows.Forms.ComboBox();
-            this.customButton4 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
-            this.customButton5 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.customButton1 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.customButton6 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -77,18 +79,151 @@
             this.panel1.Size = new System.Drawing.Size(957, 74);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox2
+            // panel3
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox2.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.printer__3_;
-            this.pictureBox2.Location = new System.Drawing.Point(857, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 74);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.panel3.BackColor = System.Drawing.Color.DarkGray;
+            this.panel3.Controls.Add(this.customButton6);
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.btnDelete);
+            this.panel3.Controls.Add(this.btnUpdate);
+            this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Controls.Add(this.splitter1);
+            this.panel3.Controls.Add(this.customButton1);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(67, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(890, 74);
+            this.panel3.TabIndex = 7;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(347, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(3, 74);
+            this.panel6.TabIndex = 12;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.White;
+            this.btnDelete.BackgroundColor = System.Drawing.Color.White;
+            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelete.BorderRadius = 5;
+            this.btnDelete.BorderSize = 0;
+            this.btnDelete.Enabled = false;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.FontSize = 10F;
+            this.btnDelete.FontStyle = System.Drawing.FontStyle.Regular;
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.delete;
+            this.btnDelete.Location = new System.Drawing.Point(229, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(105, 68);
+            this.btnDelete.TabIndex = 9;
+            this.btnDelete.TextColor = System.Drawing.Color.Black;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.White;
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.White;
+            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdate.BorderRadius = 5;
+            this.btnUpdate.BorderSize = 0;
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.FontSize = 10F;
+            this.btnUpdate.FontStyle = System.Drawing.FontStyle.Regular;
+            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdate.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.edit__1_;
+            this.btnUpdate.Location = new System.Drawing.Point(118, 3);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(105, 68);
+            this.btnUpdate.TabIndex = 10;
+            this.btnUpdate.TextColor = System.Drawing.Color.Black;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.White;
+            this.btnAdd.BackgroundColor = System.Drawing.Color.White;
+            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAdd.BorderRadius = 5;
+            this.btnAdd.BorderSize = 0;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.FontSize = 10F;
+            this.btnAdd.FontStyle = System.Drawing.FontStyle.Regular;
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.plus__1_;
+            this.btnAdd.Location = new System.Drawing.Point(7, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(105, 68);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.TextColor = System.Drawing.Color.Black;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.Color.White;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 74);
+            this.splitter1.TabIndex = 7;
+            this.splitter1.TabStop = false;
+            // 
+            // customButton1
+            // 
+            this.customButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.customButton1.BackColor = System.Drawing.Color.White;
+            this.customButton1.BackgroundColor = System.Drawing.Color.White;
+            this.customButton1.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.customButton1.BorderRadius = 0;
+            this.customButton1.BorderSize = 1;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customButton1.FontSize = 10F;
+            this.customButton1.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.search__2_;
+            this.customButton1.Location = new System.Drawing.Point(698, 15);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(81, 45);
+            this.customButton1.TabIndex = 6;
+            this.customButton1.TextColor = System.Drawing.Color.White;
+            this.customButton1.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Location = new System.Drawing.Point(356, 15);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(15, 8, 8, 8);
+            this.panel4.Size = new System.Drawing.Size(330, 45);
+            this.panel4.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(12, 10);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "Search for student name:";
+            this.textBox1.Size = new System.Drawing.Size(205, 22);
+            this.textBox1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -100,12 +235,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkGray;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.student;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(67, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -209,6 +344,50 @@
             this.panel5.Size = new System.Drawing.Size(956, 42);
             this.panel5.TabIndex = 10;
             // 
+            // customButton4
+            // 
+            this.customButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.customButton4.BackColor = System.Drawing.Color.Transparent;
+            this.customButton4.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customButton4.BorderRadius = 0;
+            this.customButton4.BorderSize = 0;
+            this.customButton4.FlatAppearance.BorderSize = 0;
+            this.customButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton4.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customButton4.FontSize = 8F;
+            this.customButton4.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customButton4.ForeColor = System.Drawing.Color.White;
+            this.customButton4.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.prev;
+            this.customButton4.Location = new System.Drawing.Point(825, 3);
+            this.customButton4.Name = "customButton4";
+            this.customButton4.Size = new System.Drawing.Size(56, 37);
+            this.customButton4.TabIndex = 13;
+            this.customButton4.TextColor = System.Drawing.Color.White;
+            this.customButton4.UseVisualStyleBackColor = false;
+            // 
+            // customButton5
+            // 
+            this.customButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.customButton5.BackColor = System.Drawing.Color.Transparent;
+            this.customButton5.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customButton5.BorderRadius = 0;
+            this.customButton5.BorderSize = 0;
+            this.customButton5.FlatAppearance.BorderSize = 0;
+            this.customButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton5.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customButton5.FontSize = 8F;
+            this.customButton5.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customButton5.ForeColor = System.Drawing.Color.White;
+            this.customButton5.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.next__2_;
+            this.customButton5.Location = new System.Drawing.Point(892, 2);
+            this.customButton5.Name = "customButton5";
+            this.customButton5.Size = new System.Drawing.Size(56, 37);
+            this.customButton5.TabIndex = 14;
+            this.customButton5.TextColor = System.Drawing.Color.White;
+            this.customButton5.UseVisualStyleBackColor = false;
+            // 
             // customButton3
             // 
             this.customButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -219,7 +398,7 @@
             this.customButton3.BorderSize = 0;
             this.customButton3.FlatAppearance.BorderSize = 0;
             this.customButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton3.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customButton3.FontSize = 8F;
             this.customButton3.FontStyle = System.Drawing.FontStyle.Regular;
             this.customButton3.ForeColor = System.Drawing.Color.White;
@@ -241,7 +420,7 @@
             this.customButton2.BorderSize = 0;
             this.customButton2.FlatAppearance.BorderSize = 0;
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customButton2.FontSize = 8F;
             this.customButton2.FontStyle = System.Drawing.FontStyle.Regular;
             this.customButton2.ForeColor = System.Drawing.Color.White;
@@ -293,117 +472,27 @@
             this.comboBoxRows.Size = new System.Drawing.Size(94, 28);
             this.comboBoxRows.TabIndex = 0;
             // 
-            // customButton4
+            // customButton6
             // 
-            this.customButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.customButton4.BackColor = System.Drawing.Color.Transparent;
-            this.customButton4.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customButton4.BorderRadius = 0;
-            this.customButton4.BorderSize = 0;
-            this.customButton4.FlatAppearance.BorderSize = 0;
-            this.customButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton4.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customButton4.FontSize = 8F;
-            this.customButton4.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customButton4.ForeColor = System.Drawing.Color.White;
-            this.customButton4.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.prev;
-            this.customButton4.Location = new System.Drawing.Point(825, 3);
-            this.customButton4.Name = "customButton4";
-            this.customButton4.Size = new System.Drawing.Size(56, 37);
-            this.customButton4.TabIndex = 13;
-            this.customButton4.TextColor = System.Drawing.Color.White;
-            this.customButton4.UseVisualStyleBackColor = false;
-            // 
-            // customButton5
-            // 
-            this.customButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.customButton5.BackColor = System.Drawing.Color.Transparent;
-            this.customButton5.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customButton5.BorderRadius = 0;
-            this.customButton5.BorderSize = 0;
-            this.customButton5.FlatAppearance.BorderSize = 0;
-            this.customButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton5.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customButton5.FontSize = 8F;
-            this.customButton5.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customButton5.ForeColor = System.Drawing.Color.White;
-            this.customButton5.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.next__2_;
-            this.customButton5.Location = new System.Drawing.Point(892, 2);
-            this.customButton5.Name = "customButton5";
-            this.customButton5.Size = new System.Drawing.Size(56, 37);
-            this.customButton5.TabIndex = 14;
-            this.customButton5.TextColor = System.Drawing.Color.White;
-            this.customButton5.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Location = new System.Drawing.Point(14, 15);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(15, 8, 8, 8);
-            this.panel4.Size = new System.Drawing.Size(639, 45);
-            this.panel4.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(12, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Search for student name:";
-            this.textBox1.Size = new System.Drawing.Size(614, 22);
-            this.textBox1.TabIndex = 0;
-            // 
-            // customButton1
-            // 
-            this.customButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.customButton1.BackColor = System.Drawing.Color.Transparent;
-            this.customButton1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customButton1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.customButton1.BorderRadius = 0;
-            this.customButton1.BorderSize = 1;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customButton1.FontSize = 10F;
-            this.customButton1.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.search__2_;
-            this.customButton1.Location = new System.Drawing.Point(665, 15);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(81, 45);
-            this.customButton1.TabIndex = 6;
-            this.customButton1.TextColor = System.Drawing.Color.White;
-            this.customButton1.UseVisualStyleBackColor = false;
-            // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.Color.White;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 74);
-            this.splitter1.TabIndex = 7;
-            this.splitter1.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.splitter1);
-            this.panel3.Controls.Add(this.customButton1);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(100, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(757, 74);
-            this.panel3.TabIndex = 7;
+            this.customButton6.BackColor = System.Drawing.Color.White;
+            this.customButton6.BackgroundColor = System.Drawing.Color.White;
+            this.customButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customButton6.BorderRadius = 0;
+            this.customButton6.BorderSize = 0;
+            this.customButton6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.customButton6.FlatAppearance.BorderSize = 0;
+            this.customButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton6.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customButton6.FontSize = 10F;
+            this.customButton6.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customButton6.ForeColor = System.Drawing.Color.White;
+            this.customButton6.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.printer__3_;
+            this.customButton6.Location = new System.Drawing.Point(796, 0);
+            this.customButton6.Name = "customButton6";
+            this.customButton6.Size = new System.Drawing.Size(94, 74);
+            this.customButton6.TabIndex = 13;
+            this.customButton6.TextColor = System.Drawing.Color.White;
+            this.customButton6.UseVisualStyleBackColor = false;
             // 
             // EnrollmentsTab
             // 
@@ -415,14 +504,13 @@
             this.Name = "EnrollmentsTab";
             this.Size = new System.Drawing.Size(957, 642);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -432,7 +520,6 @@
         private Panel panel1;
         private Panel panel2;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn id_no;
@@ -456,5 +543,10 @@
         private CustomControls.CustomButton customButton1;
         private Panel panel4;
         private TextBox textBox1;
+        private CustomControls.CustomButton btnDelete;
+        private CustomControls.CustomButton btnUpdate;
+        private CustomControls.CustomButton btnAdd;
+        private Panel panel6;
+        private CustomControls.CustomButton customButton6;
     }
 }

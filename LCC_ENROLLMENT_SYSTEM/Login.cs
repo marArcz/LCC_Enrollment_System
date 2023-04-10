@@ -25,7 +25,7 @@ public partial class btnLogin : Form
 
         if(String.IsNullOrWhiteSpace(username) || String.IsNullOrWhiteSpace(password))
         {
-            MessageBox.Show("Please fill all the boxes!");
+            MessageBox.Show("Please fill all the boxes!","Required",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             return;
         }
 
@@ -39,7 +39,7 @@ public partial class btnLogin : Form
                 Admin admin = admins[0];
                 if(admin.password == password) {
                     /*MessageBox.Show("Successfully logged in!");*/
-                    successDialog.ShowSuccess("Successfully logged in!",this);
+                    MessageBox.Show("Successfully logged in!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     new Home().Show();
                     this.Hide();
                 }

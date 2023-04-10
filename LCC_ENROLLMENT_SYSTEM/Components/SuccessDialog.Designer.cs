@@ -54,12 +54,12 @@
             // lblMessage
             // 
             this.lblMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMessage.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMessage.FontSize = 10F;
+            this.lblMessage.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMessage.FontSize = 12F;
             this.lblMessage.FontStyle = System.Drawing.FontStyle.Regular;
-            this.lblMessage.Location = new System.Drawing.Point(3, 123);
+            this.lblMessage.Location = new System.Drawing.Point(3, 121);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(337, 23);
+            this.lblMessage.Size = new System.Drawing.Size(333, 23);
             this.lblMessage.TabIndex = 6;
             this.lblMessage.Text = "Successfully done!";
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -67,20 +67,20 @@
             // customLabel1
             // 
             this.customLabel1.AutoSize = true;
-            this.customLabel1.Font = new System.Drawing.Font("Heebo", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.customLabel1.FontSize = 11F;
+            this.customLabel1.Font = new System.Drawing.Font("Heebo", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.customLabel1.FontSize = 14F;
             this.customLabel1.FontStyle = System.Drawing.FontStyle.Bold;
             this.customLabel1.ForeColor = System.Drawing.Color.Green;
-            this.customLabel1.Location = new System.Drawing.Point(135, 85);
+            this.customLabel1.Location = new System.Drawing.Point(125, 72);
             this.customLabel1.Name = "customLabel1";
-            this.customLabel1.Size = new System.Drawing.Size(74, 22);
+            this.customLabel1.Size = new System.Drawing.Size(90, 28);
             this.customLabel1.TabIndex = 5;
             this.customLabel1.Text = "Success";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.correct__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(154, 34);
+            this.pictureBox1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.check__3_;
+            this.pictureBox1.Location = new System.Drawing.Point(153, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -100,7 +100,7 @@
             this.customButton1.FontSize = 10F;
             this.customButton1.FontStyle = System.Drawing.FontStyle.Regular;
             this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(129, 170);
+            this.customButton1.Location = new System.Drawing.Point(128, 168);
             this.customButton1.Name = "customButton1";
             this.customButton1.Size = new System.Drawing.Size(78, 32);
             this.customButton1.TabIndex = 3;
@@ -116,13 +116,13 @@
             this.ClientSize = new System.Drawing.Size(338, 225);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SuccessDialog";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "SuccessDialog";
             this.Load += new System.EventHandler(this.SuccessDialog_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

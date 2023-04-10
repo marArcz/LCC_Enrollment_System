@@ -1,6 +1,6 @@
 ﻿namespace LCC_ENROLLMENT_SYSTEM
 {
-    partial class AddStudentForm
+    partial class UpdateStudentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.topbar1 = new LCC_ENROLLMENT_SYSTEM.Components.Topbar();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxStudentId = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -39,6 +40,9 @@
             this.checkBoxReportCard = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBoxLastSchoolYear = new System.Windows.Forms.ComboBox();
+            this.textBoxLastSchool = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBoxGuardianPhone = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -52,25 +56,21 @@
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.textBoxHeight = new System.Windows.Forms.TextBox();
             this.textBoxWeight = new System.Windows.Forms.TextBox();
-            this.textBoxMiddlename = new System.Windows.Forms.TextBox();
             this.textBoxAge = new System.Windows.Forms.TextBox();
-            this.textBoxFirstname = new System.Windows.Forms.TextBox();
-            this.textBoxBirthPlace = new System.Windows.Forms.TextBox();
-            this.textBoxLastSchool = new System.Windows.Forms.TextBox();
-            this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBoxLastname = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxBirthPlace = new System.Windows.Forms.TextBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBoxMiddlename = new System.Windows.Forms.TextBox();
+            this.textBoxFirstname = new System.Windows.Forms.TextBox();
+            this.textBoxLastname = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.topbar1 = new LCC_ENROLLMENT_SYSTEM.Components.Topbar();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCancel = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.btnReset = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
@@ -83,38 +83,45 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
+            // topbar1
+            // 
+            this.topbar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.topbar1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.topbar1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topbar1.Location = new System.Drawing.Point(0, 0);
+            this.topbar1.Name = "topbar1";
+            this.topbar1.Size = new System.Drawing.Size(973, 109);
+            this.topbar1.TabIndex = 0;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(18, 131);
+            this.label1.Location = new System.Drawing.Point(16, 136);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 18);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 7;
             this.label1.Text = "Student ID:";
             // 
             // textBoxStudentId
             // 
-            this.textBoxStudentId.Location = new System.Drawing.Point(98, 128);
+            this.textBoxStudentId.Location = new System.Drawing.Point(96, 133);
             this.textBoxStudentId.Name = "textBoxStudentId";
             this.textBoxStudentId.ReadOnly = true;
             this.textBoxStudentId.Size = new System.Drawing.Size(304, 23);
-            this.textBoxStudentId.TabIndex = 3;
+            this.textBoxStudentId.TabIndex = 6;
             this.textBoxStudentId.TabStop = false;
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(12, 162);
+            this.groupBox1.Location = new System.Drawing.Point(16, 166);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(949, 500);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(945, 491);
+            this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Basic Information";
             // 
@@ -127,9 +134,10 @@
             this.groupBox2.Controls.Add(this.checkBoxNSO);
             this.groupBox2.Controls.Add(this.checkBoxPicture);
             this.groupBox2.Controls.Add(this.checkBoxReportCard);
-            this.groupBox2.Location = new System.Drawing.Point(763, 24);
+            this.groupBox2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Location = new System.Drawing.Point(771, 24);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(174, 461);
+            this.groupBox2.Size = new System.Drawing.Size(168, 450);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Requirements";
@@ -138,10 +146,10 @@
             // 
             this.checkBoxGoodMoral.AutoSize = true;
             this.checkBoxGoodMoral.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxGoodMoral.Location = new System.Drawing.Point(12, 182);
+            this.checkBoxGoodMoral.Location = new System.Drawing.Point(8, 177);
             this.checkBoxGoodMoral.Name = "checkBoxGoodMoral";
             this.checkBoxGoodMoral.Size = new System.Drawing.Size(92, 22);
-            this.checkBoxGoodMoral.TabIndex = 19;
+            this.checkBoxGoodMoral.TabIndex = 24;
             this.checkBoxGoodMoral.Text = "Good Moral";
             this.checkBoxGoodMoral.UseVisualStyleBackColor = true;
             // 
@@ -149,10 +157,10 @@
             // 
             this.checkBoxCertification.AutoSize = true;
             this.checkBoxCertification.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxCertification.Location = new System.Drawing.Point(12, 148);
+            this.checkBoxCertification.Location = new System.Drawing.Point(8, 143);
             this.checkBoxCertification.Name = "checkBoxCertification";
             this.checkBoxCertification.Size = new System.Drawing.Size(98, 22);
-            this.checkBoxCertification.TabIndex = 18;
+            this.checkBoxCertification.TabIndex = 23;
             this.checkBoxCertification.Text = "Certification";
             this.checkBoxCertification.UseVisualStyleBackColor = true;
             // 
@@ -160,10 +168,10 @@
             // 
             this.checkBoxNSO.AutoSize = true;
             this.checkBoxNSO.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxNSO.Location = new System.Drawing.Point(12, 110);
+            this.checkBoxNSO.Location = new System.Drawing.Point(8, 105);
             this.checkBoxNSO.Name = "checkBoxNSO";
             this.checkBoxNSO.Size = new System.Drawing.Size(145, 22);
-            this.checkBoxNSO.TabIndex = 17;
+            this.checkBoxNSO.TabIndex = 22;
             this.checkBoxNSO.Text = "NSO Birth Certificate";
             this.checkBoxNSO.UseVisualStyleBackColor = true;
             // 
@@ -171,10 +179,10 @@
             // 
             this.checkBoxPicture.AutoSize = true;
             this.checkBoxPicture.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxPicture.Location = new System.Drawing.Point(12, 74);
+            this.checkBoxPicture.Location = new System.Drawing.Point(8, 69);
             this.checkBoxPicture.Name = "checkBoxPicture";
             this.checkBoxPicture.Size = new System.Drawing.Size(144, 22);
-            this.checkBoxPicture.TabIndex = 16;
+            this.checkBoxPicture.TabIndex = 21;
             this.checkBoxPicture.Text = "2 pcs ID Pictue (2x2)";
             this.checkBoxPicture.UseVisualStyleBackColor = true;
             // 
@@ -182,46 +190,45 @@
             // 
             this.checkBoxReportCard.AutoSize = true;
             this.checkBoxReportCard.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxReportCard.Location = new System.Drawing.Point(12, 33);
+            this.checkBoxReportCard.Location = new System.Drawing.Point(8, 28);
             this.checkBoxReportCard.Name = "checkBoxReportCard";
             this.checkBoxReportCard.Size = new System.Drawing.Size(151, 22);
-            this.checkBoxReportCard.TabIndex = 15;
+            this.checkBoxReportCard.TabIndex = 20;
             this.checkBoxReportCard.Text = "Report Card Form 138";
             this.checkBoxReportCard.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.Controls.Add(this.comboBoxLastSchoolYear);
+            this.panel1.Controls.Add(this.textBoxLastSchool);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBoxSex);
             this.panel1.Controls.Add(this.dateTimePicker);
             this.panel1.Controls.Add(this.textBoxHeight);
             this.panel1.Controls.Add(this.textBoxWeight);
-            this.panel1.Controls.Add(this.textBoxMiddlename);
             this.panel1.Controls.Add(this.textBoxAge);
-            this.panel1.Controls.Add(this.textBoxFirstname);
-            this.panel1.Controls.Add(this.textBoxBirthPlace);
-            this.panel1.Controls.Add(this.textBoxLastSchool);
-            this.panel1.Controls.Add(this.textBoxAddress);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBoxLastname);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.textBoxBirthPlace);
+            this.panel1.Controls.Add(this.textBoxAddress);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.textBoxMiddlename);
+            this.panel1.Controls.Add(this.textBoxFirstname);
+            this.panel1.Controls.Add(this.textBoxLastname);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(6, 24);
+            this.panel1.Location = new System.Drawing.Point(10, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(744, 470);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(755, 450);
+            this.panel1.TabIndex = 0;
             // 
             // comboBoxLastSchoolYear
             // 
@@ -229,10 +236,41 @@
             this.comboBoxLastSchoolYear.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxLastSchoolYear.IntegralHeight = false;
             this.comboBoxLastSchoolYear.ItemHeight = 18;
-            this.comboBoxLastSchoolYear.Location = new System.Drawing.Point(459, 399);
+            this.comboBoxLastSchoolYear.Location = new System.Drawing.Point(474, 385);
             this.comboBoxLastSchoolYear.Name = "comboBoxLastSchoolYear";
             this.comboBoxLastSchoolYear.Size = new System.Drawing.Size(257, 26);
-            this.comboBoxLastSchoolYear.TabIndex = 12;
+            this.comboBoxLastSchoolYear.TabIndex = 26;
+            // 
+            // textBoxLastSchool
+            // 
+            this.textBoxLastSchool.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxLastSchool.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxLastSchool.Location = new System.Drawing.Point(28, 385);
+            this.textBoxLastSchool.Multiline = true;
+            this.textBoxLastSchool.Name = "textBoxLastSchool";
+            this.textBoxLastSchool.Size = new System.Drawing.Size(430, 47);
+            this.textBoxLastSchool.TabIndex = 25;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(475, 360);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(85, 18);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "School Year:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(31, 360);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(136, 18);
+            this.label14.TabIndex = 24;
+            this.label14.Text = "Last School Attended";
             // 
             // groupBox4
             // 
@@ -243,10 +281,10 @@
             this.groupBox4.Controls.Add(this.textBoxGuardianAddress);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox4.Location = new System.Drawing.Point(13, 211);
+            this.groupBox4.Location = new System.Drawing.Point(19, 208);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(717, 152);
-            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabIndex = 22;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Guardian";
             // 
@@ -257,7 +295,7 @@
             this.textBoxGuardianPhone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxGuardianPhone.Location = new System.Drawing.Point(15, 104);
             this.textBoxGuardianPhone.Name = "textBoxGuardianPhone";
-            this.textBoxGuardianPhone.Size = new System.Drawing.Size(338, 25);
+            this.textBoxGuardianPhone.Size = new System.Drawing.Size(340, 25);
             this.textBoxGuardianPhone.TabIndex = 12;
             // 
             // label13
@@ -277,7 +315,7 @@
             this.textBoxGuardianName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxGuardianName.Location = new System.Drawing.Point(15, 50);
             this.textBoxGuardianName.Name = "textBoxGuardianName";
-            this.textBoxGuardianName.Size = new System.Drawing.Size(338, 25);
+            this.textBoxGuardianName.Size = new System.Drawing.Size(340, 25);
             this.textBoxGuardianName.TabIndex = 11;
             // 
             // label11
@@ -298,7 +336,7 @@
             this.textBoxGuardianAddress.Location = new System.Drawing.Point(377, 50);
             this.textBoxGuardianAddress.Multiline = true;
             this.textBoxGuardianAddress.Name = "textBoxGuardianAddress";
-            this.textBoxGuardianAddress.Size = new System.Drawing.Size(326, 82);
+            this.textBoxGuardianAddress.Size = new System.Drawing.Size(334, 82);
             this.textBoxGuardianAddress.TabIndex = 13;
             // 
             // label12
@@ -310,17 +348,16 @@
             this.label12.Size = new System.Drawing.Size(62, 18);
             this.label12.TabIndex = 0;
             this.label12.Text = "Address:";
-            this.label12.Click += new System.EventHandler(this.label5_Click);
             // 
             // groupBoxSex
             // 
             this.groupBoxSex.Controls.Add(this.radioButtonFemale);
             this.groupBoxSex.Controls.Add(this.radioButtonMale);
             this.groupBoxSex.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBoxSex.Location = new System.Drawing.Point(303, 146);
+            this.groupBoxSex.Location = new System.Drawing.Point(309, 140);
             this.groupBoxSex.Name = "groupBoxSex";
             this.groupBoxSex.Size = new System.Drawing.Size(140, 55);
-            this.groupBoxSex.TabIndex = 6;
+            this.groupBoxSex.TabIndex = 19;
             this.groupBoxSex.TabStop = false;
             this.groupBoxSex.Text = "Sex";
             // 
@@ -352,10 +389,10 @@
             this.dateTimePicker.CustomFormat = " MMM dd yyyy";
             this.dateTimePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker.Location = new System.Drawing.Point(13, 176);
+            this.dateTimePicker.Location = new System.Drawing.Point(19, 170);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker.TabIndex = 5;
+            this.dateTimePicker.TabIndex = 18;
             this.dateTimePicker.Value = new System.DateTime(2002, 3, 13, 0, 0, 0, 0);
             this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
@@ -364,222 +401,172 @@
             this.textBoxHeight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxHeight.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxHeight.Location = new System.Drawing.Point(594, 174);
+            this.textBoxHeight.Location = new System.Drawing.Point(600, 168);
             this.textBoxHeight.Name = "textBoxHeight";
             this.textBoxHeight.Size = new System.Drawing.Size(136, 25);
-            this.textBoxHeight.TabIndex = 8;
+            this.textBoxHeight.TabIndex = 21;
             // 
             // textBoxWeight
             // 
             this.textBoxWeight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxWeight.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxWeight.Location = new System.Drawing.Point(449, 174);
+            this.textBoxWeight.Location = new System.Drawing.Point(455, 168);
             this.textBoxWeight.Name = "textBoxWeight";
             this.textBoxWeight.Size = new System.Drawing.Size(136, 25);
-            this.textBoxWeight.TabIndex = 7;
-            // 
-            // textBoxMiddlename
-            // 
-            this.textBoxMiddlename.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxMiddlename.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxMiddlename.Location = new System.Drawing.Point(474, 43);
-            this.textBoxMiddlename.Name = "textBoxMiddlename";
-            this.textBoxMiddlename.Size = new System.Drawing.Size(256, 25);
-            this.textBoxMiddlename.TabIndex = 2;
+            this.textBoxWeight.TabIndex = 20;
             // 
             // textBoxAge
             // 
             this.textBoxAge.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxAge.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxAge.Location = new System.Drawing.Point(225, 176);
+            this.textBoxAge.Location = new System.Drawing.Point(231, 170);
             this.textBoxAge.Name = "textBoxAge";
             this.textBoxAge.ReadOnly = true;
             this.textBoxAge.Size = new System.Drawing.Size(63, 25);
-            this.textBoxAge.TabIndex = 1;
+            this.textBoxAge.TabIndex = 17;
             this.textBoxAge.TabStop = false;
             // 
-            // textBoxFirstname
+            // label10
             // 
-            this.textBoxFirstname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxFirstname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxFirstname.Location = new System.Drawing.Point(243, 43);
-            this.textBoxFirstname.Name = "textBoxFirstname";
-            this.textBoxFirstname.Size = new System.Drawing.Size(225, 25);
-            this.textBoxFirstname.TabIndex = 1;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(600, 141);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 18);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Height (cm):";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(455, 140);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 18);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Weight(kg):";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(231, 141);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 18);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Age:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(19, 141);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 18);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Date of Birth:";
             // 
             // textBoxBirthPlace
             // 
             this.textBoxBirthPlace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBirthPlace.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxBirthPlace.Location = new System.Drawing.Point(369, 104);
+            this.textBoxBirthPlace.Location = new System.Drawing.Point(378, 104);
             this.textBoxBirthPlace.Name = "textBoxBirthPlace";
             this.textBoxBirthPlace.Size = new System.Drawing.Size(361, 25);
-            this.textBoxBirthPlace.TabIndex = 4;
-            // 
-            // textBoxLastSchool
-            // 
-            this.textBoxLastSchool.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxLastSchool.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxLastSchool.Location = new System.Drawing.Point(13, 399);
-            this.textBoxLastSchool.Multiline = true;
-            this.textBoxLastSchool.Name = "textBoxLastSchool";
-            this.textBoxLastSchool.Size = new System.Drawing.Size(430, 47);
-            this.textBoxLastSchool.TabIndex = 11;
+            this.textBoxBirthPlace.TabIndex = 12;
             // 
             // textBoxAddress
             // 
             this.textBoxAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxAddress.Location = new System.Drawing.Point(13, 104);
+            this.textBoxAddress.Location = new System.Drawing.Point(22, 104);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(344, 25);
-            this.textBoxAddress.TabIndex = 3;
+            this.textBoxAddress.TabIndex = 11;
             // 
-            // label10
+            // label6
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(594, 147);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 18);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Height (cm):";
-            this.label10.Click += new System.EventHandler(this.label4_Click);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(376, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 18);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Place of Birth:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(22, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 18);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Address:";
+            // 
+            // textBoxMiddlename
+            // 
+            this.textBoxMiddlename.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxMiddlename.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxMiddlename.Location = new System.Drawing.Point(480, 40);
+            this.textBoxMiddlename.Name = "textBoxMiddlename";
+            this.textBoxMiddlename.Size = new System.Drawing.Size(256, 25);
+            this.textBoxMiddlename.TabIndex = 7;
+            // 
+            // textBoxFirstname
+            // 
+            this.textBoxFirstname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxFirstname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxFirstname.Location = new System.Drawing.Point(249, 40);
+            this.textBoxFirstname.Name = "textBoxFirstname";
+            this.textBoxFirstname.Size = new System.Drawing.Size(225, 25);
+            this.textBoxFirstname.TabIndex = 6;
             // 
             // textBoxLastname
             // 
             this.textBoxLastname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxLastname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxLastname.Location = new System.Drawing.Point(13, 43);
+            this.textBoxLastname.Location = new System.Drawing.Point(19, 40);
             this.textBoxLastname.Name = "textBoxLastname";
             this.textBoxLastname.Size = new System.Drawing.Size(224, 25);
-            this.textBoxLastname.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(449, 146);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 18);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Weight(kg):";
-            this.label9.Click += new System.EventHandler(this.label4_Click);
+            this.textBoxLastname.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(474, 15);
+            this.label4.Location = new System.Drawing.Point(480, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 18);
-            this.label4.TabIndex = 2;
+            this.label4.TabIndex = 8;
             this.label4.Text = "Middle Name:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(367, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 18);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Place of Birth:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(243, 15);
+            this.label3.Location = new System.Drawing.Point(249, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 18);
-            this.label3.TabIndex = 0;
+            this.label3.TabIndex = 4;
             this.label3.Text = "First Name:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(225, 147);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 18);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Age:";
-            this.label8.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(13, 147);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 18);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Date of Birth:";
-            this.label7.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(460, 374);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 18);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "School Year:";
-            this.label15.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(16, 374);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(136, 18);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Last School Attended";
-            this.label14.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(13, 77);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 18);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Address:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(13, 15);
+            this.label2.Location = new System.Drawing.Point(19, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 18);
-            this.label2.TabIndex = 0;
+            this.label2.TabIndex = 5;
             this.label2.Text = "Last Name:";
-            // 
-            // topbar1
-            // 
-            this.topbar1.BackColor = System.Drawing.Color.Gainsboro;
-            this.topbar1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.topbar1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topbar1.Location = new System.Drawing.Point(0, 0);
-            this.topbar1.Name = "topbar1";
-            this.topbar1.Size = new System.Drawing.Size(973, 109);
-            this.topbar1.TabIndex = 4;
-            this.topbar1.TabStop = false;
             // 
             // panel2
             // 
@@ -592,7 +579,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 668);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(973, 67);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 9;
             // 
             // btnCancel
             // 
@@ -605,7 +592,7 @@
             this.btnCancel.BorderSize = 0;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCancel.FontSize = 10F;
             this.btnCancel.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
@@ -615,7 +602,6 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.TextColor = System.Drawing.Color.White;
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnReset
             // 
@@ -628,7 +614,7 @@
             this.btnReset.BorderSize = 0;
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnReset.FontSize = 10F;
             this.btnReset.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnReset.ForeColor = System.Drawing.Color.White;
@@ -650,7 +636,7 @@
             this.btnSave.BorderSize = 0;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSave.FontSize = 10F;
             this.btnSave.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnSave.ForeColor = System.Drawing.Color.White;
@@ -662,21 +648,23 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // AddStudentForm
+            // UpdateStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(973, 735);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.topbar1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxStudentId);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.topbar1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "AddStudentForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Student";
+            this.Name = "UpdateStudentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Update Student";
+            this.Load += new System.EventHandler(this.UpdateStudentForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -694,29 +682,33 @@
 
         #endregion
 
+        private Components.Topbar topbar1;
         private Label label1;
         private TextBox textBoxStudentId;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private Components.Topbar topbar1;
         private Panel panel1;
+        private TextBox textBoxMiddlename;
+        private TextBox textBoxFirstname;
+        private TextBox textBoxLastname;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private TextBox textBoxBirthPlace;
+        private TextBox textBoxAddress;
+        private Label label6;
+        private Label label5;
         private GroupBox groupBoxSex;
         private RadioButton radioButtonFemale;
         private RadioButton radioButtonMale;
         private DateTimePicker dateTimePicker;
-        private TextBox textBoxMiddlename;
+        private TextBox textBoxHeight;
+        private TextBox textBoxWeight;
         private TextBox textBoxAge;
-        private TextBox textBoxFirstname;
-        private TextBox textBoxBirthPlace;
-        private TextBox textBoxAddress;
-        private TextBox textBoxLastname;
-        private Label label4;
-        private Label label6;
-        private Label label3;
+        private Label label10;
+        private Label label9;
         private Label label8;
         private Label label7;
-        private Label label5;
-        private Label label2;
         private GroupBox groupBox4;
         private TextBox textBoxGuardianPhone;
         private Label label13;
@@ -724,14 +716,11 @@
         private Label label11;
         private TextBox textBoxGuardianAddress;
         private Label label12;
-        private TextBox textBoxHeight;
-        private TextBox textBoxWeight;
+        private ComboBox comboBoxLastSchoolYear;
         private TextBox textBoxLastSchool;
-        private Label label10;
-        private Label label9;
         private Label label15;
         private Label label14;
-        private ComboBox comboBoxLastSchoolYear;
+        private CheckBox checkBoxGoodMoral;
         private CheckBox checkBoxCertification;
         private CheckBox checkBoxNSO;
         private CheckBox checkBoxPicture;
@@ -740,6 +729,5 @@
         private CustomControls.CustomButton btnCancel;
         private CustomControls.CustomButton btnReset;
         private CustomControls.CustomButton btnSave;
-        private CheckBox checkBoxGoodMoral;
     }
 }

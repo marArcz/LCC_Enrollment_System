@@ -69,7 +69,7 @@ namespace LCC_ENROLLMENT_SYSTEM
             int has_good_moral = checkBoxGoodMoral.Checked ? 1 : 0;
             int has_nso = checkBoxNSO.Checked ? 1: 0;
             int has_certification = checkBoxCertification.Checked ? 1 : 0;
-
+            int year_added = DateTime.Now.Year;
             Student newStudent = new()
             {
                 student_id = id_no,
@@ -93,6 +93,7 @@ namespace LCC_ENROLLMENT_SYSTEM
                 has_certification = has_certification,
                 has_id_picture = has_picture,
                 has_good_moral= has_good_moral,
+                year_added = year_added
             };
 
             using(AppDbContext db = new())

@@ -13,6 +13,12 @@ namespace LCC_ENROLLMENT_SYSTEM.Data
     {
         public DbSet<Student> Students { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<Enrollment> Enrollments { get; set; }
+        public DbSet<GradeLevel> GradeLevels { get; set; }
+        public DbSet<Section> Sections { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<SubjectsEnrolled> SubjectsEnrolled { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySql(ConfigurationManager.ConnectionStrings["mysql_connection"].ConnectionString,new MySqlServerVersion("10.4.25"));

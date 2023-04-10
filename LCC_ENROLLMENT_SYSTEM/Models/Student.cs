@@ -38,5 +38,6 @@ namespace LCC_ENROLLMENT_SYSTEM.Models
 
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime created_at { get; set; }
+        public int year_added { get; set; }
     }
 }
