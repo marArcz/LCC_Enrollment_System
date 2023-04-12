@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,23 @@ namespace LCC_ENROLLMENT_SYSTEM
 {
     public partial class LoadingForm : Form
     {
+        private string message = "Please wait...";
+        private int duration = 200;
+
+        public string Message { get => message;
+            set
+            {
+                message = value;
+                labelMessage.Text = value;
+            }
+        }
+
+        public int Duration { get => duration; set => duration = value; }
+
         public LoadingForm()
         {
             InitializeComponent();
+            labelMessage.Text = message;
             backgroundWorker1.WorkerReportsProgress = true;
             backgroundWorker1.WorkerSupportsCancellation = true;
         }
@@ -32,7 +47,7 @@ namespace LCC_ENROLLMENT_SYSTEM
                 }
                 else
                 {
-                    System.Threading.Thread.Sleep(200);
+                    System.Threading.Thread.Sleep(duration);
                     worker.ReportProgress(i * 10);
                 }
             }
@@ -61,7 +76,20 @@ namespace LCC_ENROLLMENT_SYSTEM
 
         private void LoadingForm_Load(object sender, EventArgs e)
         {
-            startProgressBar();
+            if(duration > 0)
+            {
+                startProgressBar();
+            }
+        }
+     
+
+        public static void ShowLoading(string message,int duration=200)
+        {
+            var form = new LoadingForm();
+            form.message = message;
+            form.duration = duration;
+
+            form.ShowDialog();
         }
     }
 }

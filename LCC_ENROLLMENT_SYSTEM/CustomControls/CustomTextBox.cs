@@ -28,6 +28,8 @@ namespace LCC_ENROLLMENT_SYSTEM.CustomControls
         private string placeholderText = "";
         private bool isPlaceholder = false;
         private bool isPasswordChar = false;
+        private float fontSize = 10F;
+        private FontStyle fontStyle = FontStyle.Regular;
 
         //Events
         public event EventHandler _TextChanged;
@@ -37,8 +39,14 @@ namespace LCC_ENROLLMENT_SYSTEM.CustomControls
         //-> Constructor
         public CustomTextBox()
         {
-            //Created by designer
             InitializeComponent();
+
+            CustomFonts.init();
+            this.Font = CustomFonts.GetFont(fontSize, fontStyle);
+        }
+        private void updateFont()
+        {
+            this.Font = CustomFonts.GetFont(fontSize, fontStyle);
         }
 
         #region -> Properties
@@ -66,11 +74,8 @@ namespace LCC_ENROLLMENT_SYSTEM.CustomControls
             get { return borderSize; }
             set
             {
-                if (value >= 1)
-                {
-                    borderSize = value;
-                    this.Invalidate();
-                }
+                borderSize = value;
+                this.Invalidate();
             }
         }
 
@@ -189,6 +194,19 @@ namespace LCC_ENROLLMENT_SYSTEM.CustomControls
                 placeholderText = value;
                 textBox1.Text = "";
                 SetPlaceholder();
+            }
+        }
+
+        public float FontSize { get => fontSize; set
+            {
+                fontSize = value;
+                updateFont();
+            }
+        }
+        public FontStyle FontStyle { get => fontStyle; set
+            {
+                fontStyle = value;
+                updateFont();
             }
         }
 

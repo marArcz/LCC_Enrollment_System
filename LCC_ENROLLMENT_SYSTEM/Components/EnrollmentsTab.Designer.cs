@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.customButton6 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnDelete = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.btnUpdate = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
@@ -38,7 +39,6 @@
             this.customButton1 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +58,6 @@
             this.customLabel4 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.customLabel3 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.comboBoxRows = new System.Windows.Forms.ComboBox();
-            this.customButton6 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -71,7 +70,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -95,6 +93,28 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(890, 74);
             this.panel3.TabIndex = 7;
+            // 
+            // customButton6
+            // 
+            this.customButton6.BackColor = System.Drawing.Color.White;
+            this.customButton6.BackgroundColor = System.Drawing.Color.White;
+            this.customButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customButton6.BorderRadius = 0;
+            this.customButton6.BorderSize = 0;
+            this.customButton6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.customButton6.FlatAppearance.BorderSize = 0;
+            this.customButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton6.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customButton6.FontSize = 10F;
+            this.customButton6.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customButton6.ForeColor = System.Drawing.Color.White;
+            this.customButton6.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.printer__3_;
+            this.customButton6.Location = new System.Drawing.Point(796, 0);
+            this.customButton6.Name = "customButton6";
+            this.customButton6.Size = new System.Drawing.Size(94, 74);
+            this.customButton6.TabIndex = 13;
+            this.customButton6.TextColor = System.Drawing.Color.White;
+            this.customButton6.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
@@ -207,7 +227,7 @@
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Location = new System.Drawing.Point(356, 15);
+            this.panel4.Location = new System.Drawing.Point(362, 15);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(15, 8, 8, 8);
             this.panel4.Size = new System.Drawing.Size(330, 45);
@@ -224,14 +244,6 @@
             this.textBox1.PlaceholderText = "Search for student name:";
             this.textBox1.Size = new System.Drawing.Size(205, 22);
             this.textBox1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(101, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 70);
-            this.panel2.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -472,28 +484,6 @@
             this.comboBoxRows.Size = new System.Drawing.Size(94, 28);
             this.comboBoxRows.TabIndex = 0;
             // 
-            // customButton6
-            // 
-            this.customButton6.BackColor = System.Drawing.Color.White;
-            this.customButton6.BackgroundColor = System.Drawing.Color.White;
-            this.customButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customButton6.BorderRadius = 0;
-            this.customButton6.BorderSize = 0;
-            this.customButton6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.customButton6.FlatAppearance.BorderSize = 0;
-            this.customButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton6.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customButton6.FontSize = 10F;
-            this.customButton6.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customButton6.ForeColor = System.Drawing.Color.White;
-            this.customButton6.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.printer__3_;
-            this.customButton6.Location = new System.Drawing.Point(796, 0);
-            this.customButton6.Name = "customButton6";
-            this.customButton6.Size = new System.Drawing.Size(94, 74);
-            this.customButton6.TabIndex = 13;
-            this.customButton6.TextColor = System.Drawing.Color.White;
-            this.customButton6.UseVisualStyleBackColor = false;
-            // 
             // EnrollmentsTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -518,7 +508,6 @@
         #endregion
 
         private Panel panel1;
-        private Panel panel2;
         private PictureBox pictureBox1;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn id;

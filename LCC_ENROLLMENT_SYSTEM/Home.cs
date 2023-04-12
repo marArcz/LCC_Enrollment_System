@@ -26,27 +26,24 @@ namespace LCC_ENROLLMENT_SYSTEM
         {
             CustomFonts.init();
             InitializeComponent();
-            /*var controls = sidemenuPanel.Controls;*/
-            /*foreach (var control in controls)
+            var controls = sidemenuPanel.Controls;
+            foreach (var control in controls)
             {
-                ((SidemenuButton)control).Click += tabLink_Click;
-            }*/
+                if(control.GetType() == typeof(MenuButton))
+                {
+                    ((MenuButton)control).OnClickHandler += tabLink_Click;
+                }
+            }
             /*studentsTabComponent.LoadStudents();*/
-
-            /*collapsibleMenu1.MenuItems = new List<CollapsibleMenu.MenuItemButton>()
-            {
-                new CollapsibleMenu.MenuItemButton(){ Text = "Elementary"},
-                new CollapsibleMenu.MenuItemButton(){ Text = "Junior HighSchool"}
-            };*/
 
             enrollmentMenuToggler.OnToggle = enrollmentMenuToggler_Click;
         }
 
         private void tabLink_Click(object sender, EventArgs e)
         {
-            SidemenuButton btn = (SidemenuButton)sender;
+            MenuButton btn = (MenuButton)sender;
 
-            string targetTab = btn.Tab;
+            string targetTab = btn.Tab1;
             tabControl.SelectedTab = tabControl.TabPages[targetTab];
 
             clearActiveTabLink();
@@ -55,11 +52,14 @@ namespace LCC_ENROLLMENT_SYSTEM
 
         private void clearActiveTabLink()
         {
-           /* var controls = sidemenuPanel.Controls;
+            var controls = sidemenuPanel.Controls;
             foreach (var control in controls)
             {
-                ((SidemenuButton)control).Active = false;
-            }*/
+                if(control.GetType() == typeof(MenuButton))
+                {
+                    ((MenuButton)control).Active = false;
+                }
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

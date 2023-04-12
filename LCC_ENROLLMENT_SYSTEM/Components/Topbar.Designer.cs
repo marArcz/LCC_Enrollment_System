@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.customLabel1 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,25 +45,27 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // customLabel1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(135, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(790, 131);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "LEGACY COLLEGE OF COMPOSTELLA";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customLabel1.Font = new System.Drawing.Font("Heebo", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel1.FontSize = 22F;
+            this.customLabel1.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customLabel1.Location = new System.Drawing.Point(135, 0);
+            this.customLabel1.Name = "customLabel1";
+            this.customLabel1.Size = new System.Drawing.Size(663, 131);
+            this.customLabel1.TabIndex = 1;
+            this.customLabel1.Text = "LEGACY COLLEGE OF COMPOSTELLA";
+            this.customLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Topbar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.customLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Topbar";
-            this.Size = new System.Drawing.Size(925, 131);
+            this.Size = new System.Drawing.Size(798, 131);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -72,6 +74,6 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Label label1;
+        private CustomControls.CustomLabel customLabel1;
     }
 }

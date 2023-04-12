@@ -223,7 +223,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             {
                 return;
             }
-
+            
             var ids = new List<int>();
             var selectedRows = dataGridViewStudents.SelectedRows;
             

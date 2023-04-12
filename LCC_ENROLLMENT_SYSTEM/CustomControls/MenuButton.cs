@@ -23,6 +23,7 @@ namespace LCC_ENROLLMENT_SYSTEM.CustomControls
         private float fontSize = 10F;
         private FontStyle fontStyle = FontStyle.Regular;
         private string text = "Text";
+        private EventHandler onClickHandler;
         public enum borderPosition
         {
             start,
@@ -58,6 +59,8 @@ namespace LCC_ENROLLMENT_SYSTEM.CustomControls
             }
         }
 
+        public EventHandler OnClickHandler { get => onClickHandler; set => onClickHandler = value; }
+
         public MenuButton()
         {
             InitializeComponent();
@@ -73,7 +76,15 @@ namespace LCC_ENROLLMENT_SYSTEM.CustomControls
                 this.BackColor = DefaultBgColor;
             }
             label.Text = BtnText;
-           
+            
+        }
+
+        private void MenuButton_Click(object? sender, EventArgs e)
+        {
+            if(OnClickHandler != null)
+            {
+                onClickHandler(this,e);
+            }
         }
 
         protected override void OnPaint(PaintEventArgs e)

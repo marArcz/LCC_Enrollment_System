@@ -44,6 +44,7 @@
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
+            this.pictureBox.Click += new System.EventHandler(this.MenuButton_Click);
             // 
             // label
             // 
@@ -59,17 +60,19 @@
             this.label.TabIndex = 1;
             this.label.Text = "customLabel1";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label.Click += new System.EventHandler(this.MenuButton_Click);
             // 
             // MenuButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.Controls.Add(this.label);
             this.Controls.Add(this.pictureBox);
             this.Name = "MenuButton";
             this.Padding = new System.Windows.Forms.Padding(7);
             this.Size = new System.Drawing.Size(204, 49);
+            this.Click += new System.EventHandler(this.MenuButton_Click);
             this.Enter += new System.EventHandler(this.MenuButton_MouseHover);
             this.MouseHover += new System.EventHandler(this.MenuButton_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

@@ -29,168 +29,132 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnLogin));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.login = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
-            this.customLabel1 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.customLabel2 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
+            this.customLabel1 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.customLabel3 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
-            this.customLabel4 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.usernameBox = new LCC_ENROLLMENT_SYSTEM.CustomControls.ElegantTextBox();
+            this.customButton1 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
+            this.passwordBox = new LCC_ENROLLMENT_SYSTEM.CustomControls.ElegantPasswordBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.profile_user;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBoxUsername);
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.customLabel2);
+            this.panel1.Controls.Add(this.customLabel1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Location = new System.Drawing.Point(53, 152);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(7);
-            this.panel1.Size = new System.Drawing.Size(321, 51);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(426, 98);
+            this.panel1.TabIndex = 2;
             // 
-            // textBoxUsername
+            // customLabel2
             // 
-            this.textBoxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxUsername.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxUsername.Location = new System.Drawing.Point(56, 14);
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.PlaceholderText = "Enter Your Username";
-            this.textBoxUsername.Size = new System.Drawing.Size(251, 19);
-            this.textBoxUsername.TabIndex = 0;
-            this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBoxPassword);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(53, 251);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(7);
-            this.panel2.Size = new System.Drawing.Size(321, 51);
-            this.panel2.TabIndex = 2;
-            // 
-            // textBoxPassword
-            // 
-            this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPassword.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPassword.Location = new System.Drawing.Point(54, 14);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.PlaceholderText = "Enter Your Password";
-            this.textBoxPassword.Size = new System.Drawing.Size(251, 19);
-            this.textBoxPassword.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.padlock__3_;
-            this.pictureBox2.Location = new System.Drawing.Point(7, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // login
-            // 
-            this.login.BackColor = System.Drawing.Color.DodgerBlue;
-            this.login.BackgroundColor = System.Drawing.Color.DodgerBlue;
-            this.login.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.login.BorderRadius = 0;
-            this.login.BorderSize = 0;
-            this.login.FlatAppearance.BorderSize = 0;
-            this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.login.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.login.FontSize = 12F;
-            this.login.FontStyle = System.Drawing.FontStyle.Regular;
-            this.login.ForeColor = System.Drawing.Color.White;
-            this.login.Location = new System.Drawing.Point(53, 332);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(321, 47);
-            this.login.TabIndex = 4;
-            this.login.Text = "LOG IN";
-            this.login.TextColor = System.Drawing.Color.White;
-            this.login.UseVisualStyleBackColor = false;
-            this.login.Click += new System.EventHandler(this.button1_Click);
+            this.customLabel2.AutoSize = true;
+            this.customLabel2.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel2.FontSize = 10F;
+            this.customLabel2.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customLabel2.Location = new System.Drawing.Point(96, 51);
+            this.customLabel2.Name = "customLabel2";
+            this.customLabel2.Size = new System.Drawing.Size(156, 21);
+            this.customLabel2.TabIndex = 4;
+            this.customLabel2.Text = "ENROLLMENT SYSTEM";
             // 
             // customLabel1
             // 
             this.customLabel1.AutoSize = true;
-            this.customLabel1.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel1.FontSize = 12F;
-            this.customLabel1.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel1.Location = new System.Drawing.Point(54, 120);
+            this.customLabel1.Font = new System.Drawing.Font("Heebo", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.customLabel1.FontSize = 11F;
+            this.customLabel1.FontStyle = System.Drawing.FontStyle.Bold;
+            this.customLabel1.Location = new System.Drawing.Point(95, 24);
             this.customLabel1.Name = "customLabel1";
-            this.customLabel1.Size = new System.Drawing.Size(85, 24);
-            this.customLabel1.TabIndex = 6;
-            this.customLabel1.Text = "Username:";
+            this.customLabel1.Size = new System.Drawing.Size(294, 22);
+            this.customLabel1.TabIndex = 3;
+            this.customLabel1.Text = "LEGACY COLLEGE OF COMPOSTELLA";
             // 
-            // customLabel2
+            // pictureBox1
             // 
-            this.customLabel2.Font = new System.Drawing.Font("Heebo", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel2.FontSize = 11F;
-            this.customLabel2.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel2.Location = new System.Drawing.Point(12, 77);
-            this.customLabel2.Name = "customLabel2";
-            this.customLabel2.Size = new System.Drawing.Size(402, 23);
-            this.customLabel2.TabIndex = 7;
-            this.customLabel2.Text = "ENROLLMENT SYSTEM";
-            this.customLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.LCC_64;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // customLabel3
             // 
-            this.customLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.customLabel3.Font = new System.Drawing.Font("Heebo", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.customLabel3.FontSize = 14F;
-            this.customLabel3.FontStyle = System.Drawing.FontStyle.Bold;
-            this.customLabel3.Location = new System.Drawing.Point(12, 38);
+            this.customLabel3.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel3.FontSize = 12F;
+            this.customLabel3.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customLabel3.ForeColor = System.Drawing.Color.Gray;
+            this.customLabel3.Location = new System.Drawing.Point(0, 114);
             this.customLabel3.Name = "customLabel3";
-            this.customLabel3.Size = new System.Drawing.Size(402, 23);
-            this.customLabel3.TabIndex = 8;
-            this.customLabel3.Text = "LEGACY COLLEGE OF COMPOSTELLA";
+            this.customLabel3.Size = new System.Drawing.Size(426, 23);
+            this.customLabel3.TabIndex = 3;
+            this.customLabel3.Text = "Admin | Login";
             this.customLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // customLabel4
+            // usernameBox
             // 
-            this.customLabel4.AutoSize = true;
-            this.customLabel4.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel4.FontSize = 12F;
-            this.customLabel4.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel4.Location = new System.Drawing.Point(55, 221);
-            this.customLabel4.Name = "customLabel4";
-            this.customLabel4.Size = new System.Drawing.Size(84, 24);
-            this.customLabel4.TabIndex = 9;
-            this.customLabel4.Text = "Password:";
+            this.usernameBox.BackColor = System.Drawing.Color.Transparent;
+            this.usernameBox.BorderColor = System.Drawing.Color.DimGray;
+            this.usernameBox.BorderRadius = 3;
+            this.usernameBox.BorderSize = 1;
+            this.usernameBox.FloatingLabel = true;
+            this.usernameBox.Hint = "Username";
+            this.usernameBox.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.user__6_2;
+            this.usernameBox.Location = new System.Drawing.Point(36, 149);
+            this.usernameBox.Name = "usernameBox";
+            this.usernameBox.Size = new System.Drawing.Size(351, 64);
+            this.usernameBox.TabIndex = 0;
+            this.usernameBox.TextBoxInputType = LCC_ENROLLMENT_SYSTEM.CustomControls.ElegantTextBox.InputType.Text;
+            this.usernameBox.TextContent = "";
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.Green;
+            this.customButton1.BackgroundColor = System.Drawing.Color.Green;
+            this.customButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customButton1.BorderRadius = 3;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customButton1.FontSize = 10F;
+            this.customButton1.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.Location = new System.Drawing.Point(36, 328);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(351, 40);
+            this.customButton1.TabIndex = 2;
+            this.customButton1.Text = "LOG IN";
+            this.customButton1.TextColor = System.Drawing.Color.White;
+            this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // passwordBox
+            // 
+            this.passwordBox.BackColor = System.Drawing.Color.Transparent;
+            this.passwordBox.BorderColor = System.Drawing.Color.DimGray;
+            this.passwordBox.BorderRadius = 3;
+            this.passwordBox.BorderSize = 1;
+            this.passwordBox.FloatingLabel = true;
+            this.passwordBox.Hint = "Password";
+            this.passwordBox.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.lock1;
+            this.passwordBox.Location = new System.Drawing.Point(36, 231);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.ShowPassword = false;
+            this.passwordBox.Size = new System.Drawing.Size(351, 64);
+            this.passwordBox.TabIndex = 1;
+            this.passwordBox.TextBoxInputType = LCC_ENROLLMENT_SYSTEM.CustomControls.ElegantTextBox.InputType.Password;
+            this.passwordBox.TextContent = "";
             // 
             // btnLogin
             // 
@@ -198,13 +162,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(426, 413);
-            this.Controls.Add(this.customLabel4);
+            this.Controls.Add(this.passwordBox);
+            this.Controls.Add(this.customButton1);
+            this.Controls.Add(this.usernameBox);
             this.Controls.Add(this.customLabel3);
-            this.Controls.Add(this.customLabel2);
-            this.Controls.Add(this.customLabel1);
-            this.Controls.Add(this.login);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "btnLogin";
@@ -212,28 +175,22 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOG IN";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private PictureBox pictureBox1;
+
         private Panel panel1;
-        private TextBox textBoxUsername;
-        private Panel panel2;
-        private TextBox textBoxPassword;
-        private PictureBox pictureBox2;
-        private CustomControls.CustomButton login;
-        private CustomControls.CustomLabel customLabel1;
         private CustomControls.CustomLabel customLabel2;
+        private CustomControls.CustomLabel customLabel1;
+        private PictureBox pictureBox1;
         private CustomControls.CustomLabel customLabel3;
-        private CustomControls.CustomLabel customLabel4;
+        private CustomControls.ElegantTextBox usernameBox;
+        private CustomControls.CustomButton customButton1;
+        private CustomControls.ElegantPasswordBox passwordBox;
     }
 }
