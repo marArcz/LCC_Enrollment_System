@@ -28,6 +28,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         public SubjectsTabComponent()
         {
             InitializeComponent();
+            LoadRows();
         }
 
         public void LoadRows(bool movePagination = false)
@@ -109,7 +110,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
         private void SubjectsTabComponent_Load(object sender, EventArgs e)
         {
-            LoadRows();
+            
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

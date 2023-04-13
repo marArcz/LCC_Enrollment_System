@@ -241,5 +241,10 @@ namespace LCC_ENROLLMENT_SYSTEM
                 EnrollmentMenuLayout.Height = h;
             }
         }
+
+        private void subjectsTabComponent1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

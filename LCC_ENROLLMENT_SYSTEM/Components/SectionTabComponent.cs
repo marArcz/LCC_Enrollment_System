@@ -27,6 +27,8 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         public SectionTabComponent()
         {
             InitializeComponent();
+            rows = new();
+            LoadRows();
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -172,7 +174,8 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
         private void SectionTabComponent_Load(object sender, EventArgs e)
         {
-            LoadRows();
+            
+            
         }
     }
 }

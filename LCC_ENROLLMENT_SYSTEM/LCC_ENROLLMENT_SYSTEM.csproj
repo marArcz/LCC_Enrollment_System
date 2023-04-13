@@ -33,12 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="CustomControlLibrary">
-      <HintPath>..\..\CustomControlLibrary\CustomControlLibrary\bin\Debug\net6.0-windows\CustomControlLibrary.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

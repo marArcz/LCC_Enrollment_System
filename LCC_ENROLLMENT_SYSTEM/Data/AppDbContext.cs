@@ -18,7 +18,8 @@ namespace LCC_ENROLLMENT_SYSTEM.Data
         public DbSet<Section> Sections { get; set; }
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<SubjectsEnrolled> SubjectsEnrolled { get; set; }
-
+        public DbSet<Track> Tracks { get; set; }
+        public DbSet<Strand> Strands { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySql(ConfigurationManager.ConnectionStrings["mysql_connection"].ConnectionString,new MySqlServerVersion("10.4.25"));

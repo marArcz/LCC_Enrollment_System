@@ -65,6 +65,10 @@
             this.customLabel3.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel3.Size = new System.Drawing.Size(48, 21);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.book_24;
+            // 
             // btnDelete
             // 
             this.btnDelete.FlatAppearance.BorderSize = 0;
@@ -102,6 +106,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
