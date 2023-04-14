@@ -28,7 +28,6 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         public SubjectsTabComponent()
         {
             InitializeComponent();
-            LoadRows();
         }
 
         public void LoadRows(bool movePagination = false)
@@ -69,8 +68,8 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
                 int nextId = rows.Last().id;
                 int prevId = rows.First().id;
-                int prevRowsCount = db.Subjects.Where(s => s.id < lastId && (s.Name.Contains(textBoxSearch.Text) || s.Description.Contains(textBoxSearch.Text))).Count();
-                int nextRowsCount = db.Subjects.Where(s => s.id > lastId && (s.Name.Contains(textBoxSearch.Text) || s.Description.Contains(textBoxSearch.Text))).Count();
+                int prevRowsCount = db.Subjects.Where(s => s.id < prevId && (s.Name.Contains(textBoxSearch.Text) || s.Description.Contains(textBoxSearch.Text))).Count();
+                int nextRowsCount = db.Subjects.Where(s => s.id > nextId && (s.Name.Contains(textBoxSearch.Text) || s.Description.Contains(textBoxSearch.Text))).Count();
 
                 btnNext.Enabled = nextRowsCount > 0;
                 btnPrev.Enabled = prevRowsCount > 0;

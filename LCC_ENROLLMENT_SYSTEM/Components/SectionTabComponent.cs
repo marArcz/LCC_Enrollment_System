@@ -27,8 +27,6 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         public SectionTabComponent()
         {
             InitializeComponent();
-            rows = new();
-            LoadRows();
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -77,8 +75,8 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
                 int nextId = rows.Last().Id;
                 int prevId = rows.First().Id;
-                int prevRowsCount = db.Sections.Where(s => s.Id > lastId && s.Name.Contains(textBoxSearch.Text)).Count();
-                int nextRowsCount = db.Sections.Where(s => s.Id > lastId && s.Name.Contains(textBoxSearch.Text)).Count();
+                int prevRowsCount = db.Sections.Where(s => s.Id > prevId && s.Name.Contains(textBoxSearch.Text)).Count();
+                int nextRowsCount = db.Sections.Where(s => s.Id > nextId && s.Name.Contains(textBoxSearch.Text)).Count();
 
                 btnNext.Enabled = nextRowsCount > 0;
                 btnPrev.Enabled = prevRowsCount > 0;

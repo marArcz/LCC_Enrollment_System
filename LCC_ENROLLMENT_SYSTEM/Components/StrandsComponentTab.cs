@@ -27,7 +27,8 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         public StrandsComponentTab()
         {
             InitializeComponent();
-            LoadRows();
+            ///LoadRows();
+
         }
 
         public void LoadRows(bool movePagination = false)
@@ -70,8 +71,8 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
                 int nextId = rows.Last().Id;
                 int prevId = rows.First().Id;
-                int prevRowsCount = db.Strands.Where(s => s.Id < lastId && s.Name.Contains(textBoxSearch.Text)).Count();
-                int nextRowsCount = db.Strands.Where(s => s.Id > lastId && s.Name.Contains(textBoxSearch.Text)).Count();
+                int prevRowsCount = db.Strands.Where(s => s.Id < prevId && s.Name.Contains(textBoxSearch.Text)).Count();
+                int nextRowsCount = db.Strands.Where(s => s.Id > nextId && s.Name.Contains(textBoxSearch.Text)).Count();
 
                 btnNext.Enabled = nextRowsCount > 0;
                 btnPrev.Enabled = prevRowsCount > 0;
@@ -116,6 +117,27 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         {
             dir = FetchDirection.backward;
             LoadRows(true);
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddStrandForm addStrandForm = new();
+            addStrandForm.ShowDialog();
+            LoadRows();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            int id = (int) dataGridView.SelectedRows[0].Cells["id"].Value;
+            UpdateStrandForm updateStrandForm = new(id);
+            updateStrandForm.ShowDialog();
+            LoadRows();
+        }
+
+        private void dataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            btnUpdate.Enabled = dataGridView.SelectedRows.Count == 1;
+            btnDelete.Enabled = dataGridView.SelectedRows.Count > 0;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace LCC_ENROLLMENT_SYSTEM.Components
 {
-    partial class StrandsComponentTab
+    partial class ElementaryEnrollmentTabComponent
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,9 @@
         {
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Track = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Strand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Student = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Section = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -42,40 +43,33 @@
             // 
             // btnPrev
             // 
-            this.btnPrev.Enabled = false;
             this.btnPrev.FlatAppearance.BorderSize = 0;
             this.btnPrev.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
+            this.btnPrev.Location = new System.Drawing.Point(746, 3);
             // 
             // btnNext
             // 
-            this.btnNext.Enabled = false;
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            this.btnNext.Location = new System.Drawing.Point(823, 3);
             // 
             // customLabel4
             // 
             this.customLabel4.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel4.Size = new System.Drawing.Size(45, 21);
             // 
-            // comboBoxRows
+            // panel5
             // 
-            this.comboBoxRows.Location = new System.Drawing.Point(60, 7);
+            this.panel5.Size = new System.Drawing.Size(917, 42);
             // 
             // customLabel3
             // 
             this.customLabel3.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel3.Size = new System.Drawing.Size(48, 21);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.graduation__1_;
-            // 
             // textBoxSearch
             // 
-            this.textBoxSearch.PlaceholderText = "Search for strands";
-            this.textBoxSearch.Size = new System.Drawing.Size(209, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(263, 22);
             // 
             // btnDelete
             // 
@@ -86,7 +80,6 @@
             // 
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -98,25 +91,25 @@
             // 
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(733, 13);
+            this.btnSearch.Location = new System.Drawing.Point(654, 13);
             // 
             // panel4
             // 
-            this.panel4.Size = new System.Drawing.Size(381, 45);
+            this.panel4.Size = new System.Drawing.Size(361, 45);
             // 
             // panel3
             // 
-            this.panel3.Size = new System.Drawing.Size(871, 74);
+            this.panel3.Size = new System.Drawing.Size(851, 74);
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(938, 74);
+            this.panel1.Size = new System.Drawing.Size(918, 74);
             // 
             // btnRefresh
             // 
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.Location = new System.Drawing.Point(671, 2);
             // 
             // dataGridView
             // 
@@ -130,43 +123,47 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
-            this.Track,
-            this.Strand});
+            this.Student,
+            this.Section,
+            this.Level});
             this.dataGridView.Location = new System.Drawing.Point(0, 115);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.ReadOnly = true;
             this.dataGridView.RowTemplate.Height = 25;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(938, 469);
+            this.dataGridView.Size = new System.Drawing.Size(918, 391);
             this.dataGridView.TabIndex = 14;
-            this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
             // id
             // 
             this.id.HeaderText = "id";
             this.id.Name = "id";
-            this.id.ReadOnly = true;
             this.id.Visible = false;
             // 
-            // Track
+            // Student
             // 
-            this.Track.HeaderText = "Track";
-            this.Track.Name = "Track";
-            this.Track.ReadOnly = true;
+            this.Student.HeaderText = "Student";
+            this.Student.Name = "Student";
+            this.Student.ReadOnly = true;
             // 
-            // Strand
+            // Section
             // 
-            this.Strand.HeaderText = "Strand";
-            this.Strand.Name = "Strand";
-            this.Strand.ReadOnly = true;
+            this.Section.HeaderText = "Section";
+            this.Section.Name = "Section";
+            this.Section.ReadOnly = true;
             // 
-            // StrandsComponentTab
+            // Level
+            // 
+            this.Level.HeaderText = "Level";
+            this.Level.Name = "Level";
+            this.Level.ReadOnly = true;
+            // 
+            // ElementaryEnrollmentTabComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView);
-            this.Name = "StrandsComponentTab";
-            this.Size = new System.Drawing.Size(938, 584);
+            this.Name = "ElementaryEnrollmentTabComponent";
+            this.Size = new System.Drawing.Size(918, 506);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
             this.Controls.SetChildIndex(this.dataGridView, 0);
@@ -186,7 +183,8 @@
 
         private DataGridView dataGridView;
         private DataGridViewTextBoxColumn id;
-        private DataGridViewTextBoxColumn Track;
-        private DataGridViewTextBoxColumn Strand;
+        private DataGridViewTextBoxColumn Student;
+        private DataGridViewTextBoxColumn Section;
+        private DataGridViewTextBoxColumn Level;
     }
 }
