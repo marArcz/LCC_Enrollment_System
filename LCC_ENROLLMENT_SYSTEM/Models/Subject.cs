@@ -12,5 +12,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Models
         public string Name { get; set; } = String.Empty;
         public string Description { get; set; } = String.Empty;
         public int Level { get; set; }
+
+        public List<SubjectGroup> subjectGroups { get; set; }
     }
 }

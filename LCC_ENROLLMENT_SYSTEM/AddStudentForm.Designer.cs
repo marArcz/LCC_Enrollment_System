@@ -38,7 +38,6 @@
             this.checkBoxPicture = new System.Windows.Forms.CheckBox();
             this.checkBoxReportCard = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBoxLastSchoolYear = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBoxGuardianPhone = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -75,6 +74,7 @@
             this.btnCancel = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.btnReset = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.btnSave = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
+            this.textBoxSchoolYear = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -194,11 +194,11 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.comboBoxLastSchoolYear);
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBoxSex);
             this.panel1.Controls.Add(this.dateTimePicker);
             this.panel1.Controls.Add(this.textBoxHeight);
+            this.panel1.Controls.Add(this.textBoxSchoolYear);
             this.panel1.Controls.Add(this.textBoxWeight);
             this.panel1.Controls.Add(this.textBoxMiddlename);
             this.panel1.Controls.Add(this.textBoxAge);
@@ -222,17 +222,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(744, 470);
             this.panel1.TabIndex = 1;
-            // 
-            // comboBoxLastSchoolYear
-            // 
-            this.comboBoxLastSchoolYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxLastSchoolYear.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxLastSchoolYear.IntegralHeight = false;
-            this.comboBoxLastSchoolYear.ItemHeight = 18;
-            this.comboBoxLastSchoolYear.Location = new System.Drawing.Point(459, 399);
-            this.comboBoxLastSchoolYear.Name = "comboBoxLastSchoolYear";
-            this.comboBoxLastSchoolYear.Size = new System.Drawing.Size(257, 26);
-            this.comboBoxLastSchoolYear.TabIndex = 12;
             // 
             // groupBox4
             // 
@@ -580,6 +569,7 @@
             this.topbar1.Size = new System.Drawing.Size(973, 109);
             this.topbar1.TabIndex = 4;
             this.topbar1.TabStop = false;
+            this.topbar1.TextSize = 22;
             // 
             // panel2
             // 
@@ -605,7 +595,7 @@
             this.btnCancel.BorderSize = 0;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCancel.FontSize = 10F;
             this.btnCancel.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
@@ -628,7 +618,7 @@
             this.btnReset.BorderSize = 0;
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnReset.FontSize = 10F;
             this.btnReset.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnReset.ForeColor = System.Drawing.Color.White;
@@ -650,7 +640,7 @@
             this.btnSave.BorderSize = 0;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSave.FontSize = 10F;
             this.btnSave.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnSave.ForeColor = System.Drawing.Color.White;
@@ -661,6 +651,16 @@
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // textBoxSchoolYear
+            // 
+            this.textBoxSchoolYear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSchoolYear.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSchoolYear.Location = new System.Drawing.Point(460, 399);
+            this.textBoxSchoolYear.Name = "textBoxSchoolYear";
+            this.textBoxSchoolYear.Size = new System.Drawing.Size(256, 25);
+            this.textBoxSchoolYear.TabIndex = 7;
             // 
             // AddStudentForm
             // 
@@ -731,7 +731,6 @@
         private Label label9;
         private Label label15;
         private Label label14;
-        private ComboBox comboBoxLastSchoolYear;
         private CheckBox checkBoxCertification;
         private CheckBox checkBoxNSO;
         private CheckBox checkBoxPicture;
@@ -741,5 +740,6 @@
         private CustomControls.CustomButton btnReset;
         private CustomControls.CustomButton btnSave;
         private CheckBox checkBoxGoodMoral;
+        private TextBox textBoxSchoolYear;
     }
 }

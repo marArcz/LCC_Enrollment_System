@@ -34,13 +34,15 @@
             this.textBoxSubject = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomTextBox();
             this.customLabel3 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.textBoxDescription = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomTextBox();
-            this.customLabel4 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
-            this.comboBoxLevel = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnReset = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.btnSave = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.btnClose = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
+            this.borderedPanel1 = new LCC_ENROLLMENT_SYSTEM.CustomControls.BorderedPanel();
+            this.checkedListLevels = new System.Windows.Forms.CheckedListBox();
+            this.customLabel4 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.panel1.SuspendLayout();
+            this.borderedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // topbar1
@@ -49,8 +51,9 @@
             this.topbar1.Dock = System.Windows.Forms.DockStyle.Top;
             this.topbar1.Location = new System.Drawing.Point(0, 0);
             this.topbar1.Name = "topbar1";
-            this.topbar1.Size = new System.Drawing.Size(844, 131);
+            this.topbar1.Size = new System.Drawing.Size(737, 131);
             this.topbar1.TabIndex = 0;
+            this.topbar1.TextSize = 22;
             // 
             // customLabel1
             // 
@@ -58,7 +61,7 @@
             this.customLabel1.Font = new System.Drawing.Font("Heebo", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel1.FontSize = 14F;
             this.customLabel1.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel1.Location = new System.Drawing.Point(380, 160);
+            this.customLabel1.Location = new System.Drawing.Point(305, 142);
             this.customLabel1.Name = "customLabel1";
             this.customLabel1.Size = new System.Drawing.Size(140, 28);
             this.customLabel1.TabIndex = 1;
@@ -70,7 +73,7 @@
             this.customLabel2.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel2.FontSize = 12F;
             this.customLabel2.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel2.Location = new System.Drawing.Point(177, 227);
+            this.customLabel2.Location = new System.Drawing.Point(102, 188);
             this.customLabel2.Name = "customLabel2";
             this.customLabel2.Size = new System.Drawing.Size(67, 24);
             this.customLabel2.TabIndex = 2;
@@ -83,14 +86,18 @@
             this.textBoxSubject.BorderFocusColor = System.Drawing.Color.HotPink;
             this.textBoxSubject.BorderRadius = 0;
             this.textBoxSubject.BorderSize = 1;
-            this.textBoxSubject.Location = new System.Drawing.Point(254, 223);
+            this.textBoxSubject.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSubject.FontSize = 10F;
+            this.textBoxSubject.FontStyle = System.Drawing.FontStyle.Regular;
+            this.textBoxSubject.Location = new System.Drawing.Point(179, 184);
+            this.textBoxSubject.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxSubject.Multiline = false;
             this.textBoxSubject.Name = "textBoxSubject";
             this.textBoxSubject.Padding = new System.Windows.Forms.Padding(7);
             this.textBoxSubject.PasswordChar = false;
             this.textBoxSubject.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxSubject.PlaceholderText = "";
-            this.textBoxSubject.Size = new System.Drawing.Size(460, 30);
+            this.textBoxSubject.Size = new System.Drawing.Size(460, 36);
             this.textBoxSubject.TabIndex = 3;
             this.textBoxSubject.Texts = "";
             this.textBoxSubject.UnderlinedStyle = false;
@@ -101,7 +108,7 @@
             this.customLabel3.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel3.FontSize = 12F;
             this.customLabel3.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel3.Location = new System.Drawing.Point(150, 283);
+            this.customLabel3.Location = new System.Drawing.Point(75, 244);
             this.customLabel3.Name = "customLabel3";
             this.customLabel3.Size = new System.Drawing.Size(94, 24);
             this.customLabel3.TabIndex = 2;
@@ -114,7 +121,11 @@
             this.textBoxDescription.BorderFocusColor = System.Drawing.Color.HotPink;
             this.textBoxDescription.BorderRadius = 0;
             this.textBoxDescription.BorderSize = 1;
-            this.textBoxDescription.Location = new System.Drawing.Point(254, 280);
+            this.textBoxDescription.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxDescription.FontSize = 10F;
+            this.textBoxDescription.FontStyle = System.Drawing.FontStyle.Regular;
+            this.textBoxDescription.Location = new System.Drawing.Point(179, 241);
+            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Padding = new System.Windows.Forms.Padding(7);
@@ -126,29 +137,6 @@
             this.textBoxDescription.Texts = "";
             this.textBoxDescription.UnderlinedStyle = false;
             // 
-            // customLabel4
-            // 
-            this.customLabel4.AutoSize = true;
-            this.customLabel4.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel4.FontSize = 12F;
-            this.customLabel4.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel4.Location = new System.Drawing.Point(193, 413);
-            this.customLabel4.Name = "customLabel4";
-            this.customLabel4.Size = new System.Drawing.Size(51, 24);
-            this.customLabel4.TabIndex = 2;
-            this.customLabel4.Text = "Level:";
-            // 
-            // comboBoxLevel
-            // 
-            this.comboBoxLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxLevel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBoxLevel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxLevel.FormattingEnabled = true;
-            this.comboBoxLevel.Location = new System.Drawing.Point(254, 412);
-            this.comboBoxLevel.Name = "comboBoxLevel";
-            this.comboBoxLevel.Size = new System.Drawing.Size(460, 25);
-            this.comboBoxLevel.TabIndex = 4;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -156,13 +144,14 @@
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 513);
+            this.panel1.Location = new System.Drawing.Point(0, 494);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(844, 72);
+            this.panel1.Size = new System.Drawing.Size(737, 72);
             this.panel1.TabIndex = 5;
             // 
             // btnReset
             // 
+            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReset.BackColor = System.Drawing.Color.Transparent;
             this.btnReset.BackgroundColor = System.Drawing.Color.Transparent;
             this.btnReset.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -175,7 +164,7 @@
             this.btnReset.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnReset.ForeColor = System.Drawing.Color.Black;
             this.btnReset.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.undo_arrow;
-            this.btnReset.Location = new System.Drawing.Point(680, 10);
+            this.btnReset.Location = new System.Drawing.Point(573, 10);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(73, 50);
             this.btnReset.TabIndex = 0;
@@ -184,6 +173,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.BackColor = System.Drawing.Color.Transparent;
             this.btnSave.BackgroundColor = System.Drawing.Color.Transparent;
             this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -196,7 +186,7 @@
             this.btnSave.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.diskette__1_;
-            this.btnSave.Location = new System.Drawing.Point(759, 10);
+            this.btnSave.Location = new System.Drawing.Point(652, 10);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(73, 50);
             this.btnSave.TabIndex = 0;
@@ -225,16 +215,53 @@
             this.btnClose.TextColor = System.Drawing.Color.Black;
             this.btnClose.UseVisualStyleBackColor = false;
             // 
+            // borderedPanel1
+            // 
+            this.borderedPanel1.BackColor = System.Drawing.Color.White;
+            this.borderedPanel1.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.borderedPanel1.BorderRadius = 0;
+            this.borderedPanel1.BorderSize = 1;
+            this.borderedPanel1.Controls.Add(this.checkedListLevels);
+            this.borderedPanel1.ForeColor = System.Drawing.Color.Black;
+            this.borderedPanel1.Location = new System.Drawing.Point(179, 366);
+            this.borderedPanel1.Name = "borderedPanel1";
+            this.borderedPanel1.Padding = new System.Windows.Forms.Padding(10);
+            this.borderedPanel1.Size = new System.Drawing.Size(460, 96);
+            this.borderedPanel1.TabIndex = 8;
+            // 
+            // checkedListLevels
+            // 
+            this.checkedListLevels.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListLevels.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListLevels.FormattingEnabled = true;
+            this.checkedListLevels.Location = new System.Drawing.Point(10, 10);
+            this.checkedListLevels.MultiColumn = true;
+            this.checkedListLevels.Name = "checkedListLevels";
+            this.checkedListLevels.Size = new System.Drawing.Size(440, 76);
+            this.checkedListLevels.TabIndex = 0;
+            // 
+            // customLabel4
+            // 
+            this.customLabel4.AutoSize = true;
+            this.customLabel4.Font = new System.Drawing.Font("Heebo", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel4.FontSize = 11F;
+            this.customLabel4.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customLabel4.Location = new System.Drawing.Point(69, 366);
+            this.customLabel4.Name = "customLabel4";
+            this.customLabel4.Size = new System.Drawing.Size(100, 22);
+            this.customLabel4.TabIndex = 7;
+            this.customLabel4.Text = "Grade Levels:";
+            // 
             // UpdateSubjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 585);
+            this.ClientSize = new System.Drawing.Size(737, 566);
+            this.Controls.Add(this.borderedPanel1);
+            this.Controls.Add(this.customLabel4);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBoxLevel);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.customLabel3);
-            this.Controls.Add(this.customLabel4);
             this.Controls.Add(this.textBoxSubject);
             this.Controls.Add(this.customLabel2);
             this.Controls.Add(this.customLabel1);
@@ -243,6 +270,7 @@
             this.Text = "UpdateSubjectForm";
             this.Load += new System.EventHandler(this.UpdateSubjectForm_Load);
             this.panel1.ResumeLayout(false);
+            this.borderedPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,11 +284,12 @@
         private CustomControls.CustomTextBox textBoxSubject;
         private CustomControls.CustomLabel customLabel3;
         private CustomControls.CustomTextBox textBoxDescription;
-        private CustomControls.CustomLabel customLabel4;
-        private ComboBox comboBoxLevel;
         private Panel panel1;
         private CustomControls.CustomButton btnClose;
         private CustomControls.CustomButton btnReset;
         private CustomControls.CustomButton btnSave;
+        private CustomControls.BorderedPanel borderedPanel1;
+        private CheckedListBox checkedListLevels;
+        private CustomControls.CustomLabel customLabel4;
     }
 }

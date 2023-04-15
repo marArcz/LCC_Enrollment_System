@@ -1,5 +1,6 @@
 ﻿using LCC_ENROLLMENT_SYSTEM.Data;
 using LCC_ENROLLMENT_SYSTEM.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,7 +44,8 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
                     lastId = rows.Last().id;
                 }
                 rows = db.Subjects
-                .Where(s => s.id > lastId && (s.Name.Contains(textBoxSearch.Text) || s.Description.Contains(textBoxSearch.Text)))
+                    .Include(s => s.subjectGroups)
+                    .Where(s => s.id > lastId && (s.Name.Contains(textBoxSearch.Text) || s.Description.Contains(textBoxSearch.Text)))
                     .Take(numOfRowsToDisplay)
                     .ToList();
 
@@ -55,6 +57,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
                     lastId = rows.First().id;
                 }
                 rows = db.Subjects
+                    .Include(s => s.subjectGroups)
                 .Where(s => s.id < lastId && (s.Name.Contains(textBoxSearch.Text) || s.Description.Contains(textBoxSearch.Text)))
                     .OrderByDescending(s => s.id)
                     .Take(numOfRowsToDisplay)
@@ -68,8 +71,8 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
                 int nextId = rows.Last().id;
                 int prevId = rows.First().id;
-                int prevRowsCount = db.Subjects.Where(s => s.id < prevId && (s.Name.Contains(textBoxSearch.Text) || s.Description.Contains(textBoxSearch.Text))).Count();
-                int nextRowsCount = db.Subjects.Where(s => s.id > nextId && (s.Name.Contains(textBoxSearch.Text) || s.Description.Contains(textBoxSearch.Text))).Count();
+                int prevRowsCount = db.Subjects.Include(s => s.subjectGroups).Where(s => s.id < prevId && (s.Name.Contains(textBoxSearch.Text) || s.Description.Contains(textBoxSearch.Text))).Count();
+                int nextRowsCount = db.Subjects.Include(s => s.subjectGroups).Where(s => s.id > nextId && (s.Name.Contains(textBoxSearch.Text) || s.Description.Contains(textBoxSearch.Text))).Count();
 
                 btnNext.Enabled = nextRowsCount > 0;
                 btnPrev.Enabled = prevRowsCount > 0;
@@ -87,14 +90,22 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         {
             dataGridView.Rows.Clear();
             rows = rows.OrderBy(s => s.Level).ToList();
+
             foreach (var row in rows)
             {
+                var levels = "";
+                foreach (var item in row.subjectGroups)
+                {
+                    levels += item.Level + ",";
+                }
+                levels = levels.Substring(0,levels.Length - 1);
+
                 dataGridView.Rows
                     .Add(
                         row.id,
                         row.Name,
                         row.Description,
-                        row.Level
+                        levels
                     );
 
             }
@@ -109,7 +120,6 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
         private void SubjectsTabComponent_Load(object sender, EventArgs e)
         {
-            
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

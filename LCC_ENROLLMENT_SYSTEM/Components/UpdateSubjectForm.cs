@@ -1,5 +1,6 @@
 ﻿using LCC_ENROLLMENT_SYSTEM.Data;
 using LCC_ENROLLMENT_SYSTEM.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
     public partial class UpdateSubjectForm : Form
     {
         public Subject subject;
-        private List<GradeLevel> GraveLevels;
+        private List<GradeLevel> GradeLevels;
         public UpdateSubjectForm()
         {
             InitializeComponent();
@@ -29,17 +30,16 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             textBoxSubject.Texts = subject.Name;
             textBoxDescription.Texts = subject.Description;
             LoadGradeLevels();
-            comboBoxLevel.SelectedIndex = comboBoxLevel.Items.IndexOf("Grade "+subject.Level);
         }
 
         private void LoadGradeLevels()
         {
             AppDbContext db = new();
-            GraveLevels = db.GradeLevels.ToList();
-            comboBoxLevel.Items.Clear();
-            foreach ( var item in GraveLevels )
+            GradeLevels = db.GradeLevels.ToList();
+            checkedListLevels.Items.Clear();
+            foreach ( var item in GradeLevels )
             {
-                comboBoxLevel.Items.Add("Grade " + item.Level);
+                checkedListLevels.Items.Add($"Grade {item.Level}");
             }
         }
 
@@ -55,16 +55,40 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (checkedListLevels.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("You need to select at least one grade level!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             AppDbContext db = new();
-      
 
-            var curSubject = db.Subjects.Find(subject.id);
+
+            var curSubject = db.Subjects.Include(s => s.subjectGroups).Where(s => s.id == subject.id).First();
             curSubject.Name = textBoxSubject.Texts;
             curSubject.Description = textBoxDescription.Texts;
-            curSubject.Level = GraveLevels.ElementAt(comboBoxLevel.SelectedIndex).Level;
 
-            if (db.SaveChanges() > 0)
+            if (db.SaveChanges() >= 0)
             {
+                SubjectGroup subjectGroup;
+                //delete previous subject groups
+                foreach (SubjectGroup sg in curSubject.subjectGroups)
+                {
+                    db.SubjectGroups.Remove(sg);
+                }
+                db.SaveChanges();
+
+                foreach (int index in checkedListLevels.CheckedIndices)
+                {
+                    subjectGroup = new()
+                    {
+                        SubjectId = curSubject.id,
+                        Level = GradeLevels.ElementAt(index).Level
+                    };
+                    db.SubjectGroups.Add(subjectGroup);
+
+                }
+
+                db.SaveChanges();
                 SuccessDialog.ShowMesage("Successfully updated subject!");
                 this.Close();
             }

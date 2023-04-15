@@ -75,7 +75,7 @@
             // textBoxSearch
             // 
             this.textBoxSearch.PlaceholderText = "Search for strands";
-            this.textBoxSearch.Size = new System.Drawing.Size(209, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(190, 22);
             // 
             // btnDelete
             // 
@@ -98,7 +98,7 @@
             // 
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(733, 13);
+            this.btnSearch.Location = new System.Drawing.Point(752, 13);
             // 
             // panel4
             // 

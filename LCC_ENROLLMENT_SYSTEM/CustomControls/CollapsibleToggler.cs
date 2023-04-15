@@ -36,7 +36,7 @@ namespace LCC_ENROLLMENT_SYSTEM.CustomControls
         {
             InitializeComponent();
             DefaultIcon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.right_chevron;
-            ToggledIcon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.down_chevron__1_;
+            ToggledIcon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.chevron_d;
 
             label.Image = toggled ? ToggledIcon : DefaultIcon;
         }

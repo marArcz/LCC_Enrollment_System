@@ -21,9 +21,37 @@ namespace LCC_ENROLLMENT_SYSTEM.Data
         public DbSet<Track> Tracks { get; set; }
         public DbSet<Strand> Strands { get; set; }
         public DbSet<SchoolLevel> SchoolLevels { get; set; }
+        public DbSet<SubjectGroup> SubjectGroups { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySql(ConfigurationManager.ConnectionStrings["mysql_connection"].ConnectionString,new MySqlServerVersion("10.4.25"));
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<GradeLevel>().HasData(GetGradeLevels());
+            modelBuilder.Entity<Track>().HasData(GetTracks());
+        }
+
+        private List<GradeLevel> GetGradeLevels()
+        {
+            int[] levels = {7,8,9,10,11,12};
+            return Enumerable.Range(0, levels.Length)
+                .Select(i => new GradeLevel()
+                {
+                    Id = i+1,
+                    Level = levels[i],
+                    Description = ""
+                }).ToList();
+        }
+        private List<Track> GetTracks()
+        {
+            return new List<Track>()
+            {
+                new Track { Id=1, Name="Academic" },
+                new Track { Id=2,Name="Technical Vocational Livelihood" },
+                new Track { Id=3,Name="GAS" }
+            };
         }
 
     }

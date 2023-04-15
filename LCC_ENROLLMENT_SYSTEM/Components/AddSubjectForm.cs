@@ -29,37 +29,49 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             AppDbContext db = new();
 
             GradeLevels = db.GradeLevels.ToList();
-            comboBoxLevel.Items.Clear();
+
             foreach (var item in GradeLevels)
             {
-                comboBoxLevel.Items.Add("Grade " + item.Level);
-            }
-
-            if(comboBoxLevel.Items.Count > 0)
-            {
-                comboBoxLevel.SelectedIndex = 0;
+                checkedListLevels.Items.Add($"Grade {item.Level}");
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if(checkedListLevels.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("You need to select at least one grade level!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             AppDbContext db = new();
             string subject = textBoxSubject.Texts;
             string description = textBoxDescription.Texts;
-            Subject newSubject = new()
-            {
-                Level = GradeLevels.ElementAt(comboBoxLevel.SelectedIndex).Level,
-                Name = subject,
-                Description = description
-            };
+            Subject newSubject = new() { Name = subject, Description = description };
+            //add subject
             db.Subjects.Add(newSubject);
-            var added = db.SaveChanges() > 0;
+            db.SaveChanges();
 
-            if(added)
+            //add subject groups
+            foreach (int index in checkedListLevels.CheckedIndices)
             {
-                successDialog.ShowSuccess("Successfully added new subject!");
+                SubjectGroup subjectGroup = new()
+                {
+                    Level = GradeLevels.ElementAt(index).Level,
+                    SubjectId = newSubject.id
+                };
+                db.SubjectGroups.Add(subjectGroup);
+            }
+            if(db.SaveChanges() >= 0)
+            {
+                SuccessDialog.ShowMesage("Successfully added subject!");
+
                 this.Close();
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

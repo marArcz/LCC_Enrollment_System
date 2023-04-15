@@ -125,7 +125,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             string newStudentId = Convert.ToString(generateNewStudentId());
             AddStudentForm addStudentForm = new(newStudentId);
             addStudentForm.ShowDialog(this);
-
+            LoadStudents();
         }
         private string NewStudentId(string year)
         {

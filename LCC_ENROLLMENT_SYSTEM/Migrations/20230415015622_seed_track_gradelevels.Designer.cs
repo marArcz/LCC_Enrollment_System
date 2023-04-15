@@ -3,6 +3,7 @@ using System;
 using LCC_ENROLLMENT_SYSTEM.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LCC_ENROLLMENT_SYSTEM.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class StudentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230415015622_seed_track_gradelevels")]
+    partial class seed_track_gradelevels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,7 +46,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Admins", (string)null);
+                    b.ToTable("Admins");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Enrollment", b =>
@@ -61,13 +64,16 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
                     b.Property<int>("sectionId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("strandId")
+                    b.Property<int>("section_id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("strandId")
                         .HasColumnType("int");
 
                     b.Property<int>("studentId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("trackId")
+                    b.Property<int>("trackId")
                         .HasColumnType("int");
 
                     b.HasKey("id");
@@ -84,7 +90,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("trackId");
 
-                    b.ToTable("Enrollments", (string)null);
+                    b.ToTable("Enrollments");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.GradeLevel", b =>
@@ -102,7 +108,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("GradeLevels", (string)null);
+                    b.ToTable("GradeLevels");
 
                     b.HasData(
                         new
@@ -155,7 +161,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SchoolLevels", (string)null);
+                    b.ToTable("SchoolLevels");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Section", b =>
@@ -175,7 +181,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("GradeLevelId");
 
-                    b.ToTable("Sections", (string)null);
+                    b.ToTable("Sections");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Strand", b =>
@@ -195,7 +201,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("TrackId");
 
-                    b.ToTable("Strands", (string)null);
+                    b.ToTable("Strands");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Student", b =>
@@ -293,7 +299,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Students", (string)null);
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Subject", b =>
@@ -315,26 +321,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Subjects", (string)null);
-                });
-
-            modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.SubjectGroup", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("Level")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SubjectId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SubjectId");
-
-                    b.ToTable("SubjectGroups", (string)null);
+                    b.ToTable("Subjects");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.SubjectsEnrolled", b =>
@@ -355,7 +342,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("subjectId");
 
-                    b.ToTable("SubjectsEnrolled", (string)null);
+                    b.ToTable("SubjectsEnrolled");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Track", b =>
@@ -370,7 +357,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tracks", (string)null);
+                    b.ToTable("Tracks");
 
                     b.HasData(
                         new
@@ -412,7 +399,9 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasOne("LCC_ENROLLMENT_SYSTEM.Models.Strand", "StrandModel")
                         .WithMany()
-                        .HasForeignKey("strandId");
+                        .HasForeignKey("strandId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("LCC_ENROLLMENT_SYSTEM.Models.Student", "student")
                         .WithMany()
@@ -422,7 +411,9 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasOne("LCC_ENROLLMENT_SYSTEM.Models.Track", "TrackModel")
                         .WithMany()
-                        .HasForeignKey("trackId");
+                        .HasForeignKey("trackId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("StrandModel");
 
@@ -457,17 +448,6 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
                         .IsRequired();
 
                     b.Navigation("TrackModel");
-                });
-
-            modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.SubjectGroup", b =>
-                {
-                    b.HasOne("LCC_ENROLLMENT_SYSTEM.Models.Subject", "SubjectModel")
-                        .WithMany()
-                        .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("SubjectModel");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.SubjectsEnrolled", b =>

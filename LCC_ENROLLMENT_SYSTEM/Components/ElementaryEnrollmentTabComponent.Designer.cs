@@ -33,6 +33,7 @@
             this.Student = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Section = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customLabel1 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -55,31 +56,55 @@
             // 
             // customLabel4
             // 
+            this.customLabel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.customLabel4.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel4.Location = new System.Drawing.Point(514, 10);
             this.customLabel4.Size = new System.Drawing.Size(45, 21);
+            // 
+            // comboBoxRows
+            // 
+            this.comboBoxRows.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBoxRows.Items.AddRange(new object[] {
+            "10",
+            "25",
+            "50",
+            "100"});
+            this.comboBoxRows.Location = new System.Drawing.Point(406, 6);
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.customLabel1);
             this.panel5.Size = new System.Drawing.Size(917, 42);
+            this.panel5.Controls.SetChildIndex(this.comboBoxRows, 0);
+            this.panel5.Controls.SetChildIndex(this.customLabel3, 0);
+            this.panel5.Controls.SetChildIndex(this.customLabel4, 0);
+            this.panel5.Controls.SetChildIndex(this.btnNext, 0);
+            this.panel5.Controls.SetChildIndex(this.btnPrev, 0);
+            this.panel5.Controls.SetChildIndex(this.btnRefresh, 0);
+            this.panel5.Controls.SetChildIndex(this.customLabel1, 0);
             // 
             // customLabel3
             // 
+            this.customLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.customLabel3.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel3.Location = new System.Drawing.Point(350, 11);
             this.customLabel3.Size = new System.Drawing.Size(48, 21);
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Size = new System.Drawing.Size(263, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(220, 22);
             // 
             // btnDelete
             // 
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -91,7 +116,7 @@
             // 
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(654, 13);
+            this.btnSearch.Location = new System.Drawing.Point(615, 13);
             // 
             // panel4
             // 
@@ -110,6 +135,7 @@
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRefresh.Location = new System.Drawing.Point(671, 2);
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dataGridView
             // 
@@ -132,6 +158,7 @@
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(918, 391);
             this.dataGridView.TabIndex = 14;
+            this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
             // id
             // 
@@ -156,6 +183,19 @@
             this.Level.HeaderText = "Level";
             this.Level.Name = "Level";
             this.Level.ReadOnly = true;
+            // 
+            // customLabel1
+            // 
+            this.customLabel1.AutoSize = true;
+            this.customLabel1.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.customLabel1.FontSize = 12F;
+            this.customLabel1.FontStyle = System.Drawing.FontStyle.Bold;
+            this.customLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customLabel1.Location = new System.Drawing.Point(3, 10);
+            this.customLabel1.Name = "customLabel1";
+            this.customLabel1.Size = new System.Drawing.Size(190, 24);
+            this.customLabel1.TabIndex = 13;
+            this.customLabel1.Text = "Elementary Enrollment";
             // 
             // ElementaryEnrollmentTabComponent
             // 
@@ -186,5 +226,6 @@
         private DataGridViewTextBoxColumn Student;
         private DataGridViewTextBoxColumn Section;
         private DataGridViewTextBoxColumn Level;
+        private CustomControls.CustomLabel customLabel1;
     }
 }

@@ -35,9 +35,9 @@
             this.customLabel3 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.customLabel2 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +49,7 @@
             this.topbar1.Name = "topbar1";
             this.topbar1.Size = new System.Drawing.Size(687, 100);
             this.topbar1.TabIndex = 0;
+            this.topbar1.TextSize = 22;
             // 
             // customLabel1
             // 
@@ -131,17 +132,17 @@
             this.panel1.Size = new System.Drawing.Size(687, 72);
             this.panel1.TabIndex = 9;
             // 
-            // btnClose
+            // btnReset
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.close;
-            this.btnClose.Location = new System.Drawing.Point(3, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 66);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnReset.BackColor = System.Drawing.Color.Transparent;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.undo_arrow;
+            this.btnReset.Location = new System.Drawing.Point(521, 5);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 66);
+            this.btnReset.TabIndex = 0;
+            this.btnReset.UseVisualStyleBackColor = false;
             // 
             // btnSave
             // 
@@ -156,17 +157,17 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnReset
+            // btnClose
             // 
-            this.btnReset.BackColor = System.Drawing.Color.Transparent;
-            this.btnReset.FlatAppearance.BorderSize = 0;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.undo_arrow;
-            this.btnReset.Location = new System.Drawing.Point(521, 5);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 66);
-            this.btnReset.TabIndex = 0;
-            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.close;
+            this.btnClose.Location = new System.Drawing.Point(3, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 66);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // UpdateStrandForm
             // 

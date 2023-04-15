@@ -62,7 +62,7 @@ namespace LCC_ENROLLMENT_SYSTEM
             string guardianPhone = textBoxGuardianPhone.Text;
             string guardianAddress = textBoxGuardianAddress.Text;
             string lastSchoolAttended = textBoxLastSchool.Text;
-            string lastSchoolYear = comboBoxLastSchoolYear.Text;
+            string lastSchoolYear = textBoxSchoolYear.Text;
 
             int has_report_card = checkBoxReportCard.Checked ? 1: 0;
             int has_picture = checkBoxPicture.Checked ? 1 : 0;

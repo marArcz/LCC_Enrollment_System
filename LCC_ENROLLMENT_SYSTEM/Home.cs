@@ -34,6 +34,13 @@ namespace LCC_ENROLLMENT_SYSTEM
                     ((MenuButton)control).OnClickHandler += tabLink_Click;
                 }
             }
+            foreach (var control in EnrollmentMenuLayout.Controls)
+            {
+                if (control.GetType() == typeof(MenuButton))
+                {
+                    ((MenuButton)control).OnClickHandler += tabLink_Click;
+                }
+            }
             /*studentsTabComponent.LoadStudents();*/
 
             enrollmentMenuToggler.OnToggle = enrollmentMenuToggler_Click;
@@ -48,12 +55,25 @@ namespace LCC_ENROLLMENT_SYSTEM
 
             clearActiveTabLink();
             btn.Active = true;
+
+            subjectsTabComponent2.LoadRows();
+            studentsTabComponent1.LoadStudents();
+            strandsComponentTab1.LoadRows();
+            sectionTabComponent2.LoadRows();
+
         }
 
         private void clearActiveTabLink()
         {
             var controls = sidemenuPanel.Controls;
             foreach (var control in controls)
+            {
+                if(control.GetType() == typeof(MenuButton))
+                {
+                    ((MenuButton)control).Active = false;
+                }
+            }  
+            foreach (var control in EnrollmentMenuLayout.Controls)
             {
                 if(control.GetType() == typeof(MenuButton))
                 {
@@ -231,6 +251,10 @@ namespace LCC_ENROLLMENT_SYSTEM
         private void enrollmentMenuToggler_Click(object sender, EventArgs e)
         {
             enrollmentMenuToggler.Toggled = !enrollmentMenuToggler.Toggled;
+            UpdateEnrollmentMenu();
+        }
+        private void UpdateEnrollmentMenu()
+        {
             int h = EnrollmentMenuLayout.Controls[0].Height + 5;
             if (enrollmentMenuToggler.Toggled)
             {

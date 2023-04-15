@@ -12,9 +12,19 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 {
     public partial class Topbar : UserControl
     {
+        private int textSize = 22;
         public Topbar()
         {
             InitializeComponent();
+            label.FontSize = textSize;
+        }
+        public int TextSize { get => textSize;
+            set
+            {
+                textSize = value;
+                label.FontSize = textSize;
+                this.Refresh();
+            }
         }
     }
 }

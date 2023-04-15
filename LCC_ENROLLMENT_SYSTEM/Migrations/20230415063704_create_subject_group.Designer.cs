@@ -3,6 +3,7 @@ using System;
 using LCC_ENROLLMENT_SYSTEM.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LCC_ENROLLMENT_SYSTEM.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class StudentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230415063704_create_subject_group")]
+    partial class create_subject_group
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,7 +46,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Admins", (string)null);
+                    b.ToTable("Admins");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Enrollment", b =>
@@ -84,7 +87,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("trackId");
 
-                    b.ToTable("Enrollments", (string)null);
+                    b.ToTable("Enrollments");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.GradeLevel", b =>
@@ -102,7 +105,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("GradeLevels", (string)null);
+                    b.ToTable("GradeLevels");
 
                     b.HasData(
                         new
@@ -155,7 +158,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SchoolLevels", (string)null);
+                    b.ToTable("SchoolLevels");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Section", b =>
@@ -175,7 +178,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("GradeLevelId");
 
-                    b.ToTable("Sections", (string)null);
+                    b.ToTable("Sections");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Strand", b =>
@@ -195,7 +198,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("TrackId");
 
-                    b.ToTable("Strands", (string)null);
+                    b.ToTable("Strands");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Student", b =>
@@ -293,7 +296,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Students", (string)null);
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Subject", b =>
@@ -315,7 +318,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Subjects", (string)null);
+                    b.ToTable("Subjects");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.SubjectGroup", b =>
@@ -334,7 +337,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("SubjectId");
 
-                    b.ToTable("SubjectGroups", (string)null);
+                    b.ToTable("SubjectGroups");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.SubjectsEnrolled", b =>
@@ -355,7 +358,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("subjectId");
 
-                    b.ToTable("SubjectsEnrolled", (string)null);
+                    b.ToTable("SubjectsEnrolled");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Track", b =>
@@ -370,7 +373,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tracks", (string)null);
+                    b.ToTable("Tracks");
 
                     b.HasData(
                         new

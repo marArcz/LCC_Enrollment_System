@@ -75,7 +75,7 @@
             // textBoxSearch
             // 
             this.textBoxSearch.PlaceholderText = "Search for section name";
-            this.textBoxSearch.Size = new System.Drawing.Size(196, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(173, 22);
             // 
             // btnDelete
             // 
