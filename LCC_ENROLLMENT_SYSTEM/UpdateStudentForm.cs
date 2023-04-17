@@ -56,7 +56,7 @@ namespace LCC_ENROLLMENT_SYSTEM
                 textBoxGuardianPhone.Text = student.guardian_phone;
                 textBoxGuardianAddress.Text = student.guardian_address;
                 textBoxLastSchool.Text = student.last_school_attended;
-                comboBoxLastSchoolYear.Text = student.last_school_year;
+                textBoxSchoolYear.Text = student.last_school_year;
 
                 checkBoxReportCard.Checked = student.has_report_card == 1;
                 checkBoxPicture.Checked = student.has_id_picture == 1;
@@ -87,7 +87,7 @@ namespace LCC_ENROLLMENT_SYSTEM
             string guardianPhone = textBoxGuardianPhone.Text;
             string guardianAddress = textBoxGuardianAddress.Text;
             string lastSchoolAttended = textBoxLastSchool.Text;
-            string lastSchoolYear = comboBoxLastSchoolYear.Text;
+            string lastSchoolYear = textBoxSchoolYear.Text;
 
             int has_report_card = checkBoxReportCard.Checked ? 1 : 0;
             int has_picture = checkBoxPicture.Checked ? 1 : 0;
@@ -151,6 +151,11 @@ namespace LCC_ENROLLMENT_SYSTEM
             DateTime birthDate = dateTimePicker.Value;
             int age = DateTime.Now.Year - birthDate.Year;
             textBoxAge.Text = age.ToString();
+        }
+
+        private void textBoxSchoolYear_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

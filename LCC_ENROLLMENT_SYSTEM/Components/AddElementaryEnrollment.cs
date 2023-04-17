@@ -19,6 +19,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         List<Section> sections;
         List<Student> students;
         List<SubjectGroup> subjectGroups;
+        List<SchoolYear> schoolYears;
 
         int studentId = 0;
         public AddElementaryEnrollment()
@@ -28,13 +29,14 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             LoadSections();
             LoadSubjects();
             LoadStudents();
+            LoadSchoolYears();
         }
         
         private void LoadStudents()
         {
             AppDbContext db = new();
             students = db.Students
-                .Where(s => s.is_deleted == 0 && (s.firstname.Contains(textBoxSearch.Text) || s.lastname.Contains(textBoxSearch.Text)))
+                .Where(s => s.is_deleted == 0 && (s.firstname.Contains(textBoxSearch.Text) || s.lastname.Contains(textBoxSearch.Text) || s.student_id.Contains(textBoxSearch.Text)))
                 .ToList();
             dataGridViewStudents.Rows.Clear();
             
@@ -54,10 +56,24 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             }
         }
 
+        private void LoadSchoolYears()
+        {
+            AppDbContext db = new();
+            schoolYears = db.SchoolYears.ToList();
+            foreach (SchoolYear item in schoolYears)
+            {
+                comboBoxSchoolYears.Items.Add(item.ToString());
+            }
+            if (comboBoxSchoolYears.Items.Count > 0) comboBoxSchoolYears.SelectedIndex = 0;
+            
+        }
+
         private void LoadSections()
         {
             AppDbContext db = new();
-            sections = db.Sections.ToList();
+            int gradeLevelId = gradeLevels.ElementAt(comboBoxLevel.SelectedIndex).Id;
+
+            sections = db.Sections.Where(s => s.GradeLevelId == gradeLevelId).ToList();
             comboBoxSection.Items.Clear();
             foreach (var item in sections)
             {
@@ -69,7 +85,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         private void LoadGradeLevels()
         {
             AppDbContext db = new();
-            gradeLevels = db.GradeLevels.ToList();
+            gradeLevels = db.GradeLevels.Where(g => g.Level >= 1 && g.Level <= 6).ToList();
             comboBoxLevel.Items.Clear();
             foreach (var item in gradeLevels)
             {
@@ -93,6 +109,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         private void comboBoxLevel_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadSubjects();
+            LoadSections();
         }
 
         private void dataGridViewStudents_SelectionChanged(object sender, EventArgs e)
@@ -119,17 +136,38 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            Clear();
         }
 
-        private void clear()
+        private void Clear()
         {
             checkedListSubjects.ClearSelected();
             if(comboBoxLevel.Items.Count > 0) comboBoxLevel.SelectedIndex = 0;
             if(comboBoxSection.Items.Count > 0) comboBoxSection.SelectedIndex = 0;
         }
-
+        private void ShowMessage(String message)
+        {
+            MessageBox.Show(message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (studentId == 0)
+            {
+                ShowMessage("Please select a student");
+            }
+            else if(comboBoxLevel.SelectedItem == null)
+            {
+                ShowMessage("Please select a level");
+            }
+            else if(comboBoxSchoolYears.SelectedItem == null)
+            {
+                ShowMessage("Please select a school year");
+            }
+            else if(comboBoxSection.SelectedItem == null)
+            {
+                ShowMessage("Please select a section");
+            }
+            
             AppDbContext db = new();
             var elementary = db.SchoolLevels.Where(s => s.Description.ToLower().Equals("elementary")).First();
             // add new enrollment
@@ -138,7 +176,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             enrollment.gradeLevelId = gradeLevels.ElementAt(comboBoxLevel.SelectedIndex).Id;
             enrollment.studentId = this.studentId;
             enrollment.schoolLevelId = elementary.Id;
-
+            enrollment.schoolYearId = schoolYears.ElementAt(comboBoxSchoolYears.SelectedIndex).Id;
             db.Enrollments.Add(enrollment);
 
             db.SaveChanges();
@@ -153,15 +191,33 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
                 db.SubjectsEnrolled.Add(subjectsEnrolled);
             }
 
+
             if (db.SaveChanges() >= 0)
             {
-                SuccessDialog.ShowMesage("Successfully enrolled!");
-
+                SuccessDialog.ShowMesage("Successfully added!");
+                this.Clear();
+                this.Close();
             }
 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAddSection_Click(object sender, EventArgs e)
+        {
+            int gradeLevelId = gradeLevels.ElementAt(comboBoxLevel.SelectedIndex).Id;
+            AddSectionForm addSectionForm = new(gradeLevelId);
+            var result = addSectionForm.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                LoadSections();
+            }
+        }
+
+        private void toggleButton1_Click(object sender, EventArgs e)
         {
 
         }

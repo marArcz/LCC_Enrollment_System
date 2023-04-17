@@ -15,6 +15,9 @@ namespace LCC_ENROLLMENT_SYSTEM.Models
         public int? strandId { get; set; }
         public int gradeLevelId { get; set; }
         public int schoolLevelId { get; set; }
+        public int? specializedCourseId { get; set; }
+        public int schoolYearId { get; set; }
+        public SpecializedCourse? specializedCourse { get; set; }
         public SchoolLevel schoolLevel { get; set; }
         public GradeLevel gradeLevel { get; set; }
         public Strand? StrandModel { get; set; }
@@ -23,6 +26,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Models
         public Section section { get; set; }
 
         public List<SubjectsEnrolled> subjectsEnrolled;
+        public SchoolYear schoolYear { get; set; }
 
     }
 }

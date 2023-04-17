@@ -141,22 +141,13 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            try
+            if(dataGridView.SelectedRows.Count > 0)
             {
                 int id = (int)dataGridView.SelectedRows[0].Cells["id"].Value;
 
-                AppDbContext db = new();
-                var subject = db.Subjects.Find(id);
-
-                if (subject != null)
-                {
-                    UpdateSubjectForm updateSubjectForm = new(subject);
-                    updateSubjectForm.ShowDialog();
-                    LoadRows();
-                }
-            }
-            catch (Exception)
-            {
+                UpdateSubjectForm updateSubjectForm = new(id);
+                updateSubjectForm.ShowDialog();
+                LoadRows();
             }
         }
 

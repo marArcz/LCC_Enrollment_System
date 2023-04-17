@@ -44,8 +44,11 @@
             this.checkedListSubjects = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAddSection = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.comboBoxSection = new System.Windows.Forms.ComboBox();
             this.customLabel6 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
+            this.comboBoxSchoolYears = new System.Windows.Forms.ComboBox();
+            this.customLabel8 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.comboBoxLevel = new System.Windows.Forms.ComboBox();
             this.customLabel5 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -125,30 +128,30 @@
             // customLabel2
             // 
             this.customLabel2.AutoSize = true;
-            this.customLabel2.Font = new System.Drawing.Font("Heebo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel2.FontSize = 9F;
             this.customLabel2.FontStyle = System.Drawing.FontStyle.Regular;
             this.customLabel2.Location = new System.Drawing.Point(11, 52);
             this.customLabel2.Name = "customLabel2";
-            this.customLabel2.Size = new System.Drawing.Size(110, 18);
+            this.customLabel2.Size = new System.Drawing.Size(109, 15);
             this.customLabel2.TabIndex = 1;
             this.customLabel2.Text = "Search for student:";
             // 
             // customLabel1
             // 
             this.customLabel1.AutoSize = true;
-            this.customLabel1.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.customLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.customLabel1.FontSize = 12F;
             this.customLabel1.FontStyle = System.Drawing.FontStyle.Bold;
             this.customLabel1.Location = new System.Drawing.Point(11, 12);
             this.customLabel1.Name = "customLabel1";
-            this.customLabel1.Size = new System.Drawing.Size(138, 24);
+            this.customLabel1.Size = new System.Drawing.Size(137, 20);
             this.customLabel1.TabIndex = 0;
             this.customLabel1.Text = "List of Students";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnClear);
             this.panel2.Controls.Add(this.btnCancel);
@@ -205,9 +208,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.checkedListSubjects);
-            this.groupBox3.Location = new System.Drawing.Point(8, 277);
+            this.groupBox3.Location = new System.Drawing.Point(8, 338);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(655, 289);
+            this.groupBox3.Size = new System.Drawing.Size(655, 228);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Subjects";
@@ -223,7 +226,7 @@
             this.checkedListSubjects.Location = new System.Drawing.Point(16, 27);
             this.checkedListSubjects.MultiColumn = true;
             this.checkedListSubjects.Name = "checkedListSubjects";
-            this.checkedListSubjects.Size = new System.Drawing.Size(622, 220);
+            this.checkedListSubjects.Size = new System.Drawing.Size(622, 120);
             this.checkedListSubjects.TabIndex = 0;
             // 
             // groupBox1
@@ -235,32 +238,62 @@
             this.groupBox1.Controls.Add(this.customLabel4);
             this.groupBox1.Location = new System.Drawing.Point(8, 82);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(657, 182);
+            this.groupBox1.Size = new System.Drawing.Size(657, 250);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Details";
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnAddSection);
             this.groupBox2.Controls.Add(this.comboBoxSection);
             this.groupBox2.Controls.Add(this.customLabel6);
+            this.groupBox2.Controls.Add(this.comboBoxSchoolYears);
+            this.groupBox2.Controls.Add(this.customLabel8);
             this.groupBox2.Controls.Add(this.comboBoxLevel);
             this.groupBox2.Controls.Add(this.customLabel5);
-            this.groupBox2.Location = new System.Drawing.Point(16, 69);
+            this.groupBox2.Location = new System.Drawing.Point(16, 70);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(631, 100);
+            this.groupBox2.Size = new System.Drawing.Size(631, 165);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Grade or Year Level";
             // 
+            // btnAddSection
+            // 
+            this.btnAddSection.BackColor = System.Drawing.Color.White;
+            this.btnAddSection.BackgroundColor = System.Drawing.Color.White;
+            this.btnAddSection.BorderColor = System.Drawing.Color.Green;
+            this.btnAddSection.BorderRadius = 3;
+            this.btnAddSection.BorderSize = 1;
+            this.btnAddSection.FlatAppearance.BorderSize = 0;
+            this.btnAddSection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSection.Font = new System.Drawing.Font("Heebo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddSection.FontSize = 9F;
+            this.btnAddSection.FontStyle = System.Drawing.FontStyle.Regular;
+            this.btnAddSection.ForeColor = System.Drawing.Color.Green;
+            this.btnAddSection.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAddSection.Location = new System.Drawing.Point(560, 39);
+            this.btnAddSection.Name = "btnAddSection";
+            this.btnAddSection.Size = new System.Drawing.Size(43, 26);
+            this.btnAddSection.TabIndex = 2;
+            this.btnAddSection.Text = "New";
+            this.btnAddSection.TextColor = System.Drawing.Color.Green;
+            this.btnAddSection.UseVisualStyleBackColor = false;
+            this.btnAddSection.Click += new System.EventHandler(this.btnAddSection_Click);
+            // 
             // comboBoxSection
             // 
+            this.comboBoxSection.BackColor = System.Drawing.Color.White;
             this.comboBoxSection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSection.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxSection.FormattingEnabled = true;
-            this.comboBoxSection.Location = new System.Drawing.Point(385, 40);
+            this.comboBoxSection.Location = new System.Drawing.Point(352, 40);
             this.comboBoxSection.Name = "comboBoxSection";
-            this.comboBoxSection.Size = new System.Drawing.Size(227, 25);
+            this.comboBoxSection.Size = new System.Drawing.Size(202, 25);
             this.comboBoxSection.TabIndex = 1;
             // 
             // customLabel6
@@ -269,11 +302,34 @@
             this.customLabel6.Font = new System.Drawing.Font("Heebo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel6.FontSize = 9F;
             this.customLabel6.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel6.Location = new System.Drawing.Point(331, 42);
+            this.customLabel6.Location = new System.Drawing.Point(298, 42);
             this.customLabel6.Name = "customLabel6";
             this.customLabel6.Size = new System.Drawing.Size(48, 18);
             this.customLabel6.TabIndex = 0;
             this.customLabel6.Text = "Section";
+            // 
+            // comboBoxSchoolYears
+            // 
+            this.comboBoxSchoolYears.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSchoolYears.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxSchoolYears.FormattingEnabled = true;
+            this.comboBoxSchoolYears.Location = new System.Drawing.Point(97, 85);
+            this.comboBoxSchoolYears.Name = "comboBoxSchoolYears";
+            this.comboBoxSchoolYears.Size = new System.Drawing.Size(175, 25);
+            this.comboBoxSchoolYears.TabIndex = 1;
+            this.comboBoxSchoolYears.SelectedIndexChanged += new System.EventHandler(this.comboBoxLevel_SelectedIndexChanged);
+            // 
+            // customLabel8
+            // 
+            this.customLabel8.AutoSize = true;
+            this.customLabel8.Font = new System.Drawing.Font("Heebo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel8.FontSize = 9F;
+            this.customLabel8.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customLabel8.Location = new System.Drawing.Point(16, 88);
+            this.customLabel8.Name = "customLabel8";
+            this.customLabel8.Size = new System.Drawing.Size(75, 18);
+            this.customLabel8.TabIndex = 0;
+            this.customLabel8.Text = "School Year:";
             // 
             // comboBoxLevel
             // 
@@ -282,7 +338,7 @@
             this.comboBoxLevel.FormattingEnabled = true;
             this.comboBoxLevel.Location = new System.Drawing.Point(58, 39);
             this.comboBoxLevel.Name = "comboBoxLevel";
-            this.comboBoxLevel.Size = new System.Drawing.Size(242, 25);
+            this.comboBoxLevel.Size = new System.Drawing.Size(214, 25);
             this.comboBoxLevel.TabIndex = 1;
             this.comboBoxLevel.SelectedIndexChanged += new System.EventHandler(this.comboBoxLevel_SelectedIndexChanged);
             // 
@@ -312,36 +368,36 @@
             // customLabel4
             // 
             this.customLabel4.AutoSize = true;
-            this.customLabel4.Font = new System.Drawing.Font("Heebo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel4.FontSize = 9F;
             this.customLabel4.FontStyle = System.Drawing.FontStyle.Regular;
             this.customLabel4.Location = new System.Drawing.Point(16, 31);
             this.customLabel4.Name = "customLabel4";
-            this.customLabel4.Size = new System.Drawing.Size(44, 18);
+            this.customLabel4.Size = new System.Drawing.Size(44, 15);
             this.customLabel4.TabIndex = 0;
             this.customLabel4.Text = "Name:";
             // 
             // customLabel7
             // 
             this.customLabel7.AutoSize = true;
-            this.customLabel7.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.customLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.customLabel7.FontSize = 12F;
             this.customLabel7.FontStyle = System.Drawing.FontStyle.Bold;
             this.customLabel7.Location = new System.Drawing.Point(8, 14);
             this.customLabel7.Name = "customLabel7";
-            this.customLabel7.Size = new System.Drawing.Size(99, 24);
+            this.customLabel7.Size = new System.Drawing.Size(99, 20);
             this.customLabel7.TabIndex = 0;
             this.customLabel7.Text = "Elementary";
             // 
             // customLabel3
             // 
             this.customLabel3.AutoSize = true;
-            this.customLabel3.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel3.FontSize = 10F;
             this.customLabel3.FontStyle = System.Drawing.FontStyle.Regular;
             this.customLabel3.Location = new System.Drawing.Point(9, 45);
             this.customLabel3.Name = "customLabel3";
-            this.customLabel3.Size = new System.Drawing.Size(126, 21);
+            this.customLabel3.Size = new System.Drawing.Size(134, 17);
             this.customLabel3.TabIndex = 0;
             this.customLabel3.Text = "ENROLL STUDENT";
             // 
@@ -371,29 +427,32 @@
 
         #endregion
 
-        private Panel panel1;
-        private CustomControls.CustomLabel customLabel2;
-        private CustomControls.CustomLabel customLabel1;
-        private DataGridView dataGridViewStudents;
-        private DataGridViewTextBoxColumn id;
-        private DataGridViewTextBoxColumn idNo;
-        private DataGridViewTextBoxColumn fullname;
-        private Panel panel2;
-        private GroupBox groupBox3;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private ComboBox comboBoxSection;
-        private CustomControls.CustomLabel customLabel6;
-        private ComboBox comboBoxLevel;
-        private CustomControls.CustomLabel customLabel5;
-        private TextBox textBoxName;
-        private CustomControls.CustomLabel customLabel4;
-        private CustomControls.CustomLabel customLabel3;
-        private CheckedListBox checkedListSubjects;
-        private Button btnSave;
-        private Button btnClear;
-        private Button btnCancel;
-        private CustomControls.CustomLabel customLabel7;
-        private TextBox textBoxSearch;
+        public Panel panel1;
+        public CustomControls.CustomLabel customLabel2;
+        public CustomControls.CustomLabel customLabel1;
+        public DataGridView dataGridViewStudents;
+        public DataGridViewTextBoxColumn id;
+        public DataGridViewTextBoxColumn idNo;
+        public DataGridViewTextBoxColumn fullname;
+        public Panel panel2;
+        public GroupBox groupBox3;
+        public GroupBox groupBox1;
+        public GroupBox groupBox2;
+        public ComboBox comboBoxSection;
+        public CustomControls.CustomLabel customLabel6;
+        public ComboBox comboBoxLevel;
+        public CustomControls.CustomLabel customLabel5;
+        public TextBox textBoxName;
+        public CustomControls.CustomLabel customLabel4;
+        public CustomControls.CustomLabel customLabel3;
+        public CheckedListBox checkedListSubjects;
+        public Button btnSave;
+        public Button btnClear;
+        public Button btnCancel;
+        public CustomControls.CustomLabel customLabel7;
+        public TextBox textBoxSearch;
+        public ComboBox comboBoxSchoolYears;
+        public CustomControls.CustomLabel customLabel8;
+        private CustomControls.CustomButton btnAddSection;
     }
 }

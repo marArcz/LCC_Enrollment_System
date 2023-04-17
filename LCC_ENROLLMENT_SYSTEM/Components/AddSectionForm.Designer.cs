@@ -218,6 +218,7 @@
             this.Name = "AddSectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddSectionForm";
+            this.Load += new System.EventHandler(this.AddSectionForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

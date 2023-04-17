@@ -15,11 +15,15 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
     public partial class AddSectionForm : Form
     {
         private List<GradeLevel> GradeLevels;
-        public AddSectionForm()
+        public AddSectionForm(int gradeLevelId = 0)
         {
             InitializeComponent();
             LoadGradeLevels();
 
+            if(gradeLevelId > 0 && comboBoxGradeLevel.Items.Count > 0)
+            {
+                comboBoxGradeLevel.SelectedIndex = GradeLevels.IndexOf(GradeLevels.Where(g => g.Id == gradeLevelId).First());
+            }
         }
 
         private void LoadGradeLevels()
@@ -44,6 +48,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             if(db.SaveChanges() > 0)
             {
                 SuccessDialog.ShowMesage("Successfully added new section!");
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
 
@@ -59,6 +64,11 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         {
             textBoxName.Texts = "";
             if (comboBoxGradeLevel.Items.Count > 0) comboBoxGradeLevel.SelectedIndex = 0;
+        }
+
+        private void AddSectionForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

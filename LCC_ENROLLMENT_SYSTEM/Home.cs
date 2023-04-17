@@ -53,7 +53,7 @@ namespace LCC_ENROLLMENT_SYSTEM
             string targetTab = btn.Tab1;
             tabControl.SelectedTab = tabControl.TabPages[targetTab];
 
-            clearActiveTabLink();
+            ClearActiveTabLink();
             btn.Active = true;
 
             subjectsTabComponent2.LoadRows();
@@ -63,7 +63,7 @@ namespace LCC_ENROLLMENT_SYSTEM
 
         }
 
-        private void clearActiveTabLink()
+        private void ClearActiveTabLink()
         {
             var controls = sidemenuPanel.Controls;
             foreach (var control in controls)

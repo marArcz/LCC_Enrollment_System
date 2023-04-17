@@ -42,6 +42,7 @@
             // 
             // btnPrev
             // 
+            this.btnPrev.Enabled = false;
             this.btnPrev.FlatAppearance.BorderSize = 0;
             this.btnPrev.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPrev.Location = new System.Drawing.Point(762, 3);
@@ -49,6 +50,7 @@
             // 
             // btnNext
             // 
+            this.btnNext.Enabled = false;
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnNext.Location = new System.Drawing.Point(839, 3);
@@ -75,7 +77,7 @@
             // textBoxSearch
             // 
             this.textBoxSearch.PlaceholderText = "Search for section name";
-            this.textBoxSearch.Size = new System.Drawing.Size(173, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(150, 22);
             // 
             // btnDelete
             // 
@@ -99,7 +101,7 @@
             // 
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(748, 13);
+            this.btnSearch.Location = new System.Drawing.Point(725, 13);
             // 
             // panel4
             // 

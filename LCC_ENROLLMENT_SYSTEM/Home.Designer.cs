@@ -53,17 +53,22 @@
             this.dashboardCard1 = new LCC_ENROLLMENT_SYSTEM.Components.DashboardCard();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.enrollmentTab = new System.Windows.Forms.TabPage();
+            this.enrollmentsTab1 = new LCC_ENROLLMENT_SYSTEM.Components.EnrollmentsTab();
             this.subjectsTab = new System.Windows.Forms.TabPage();
             this.subjectsTabComponent2 = new LCC_ENROLLMENT_SYSTEM.Components.SubjectsTabComponent();
             this.settingsTab = new System.Windows.Forms.TabPage();
             this.manageUserTab = new System.Windows.Forms.TabPage();
             this.reportsTab = new System.Windows.Forms.TabPage();
             this.elementaryEnrollmentTab = new System.Windows.Forms.TabPage();
-            this.elementaryEnrollmentTabComponent1 = new LCC_ENROLLMENT_SYSTEM.Components.ElementaryEnrollmentTabComponent();
+            this.elementaryTab1 = new LCC_ENROLLMENT_SYSTEM.Components.ElementaryTab();
             this.strandTab = new System.Windows.Forms.TabPage();
             this.strandsComponentTab1 = new LCC_ENROLLMENT_SYSTEM.Components.StrandsComponentTab();
             this.sectionTab = new System.Windows.Forms.TabPage();
             this.sectionTabComponent2 = new LCC_ENROLLMENT_SYSTEM.Components.SectionTabComponent();
+            this.juniorHighEnrollmentTab = new System.Windows.Forms.TabPage();
+            this.juniorHighEnrollmentTab1 = new LCC_ENROLLMENT_SYSTEM.Components.JuniorHighEnrollmentTab();
+            this.seniorHighTab = new System.Windows.Forms.TabPage();
+            this.seniorHighEnrollmentTab1 = new LCC_ENROLLMENT_SYSTEM.Components.SeniorHighEnrollmentTab();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sidebarPanel.SuspendLayout();
             this.sidemenuPanel.SuspendLayout();
@@ -72,14 +77,18 @@
             this.studentsTab.SuspendLayout();
             this.dashboardTab.SuspendLayout();
             this.tabControl.SuspendLayout();
+            this.enrollmentTab.SuspendLayout();
             this.subjectsTab.SuspendLayout();
             this.elementaryEnrollmentTab.SuspendLayout();
             this.strandTab.SuspendLayout();
             this.sectionTab.SuspendLayout();
+            this.juniorHighEnrollmentTab.SuspendLayout();
+            this.seniorHighTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.LCC_64;
             this.pictureBox1.Location = new System.Drawing.Point(10, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -106,6 +115,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sidemenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.sidemenuPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.sidemenuPanel.Controls.Add(this.menuButton1);
             this.sidemenuPanel.Controls.Add(this.menuButton2);
             this.sidemenuPanel.Controls.Add(this.menuButton3);
@@ -210,7 +220,7 @@
             this.EnrollmentMenuLayout.Controls.Add(this.menuButton6);
             this.EnrollmentMenuLayout.Location = new System.Drawing.Point(3, 223);
             this.EnrollmentMenuLayout.Name = "EnrollmentMenuLayout";
-            this.EnrollmentMenuLayout.Size = new System.Drawing.Size(207, 54);
+            this.EnrollmentMenuLayout.Size = new System.Drawing.Size(207, 231);
             this.EnrollmentMenuLayout.TabIndex = 3;
             // 
             // enrollmentMenuToggler
@@ -235,7 +245,7 @@
             this.enrollmentMenuToggler.Size = new System.Drawing.Size(201, 49);
             this.enrollmentMenuToggler.Tab1 = "Tab";
             this.enrollmentMenuToggler.TabIndex = 0;
-            this.enrollmentMenuToggler.Toggled = false;
+            this.enrollmentMenuToggler.Toggled = true;
             // 
             // menuButton4
             // 
@@ -263,7 +273,7 @@
             this.menuButton5.Active = false;
             this.menuButton5.ActiveBgColor = System.Drawing.Color.Gray;
             this.menuButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.menuButton5.BorderColor = System.Drawing.Color.Blue;
+            this.menuButton5.BorderColor = System.Drawing.Color.Green;
             this.menuButton5.BorderSize = 5;
             this.menuButton5.BtnText = "Junior Highschool";
             this.menuButton5.DefaultBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
@@ -276,7 +286,7 @@
             this.menuButton5.OnClickHandler = null;
             this.menuButton5.Padding = new System.Windows.Forms.Padding(7);
             this.menuButton5.Size = new System.Drawing.Size(201, 49);
-            this.menuButton5.Tab1 = "Tab";
+            this.menuButton5.Tab1 = "juniorHighEnrollmentTab";
             this.menuButton5.TabIndex = 2;
             // 
             // menuButton6
@@ -284,7 +294,7 @@
             this.menuButton6.Active = false;
             this.menuButton6.ActiveBgColor = System.Drawing.Color.Gray;
             this.menuButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.menuButton6.BorderColor = System.Drawing.Color.Blue;
+            this.menuButton6.BorderColor = System.Drawing.Color.Green;
             this.menuButton6.BorderSize = 5;
             this.menuButton6.BtnText = "Senior Highschool";
             this.menuButton6.DefaultBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
@@ -297,7 +307,7 @@
             this.menuButton6.OnClickHandler = null;
             this.menuButton6.Padding = new System.Windows.Forms.Padding(7);
             this.menuButton6.Size = new System.Drawing.Size(201, 49);
-            this.menuButton6.Tab1 = "Tab";
+            this.menuButton6.Tab1 = "seniorHighTab";
             this.menuButton6.TabIndex = 3;
             // 
             // menuButton8
@@ -313,7 +323,7 @@
             this.menuButton8.FontStyle = System.Drawing.FontStyle.Regular;
             this.menuButton8.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.graduation__1_1;
             this.menuButton8.IndicatorPos = LCC_ENROLLMENT_SYSTEM.CustomControls.MenuButton.borderPosition.start;
-            this.menuButton8.Location = new System.Drawing.Point(3, 283);
+            this.menuButton8.Location = new System.Drawing.Point(3, 460);
             this.menuButton8.Name = "menuButton8";
             this.menuButton8.OnClickHandler = null;
             this.menuButton8.Padding = new System.Windows.Forms.Padding(7);
@@ -324,6 +334,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.Controls.Add(this.customLabel3);
             this.panel3.Controls.Add(this.customLabel1);
             this.panel3.Controls.Add(this.label2);
@@ -337,6 +348,7 @@
             // customLabel3
             // 
             this.customLabel3.AutoSize = true;
+            this.customLabel3.BackColor = System.Drawing.Color.Transparent;
             this.customLabel3.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel3.FontSize = 12F;
             this.customLabel3.FontStyle = System.Drawing.FontStyle.Regular;
@@ -398,7 +410,6 @@
             this.dashboardTab.Controls.Add(this.dashboardCard1);
             this.dashboardTab.Location = new System.Drawing.Point(4, 5);
             this.dashboardTab.Name = "dashboardTab";
-            this.dashboardTab.Padding = new System.Windows.Forms.Padding(3);
             this.dashboardTab.Size = new System.Drawing.Size(862, 762);
             this.dashboardTab.TabIndex = 0;
             this.dashboardTab.Text = "Dashboard";
@@ -412,9 +423,9 @@
             this.dashboardCard3.CardIcon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.profile_user;
             this.dashboardCard3.CardTitle = "Students";
             this.dashboardCard3.CardValue = "0";
-            this.dashboardCard3.Location = new System.Drawing.Point(16, 327);
+            this.dashboardCard3.Location = new System.Drawing.Point(13, 324);
             this.dashboardCard3.Name = "dashboardCard3";
-            this.dashboardCard3.Size = new System.Drawing.Size(311, 218);
+            this.dashboardCard3.Size = new System.Drawing.Size(317, 218);
             this.dashboardCard3.TabIndex = 2;
             // 
             // dashboardCard1
@@ -425,9 +436,9 @@
             this.dashboardCard1.CardIcon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.profile_user;
             this.dashboardCard1.CardTitle = "Students";
             this.dashboardCard1.CardValue = "0";
-            this.dashboardCard1.Location = new System.Drawing.Point(19, 64);
+            this.dashboardCard1.Location = new System.Drawing.Point(16, 61);
             this.dashboardCard1.Name = "dashboardCard1";
-            this.dashboardCard1.Size = new System.Drawing.Size(311, 218);
+            this.dashboardCard1.Size = new System.Drawing.Size(317, 218);
             this.dashboardCard1.TabIndex = 2;
             this.dashboardCard1.Load += new System.EventHandler(this.dashboardCard1_Load);
             // 
@@ -444,6 +455,8 @@
             this.tabControl.Controls.Add(this.elementaryEnrollmentTab);
             this.tabControl.Controls.Add(this.strandTab);
             this.tabControl.Controls.Add(this.sectionTab);
+            this.tabControl.Controls.Add(this.juniorHighEnrollmentTab);
+            this.tabControl.Controls.Add(this.seniorHighTab);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl.ItemSize = new System.Drawing.Size(0, 1);
@@ -460,12 +473,21 @@
             // 
             // enrollmentTab
             // 
+            this.enrollmentTab.Controls.Add(this.enrollmentsTab1);
             this.enrollmentTab.Location = new System.Drawing.Point(4, 5);
             this.enrollmentTab.Name = "enrollmentTab";
             this.enrollmentTab.Size = new System.Drawing.Size(862, 762);
             this.enrollmentTab.TabIndex = 2;
             this.enrollmentTab.Text = "Enrollment";
             this.enrollmentTab.UseVisualStyleBackColor = true;
+            // 
+            // enrollmentsTab1
+            // 
+            this.enrollmentsTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.enrollmentsTab1.Location = new System.Drawing.Point(0, 0);
+            this.enrollmentsTab1.Name = "enrollmentsTab1";
+            this.enrollmentsTab1.Size = new System.Drawing.Size(862, 762);
+            this.enrollmentsTab1.TabIndex = 0;
             // 
             // subjectsTab
             // 
@@ -514,22 +536,21 @@
             // 
             // elementaryEnrollmentTab
             // 
-            this.elementaryEnrollmentTab.Controls.Add(this.elementaryEnrollmentTabComponent1);
+            this.elementaryEnrollmentTab.Controls.Add(this.elementaryTab1);
             this.elementaryEnrollmentTab.Location = new System.Drawing.Point(4, 5);
             this.elementaryEnrollmentTab.Name = "elementaryEnrollmentTab";
-            this.elementaryEnrollmentTab.Padding = new System.Windows.Forms.Padding(3);
             this.elementaryEnrollmentTab.Size = new System.Drawing.Size(862, 762);
             this.elementaryEnrollmentTab.TabIndex = 8;
             this.elementaryEnrollmentTab.Text = "tabPage3";
             this.elementaryEnrollmentTab.UseVisualStyleBackColor = true;
             // 
-            // elementaryEnrollmentTabComponent1
+            // elementaryTab1
             // 
-            this.elementaryEnrollmentTabComponent1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementaryEnrollmentTabComponent1.Location = new System.Drawing.Point(3, 3);
-            this.elementaryEnrollmentTabComponent1.Name = "elementaryEnrollmentTabComponent1";
-            this.elementaryEnrollmentTabComponent1.Size = new System.Drawing.Size(856, 756);
-            this.elementaryEnrollmentTabComponent1.TabIndex = 0;
+            this.elementaryTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementaryTab1.Location = new System.Drawing.Point(0, 0);
+            this.elementaryTab1.Name = "elementaryTab1";
+            this.elementaryTab1.Size = new System.Drawing.Size(862, 762);
+            this.elementaryTab1.TabIndex = 0;
             // 
             // strandTab
             // 
@@ -567,6 +588,42 @@
             this.sectionTabComponent2.Size = new System.Drawing.Size(862, 762);
             this.sectionTabComponent2.TabIndex = 0;
             // 
+            // juniorHighEnrollmentTab
+            // 
+            this.juniorHighEnrollmentTab.Controls.Add(this.juniorHighEnrollmentTab1);
+            this.juniorHighEnrollmentTab.Location = new System.Drawing.Point(4, 5);
+            this.juniorHighEnrollmentTab.Name = "juniorHighEnrollmentTab";
+            this.juniorHighEnrollmentTab.Size = new System.Drawing.Size(862, 762);
+            this.juniorHighEnrollmentTab.TabIndex = 11;
+            this.juniorHighEnrollmentTab.Text = "tabPage1";
+            this.juniorHighEnrollmentTab.UseVisualStyleBackColor = true;
+            // 
+            // juniorHighEnrollmentTab1
+            // 
+            this.juniorHighEnrollmentTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.juniorHighEnrollmentTab1.Location = new System.Drawing.Point(0, 0);
+            this.juniorHighEnrollmentTab1.Name = "juniorHighEnrollmentTab1";
+            this.juniorHighEnrollmentTab1.Size = new System.Drawing.Size(862, 762);
+            this.juniorHighEnrollmentTab1.TabIndex = 0;
+            // 
+            // seniorHighTab
+            // 
+            this.seniorHighTab.Controls.Add(this.seniorHighEnrollmentTab1);
+            this.seniorHighTab.Location = new System.Drawing.Point(4, 5);
+            this.seniorHighTab.Name = "seniorHighTab";
+            this.seniorHighTab.Size = new System.Drawing.Size(862, 762);
+            this.seniorHighTab.TabIndex = 12;
+            this.seniorHighTab.Text = "tabPage1";
+            this.seniorHighTab.UseVisualStyleBackColor = true;
+            // 
+            // seniorHighEnrollmentTab1
+            // 
+            this.seniorHighEnrollmentTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.seniorHighEnrollmentTab1.Location = new System.Drawing.Point(0, 0);
+            this.seniorHighEnrollmentTab1.Name = "seniorHighEnrollmentTab1";
+            this.seniorHighEnrollmentTab1.Size = new System.Drawing.Size(862, 762);
+            this.seniorHighEnrollmentTab1.TabIndex = 0;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -591,10 +648,13 @@
             this.studentsTab.ResumeLayout(false);
             this.dashboardTab.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
+            this.enrollmentTab.ResumeLayout(false);
             this.subjectsTab.ResumeLayout(false);
             this.elementaryEnrollmentTab.ResumeLayout(false);
             this.strandTab.ResumeLayout(false);
             this.sectionTab.ResumeLayout(false);
+            this.juniorHighEnrollmentTab.ResumeLayout(false);
+            this.seniorHighTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -641,6 +701,11 @@
         private TabPage sectionTab;
         private Components.SectionTabComponent sectionTabComponent2;
         private Components.SubjectsTabComponent subjectsTabComponent2;
-        private Components.ElementaryEnrollmentTabComponent elementaryEnrollmentTabComponent1;
+        private TabPage juniorHighEnrollmentTab;
+        private Components.JuniorHighEnrollmentTab juniorHighEnrollmentTab1;
+        private Components.EnrollmentsTab enrollmentsTab1;
+        private Components.ElementaryTab elementaryTab1;
+        private TabPage seniorHighTab;
+        private Components.SeniorHighEnrollmentTab seniorHighEnrollmentTab1;
     }
 }

@@ -50,6 +50,7 @@
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.textBoxHeight = new System.Windows.Forms.TextBox();
+            this.textBoxSchoolYear = new System.Windows.Forms.TextBox();
             this.textBoxWeight = new System.Windows.Forms.TextBox();
             this.textBoxMiddlename = new System.Windows.Forms.TextBox();
             this.textBoxAge = new System.Windows.Forms.TextBox();
@@ -74,7 +75,6 @@
             this.btnCancel = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.btnReset = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.btnSave = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
-            this.textBoxSchoolYear = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -129,7 +129,7 @@
             this.groupBox2.Controls.Add(this.checkBoxReportCard);
             this.groupBox2.Location = new System.Drawing.Point(763, 24);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(174, 461);
+            this.groupBox2.Size = new System.Drawing.Size(174, 470);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Requirements";
@@ -358,6 +358,16 @@
             this.textBoxHeight.Size = new System.Drawing.Size(136, 25);
             this.textBoxHeight.TabIndex = 8;
             // 
+            // textBoxSchoolYear
+            // 
+            this.textBoxSchoolYear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSchoolYear.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSchoolYear.Location = new System.Drawing.Point(460, 399);
+            this.textBoxSchoolYear.Name = "textBoxSchoolYear";
+            this.textBoxSchoolYear.Size = new System.Drawing.Size(256, 25);
+            this.textBoxSchoolYear.TabIndex = 7;
+            // 
             // textBoxWeight
             // 
             this.textBoxWeight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -561,8 +571,7 @@
             // 
             // topbar1
             // 
-            this.topbar1.BackColor = System.Drawing.Color.Gainsboro;
-            this.topbar1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.topbar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.topbar1.Dock = System.Windows.Forms.DockStyle.Top;
             this.topbar1.Location = new System.Drawing.Point(0, 0);
             this.topbar1.Name = "topbar1";
@@ -595,7 +604,7 @@
             this.btnCancel.BorderSize = 0;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCancel.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCancel.FontSize = 10F;
             this.btnCancel.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
@@ -618,7 +627,7 @@
             this.btnReset.BorderSize = 0;
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnReset.FontSize = 10F;
             this.btnReset.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnReset.ForeColor = System.Drawing.Color.White;
@@ -640,7 +649,7 @@
             this.btnSave.BorderSize = 0;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSave.FontSize = 10F;
             this.btnSave.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnSave.ForeColor = System.Drawing.Color.White;
@@ -651,16 +660,6 @@
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // textBoxSchoolYear
-            // 
-            this.textBoxSchoolYear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSchoolYear.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxSchoolYear.Location = new System.Drawing.Point(460, 399);
-            this.textBoxSchoolYear.Name = "textBoxSchoolYear";
-            this.textBoxSchoolYear.Size = new System.Drawing.Size(256, 25);
-            this.textBoxSchoolYear.TabIndex = 7;
             // 
             // AddStudentForm
             // 

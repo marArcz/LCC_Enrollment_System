@@ -46,35 +46,30 @@
             // 
             this.btnPrev.FlatAppearance.BorderSize = 0;
             this.btnPrev.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPrev.Location = new System.Drawing.Point(746, 3);
+            this.btnPrev.Location = new System.Drawing.Point(777, 3);
             // 
             // btnNext
             // 
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNext.Location = new System.Drawing.Point(823, 3);
+            this.btnNext.Location = new System.Drawing.Point(854, 3);
             // 
             // customLabel4
             // 
             this.customLabel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.customLabel4.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel4.Location = new System.Drawing.Point(514, 10);
+            this.customLabel4.Location = new System.Drawing.Point(530, 10);
             this.customLabel4.Size = new System.Drawing.Size(45, 21);
             // 
             // comboBoxRows
             // 
             this.comboBoxRows.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBoxRows.Items.AddRange(new object[] {
-            "10",
-            "25",
-            "50",
-            "100"});
-            this.comboBoxRows.Location = new System.Drawing.Point(406, 6);
+            this.comboBoxRows.Location = new System.Drawing.Point(422, 6);
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.customLabel1);
-            this.panel5.Size = new System.Drawing.Size(917, 42);
+            this.panel5.Size = new System.Drawing.Size(948, 42);
             this.panel5.Controls.SetChildIndex(this.comboBoxRows, 0);
             this.panel5.Controls.SetChildIndex(this.customLabel3, 0);
             this.panel5.Controls.SetChildIndex(this.customLabel4, 0);
@@ -87,12 +82,13 @@
             // 
             this.customLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.customLabel3.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel3.Location = new System.Drawing.Point(350, 11);
+            this.customLabel3.Location = new System.Drawing.Point(366, 11);
             this.customLabel3.Size = new System.Drawing.Size(48, 21);
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Size = new System.Drawing.Size(220, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(329, 22);
+            this.textBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearch_KeyPress);
             // 
             // btnDelete
             // 
@@ -116,25 +112,25 @@
             // 
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(615, 13);
+            this.btnSearch.Location = new System.Drawing.Point(763, 13);
             // 
             // panel4
             // 
-            this.panel4.Size = new System.Drawing.Size(361, 45);
+            this.panel4.Size = new System.Drawing.Size(392, 45);
             // 
             // panel3
             // 
-            this.panel3.Size = new System.Drawing.Size(851, 74);
+            this.panel3.Size = new System.Drawing.Size(882, 74);
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(918, 74);
+            this.panel1.Size = new System.Drawing.Size(949, 74);
             // 
             // btnRefresh
             // 
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRefresh.Location = new System.Drawing.Point(671, 2);
+            this.btnRefresh.Location = new System.Drawing.Point(702, 2);
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dataGridView
@@ -156,7 +152,7 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowTemplate.Height = 25;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(918, 391);
+            this.dataGridView.Size = new System.Drawing.Size(949, 446);
             this.dataGridView.TabIndex = 14;
             this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
@@ -203,7 +199,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView);
             this.Name = "ElementaryEnrollmentTabComponent";
-            this.Size = new System.Drawing.Size(918, 506);
+            this.Size = new System.Drawing.Size(949, 561);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
             this.Controls.SetChildIndex(this.dataGridView, 0);

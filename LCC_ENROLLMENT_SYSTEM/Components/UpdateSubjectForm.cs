@@ -15,17 +15,21 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 {
     public partial class UpdateSubjectForm : Form
     {
-        public Subject subject;
+        public int subjectId;
         private List<GradeLevel> GradeLevels;
+        private List<SubjectGroup> SubjectGroups;
         public UpdateSubjectForm()
         {
             InitializeComponent();
         }
 
-        public UpdateSubjectForm(Subject subject)
+        public UpdateSubjectForm(int id)
         {
             InitializeComponent();
-            this.subject = subject;
+            AppDbContext db = new();
+            subjectId = id;
+            var subject = db.Subjects.Find(id);
+            SubjectGroups = db.SubjectGroups.Where(s => s.SubjectId == id).ToList();
 
             textBoxSubject.Texts = subject.Name;
             textBoxDescription.Texts = subject.Description;
@@ -39,9 +43,12 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             checkedListLevels.Items.Clear();
             foreach ( var item in GradeLevels )
             {
-                checkedListLevels.Items.Add($"Grade {item.Level}");
+                var is_checked = SubjectGroups.Where(s => s.Level == item.Level).Any();
+                checkedListLevels.Items.Add($"Grade {item.Level}",is_checked);
             }
         }
+
+      
 
         private void UpdateSubjectForm_Load(object sender, EventArgs e)
         {
@@ -63,7 +70,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             AppDbContext db = new();
 
 
-            var curSubject = db.Subjects.Include(s => s.subjectGroups).Where(s => s.id == subject.id).First();
+            var curSubject = db.Subjects.Include(s => s.subjectGroups).Where(s => s.id == subjectId).First();
             curSubject.Name = textBoxSubject.Texts;
             curSubject.Description = textBoxDescription.Texts;
 

@@ -20,6 +20,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         List<Section> sections;
         List<SubjectGroup> subjectGroups;
         List<SubjectsEnrolled> subjectsEnrolled;
+        List<SchoolYear> schoolYears;
         private int enrollmentId;
        
         public UpdateElementaryEnrollment(int id)
@@ -30,6 +31,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             LoadSections();
             LoadData();
             LoadSubjects();
+            LoadSchoolYears();  
 
         }
 
@@ -48,11 +50,20 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             comboBoxSection.SelectedIndex = sections.IndexOf(sections.Where(s => s.Id == enrollment.sectionId).First());
 
         }
-
+        private void LoadSchoolYears()
+        {
+            AppDbContext db = new();
+            schoolYears = db.SchoolYears.ToList();
+            foreach (SchoolYear item in schoolYears)
+            {
+                comboBoxSchoolYears.Items.Add(item.ToString());
+            }
+        }
         private void LoadSections()
         {
             AppDbContext db = new();
-            sections = db.Sections.ToList();
+            int gradeLevelId = gradeLevels.ElementAt(comboBoxLevel.SelectedIndex).Id;
+            sections = db.Sections.Where(s => s.GradeLevelId == gradeLevelId).ToList();
             comboBoxSection.Items.Clear();
             foreach (var item in sections)
             {
@@ -104,7 +115,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             Enrollment enrollment = db.Enrollments.Find(enrollmentId);
             enrollment.gradeLevelId = gradeLevels.ElementAt(comboBoxLevel.SelectedIndex).Id;
             enrollment.sectionId = sections.ElementAt(comboBoxSection.SelectedIndex).Id;
-
+            enrollment.schoolYearId = schoolYears.ElementAt(comboBoxSchoolYears.SelectedIndex).Id;  
             if(db.SaveChanges() >= 0)
             {
                 foreach (int index in checkedListSubjects.CheckedIndices)
@@ -112,7 +123,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
                     SubjectsEnrolled subjectsEnrolled = new();
                     subjectsEnrolled.enrollmentId = enrollmentId;
                     subjectsEnrolled.subjectId = subjectGroups.ElementAt(index).SubjectId;
-
+                    
                     db.SubjectsEnrolled.Add(subjectsEnrolled);
                 }
 
@@ -129,6 +140,27 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         private void comboBoxLevel_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadSubjects();
+        }
+
+        private void customLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxSection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddSection_Click(object sender, EventArgs e)
+        {
+            int gradeLevelId = gradeLevels.ElementAt(comboBoxLevel.SelectedIndex).Id;
+            AddSectionForm addSectionForm = new(gradeLevelId);
+            var result = addSectionForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                LoadSections();
+            }
         }
     }
 }

@@ -39,7 +39,6 @@
             this.checkBoxPicture = new System.Windows.Forms.CheckBox();
             this.checkBoxReportCard = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBoxLastSchoolYear = new System.Windows.Forms.ComboBox();
             this.textBoxLastSchool = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -75,6 +74,7 @@
             this.btnCancel = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.btnReset = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.btnSave = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
+            this.textBoxSchoolYear = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -90,8 +90,9 @@
             this.topbar1.Dock = System.Windows.Forms.DockStyle.Top;
             this.topbar1.Location = new System.Drawing.Point(0, 0);
             this.topbar1.Name = "topbar1";
-            this.topbar1.Size = new System.Drawing.Size(973, 109);
+            this.topbar1.Size = new System.Drawing.Size(973, 113);
             this.topbar1.TabIndex = 0;
+            this.topbar1.TextSize = 22;
             // 
             // label1
             // 
@@ -120,7 +121,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(16, 166);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(945, 491);
+            this.groupBox1.Size = new System.Drawing.Size(945, 525);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Basic Information";
@@ -137,7 +138,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(771, 24);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(168, 450);
+            this.groupBox2.Size = new System.Drawing.Size(168, 484);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Requirements";
@@ -179,7 +180,7 @@
             // 
             this.checkBoxPicture.AutoSize = true;
             this.checkBoxPicture.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxPicture.Location = new System.Drawing.Point(8, 69);
+            this.checkBoxPicture.Location = new System.Drawing.Point(8, 67);
             this.checkBoxPicture.Name = "checkBoxPicture";
             this.checkBoxPicture.Size = new System.Drawing.Size(144, 22);
             this.checkBoxPicture.TabIndex = 21;
@@ -201,7 +202,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.Controls.Add(this.comboBoxLastSchoolYear);
+            this.panel1.Controls.Add(this.textBoxSchoolYear);
             this.panel1.Controls.Add(this.textBoxLastSchool);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
@@ -227,26 +228,15 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(10, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(755, 450);
+            this.panel1.Size = new System.Drawing.Size(755, 484);
             this.panel1.TabIndex = 0;
-            // 
-            // comboBoxLastSchoolYear
-            // 
-            this.comboBoxLastSchoolYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxLastSchoolYear.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxLastSchoolYear.IntegralHeight = false;
-            this.comboBoxLastSchoolYear.ItemHeight = 18;
-            this.comboBoxLastSchoolYear.Location = new System.Drawing.Point(474, 385);
-            this.comboBoxLastSchoolYear.Name = "comboBoxLastSchoolYear";
-            this.comboBoxLastSchoolYear.Size = new System.Drawing.Size(257, 26);
-            this.comboBoxLastSchoolYear.TabIndex = 26;
             // 
             // textBoxLastSchool
             // 
             this.textBoxLastSchool.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxLastSchool.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxLastSchool.Location = new System.Drawing.Point(28, 385);
+            this.textBoxLastSchool.Location = new System.Drawing.Point(28, 406);
             this.textBoxLastSchool.Multiline = true;
             this.textBoxLastSchool.Name = "textBoxLastSchool";
             this.textBoxLastSchool.Size = new System.Drawing.Size(430, 47);
@@ -256,7 +246,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(475, 360);
+            this.label15.Location = new System.Drawing.Point(475, 381);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(85, 18);
             this.label15.TabIndex = 23;
@@ -266,7 +256,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(31, 360);
+            this.label14.Location = new System.Drawing.Point(31, 381);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(136, 18);
             this.label14.TabIndex = 24;
@@ -336,14 +326,14 @@
             this.textBoxGuardianAddress.Location = new System.Drawing.Point(377, 50);
             this.textBoxGuardianAddress.Multiline = true;
             this.textBoxGuardianAddress.Name = "textBoxGuardianAddress";
-            this.textBoxGuardianAddress.Size = new System.Drawing.Size(334, 82);
+            this.textBoxGuardianAddress.Size = new System.Drawing.Size(334, 79);
             this.textBoxGuardianAddress.TabIndex = 13;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(377, 25);
+            this.label12.Location = new System.Drawing.Point(377, 26);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 18);
             this.label12.TabIndex = 0;
@@ -576,7 +566,7 @@
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.panel2.Location = new System.Drawing.Point(0, 668);
+            this.panel2.Location = new System.Drawing.Point(0, 697);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(973, 67);
             this.panel2.TabIndex = 9;
@@ -592,7 +582,7 @@
             this.btnCancel.BorderSize = 0;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCancel.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCancel.FontSize = 10F;
             this.btnCancel.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
@@ -614,11 +604,11 @@
             this.btnReset.BorderSize = 0;
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnReset.FontSize = 10F;
             this.btnReset.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(835, 13);
+            this.btnReset.Location = new System.Drawing.Point(823, 13);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(54, 42);
             this.btnReset.TabIndex = 2;
@@ -636,7 +626,7 @@
             this.btnSave.BorderSize = 0;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSave.FontSize = 10F;
             this.btnSave.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnSave.ForeColor = System.Drawing.Color.White;
@@ -648,12 +638,20 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // textBoxSchoolYear
+            // 
+            this.textBoxSchoolYear.Location = new System.Drawing.Point(480, 406);
+            this.textBoxSchoolYear.Name = "textBoxSchoolYear";
+            this.textBoxSchoolYear.Size = new System.Drawing.Size(250, 25);
+            this.textBoxSchoolYear.TabIndex = 26;
+            this.textBoxSchoolYear.TextChanged += new System.EventHandler(this.textBoxSchoolYear_TextChanged);
+            // 
             // UpdateStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(973, 735);
+            this.ClientSize = new System.Drawing.Size(973, 764);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxStudentId);
@@ -716,7 +714,6 @@
         private Label label11;
         private TextBox textBoxGuardianAddress;
         private Label label12;
-        private ComboBox comboBoxLastSchoolYear;
         private TextBox textBoxLastSchool;
         private Label label15;
         private Label label14;
@@ -729,5 +726,6 @@
         private CustomControls.CustomButton btnCancel;
         private CustomControls.CustomButton btnReset;
         private CustomControls.CustomButton btnSave;
+        private TextBox textBoxSchoolYear;
     }
 }

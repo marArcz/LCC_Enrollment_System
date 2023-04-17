@@ -43,7 +43,17 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Admins", (string)null);
+                    b.ToTable("Admins");
+
+                    b.HasData(
+                        new
+                        {
+                            id = 1,
+                            email = "admin@gmail.com",
+                            fullname = "admin",
+                            password = "admin",
+                            username = "admin"
+                        });
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Enrollment", b =>
@@ -58,7 +68,13 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
                     b.Property<int>("schoolLevelId")
                         .HasColumnType("int");
 
+                    b.Property<int>("schoolYearId")
+                        .HasColumnType("int");
+
                     b.Property<int>("sectionId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("specializedCourseId")
                         .HasColumnType("int");
 
                     b.Property<int?>("strandId")
@@ -76,7 +92,11 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("schoolLevelId");
 
+                    b.HasIndex("schoolYearId");
+
                     b.HasIndex("sectionId");
+
+                    b.HasIndex("specializedCourseId");
 
                     b.HasIndex("strandId");
 
@@ -84,7 +104,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("trackId");
 
-                    b.ToTable("Enrollments", (string)null);
+                    b.ToTable("Enrollments");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.GradeLevel", b =>
@@ -102,42 +122,78 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("GradeLevels", (string)null);
+                    b.ToTable("GradeLevels");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             Description = "",
-                            Level = 7
+                            Level = 1
                         },
                         new
                         {
                             Id = 2,
                             Description = "",
-                            Level = 8
+                            Level = 2
                         },
                         new
                         {
                             Id = 3,
                             Description = "",
-                            Level = 9
+                            Level = 3
                         },
                         new
                         {
                             Id = 4,
                             Description = "",
-                            Level = 10
+                            Level = 4
                         },
                         new
                         {
                             Id = 5,
                             Description = "",
-                            Level = 11
+                            Level = 5
                         },
                         new
                         {
                             Id = 6,
+                            Description = "",
+                            Level = 6
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Description = "",
+                            Level = 7
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Description = "",
+                            Level = 8
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Description = "",
+                            Level = 9
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Description = "",
+                            Level = 10
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Description = "",
+                            Level = 11
+                        },
+                        new
+                        {
+                            Id = 12,
                             Description = "",
                             Level = 12
                         });
@@ -155,7 +211,49 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SchoolLevels", (string)null);
+                    b.ToTable("SchoolLevels");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Elementary"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Junior Highschool"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Senior Highschool"
+                        });
+                });
+
+            modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.SchoolYear", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("From")
+                        .HasColumnType("int");
+
+                    b.Property<int>("To")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SchoolYears");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            From = 2022,
+                            To = 2023
+                        });
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Section", b =>
@@ -175,7 +273,26 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("GradeLevelId");
 
-                    b.ToTable("Sections", (string)null);
+                    b.ToTable("Sections");
+                });
+
+            modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.SpecializedCourse", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SpecializedCourses");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Strand", b =>
@@ -195,7 +312,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("TrackId");
 
-                    b.ToTable("Strands", (string)null);
+                    b.ToTable("Strands");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Student", b =>
@@ -293,7 +410,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Students", (string)null);
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Subject", b =>
@@ -315,7 +432,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Subjects", (string)null);
+                    b.ToTable("Subjects");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.SubjectGroup", b =>
@@ -334,7 +451,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("SubjectId");
 
-                    b.ToTable("SubjectGroups", (string)null);
+                    b.ToTable("SubjectGroups");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.SubjectsEnrolled", b =>
@@ -355,7 +472,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasIndex("subjectId");
 
-                    b.ToTable("SubjectsEnrolled", (string)null);
+                    b.ToTable("SubjectsEnrolled");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Track", b =>
@@ -370,7 +487,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tracks", (string)null);
+                    b.ToTable("Tracks");
 
                     b.HasData(
                         new
@@ -404,11 +521,21 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("LCC_ENROLLMENT_SYSTEM.Models.SchoolYear", "schoolYear")
+                        .WithMany()
+                        .HasForeignKey("schoolYearId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("LCC_ENROLLMENT_SYSTEM.Models.Section", "section")
                         .WithMany()
                         .HasForeignKey("sectionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("LCC_ENROLLMENT_SYSTEM.Models.SpecializedCourse", "specializedCourse")
+                        .WithMany()
+                        .HasForeignKey("specializedCourseId");
 
                     b.HasOne("LCC_ENROLLMENT_SYSTEM.Models.Strand", "StrandModel")
                         .WithMany()
@@ -432,7 +559,11 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
 
                     b.Navigation("schoolLevel");
 
+                    b.Navigation("schoolYear");
+
                     b.Navigation("section");
+
+                    b.Navigation("specializedCourse");
 
                     b.Navigation("student");
                 });
@@ -462,7 +593,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.SubjectGroup", b =>
                 {
                     b.HasOne("LCC_ENROLLMENT_SYSTEM.Models.Subject", "SubjectModel")
-                        .WithMany()
+                        .WithMany("subjectGroups")
                         .HasForeignKey("SubjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -487,6 +618,11 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
                     b.Navigation("enrollment");
 
                     b.Navigation("subject");
+                });
+
+            modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Subject", b =>
+                {
+                    b.Navigation("subjectGroups");
                 });
 #pragma warning restore 612, 618
         }

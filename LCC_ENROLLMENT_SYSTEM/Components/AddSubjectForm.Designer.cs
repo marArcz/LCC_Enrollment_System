@@ -51,7 +51,7 @@
             this.topbar1.Dock = System.Windows.Forms.DockStyle.Top;
             this.topbar1.Location = new System.Drawing.Point(0, 0);
             this.topbar1.Name = "topbar1";
-            this.topbar1.Size = new System.Drawing.Size(671, 114);
+            this.topbar1.Size = new System.Drawing.Size(734, 114);
             this.topbar1.TabIndex = 0;
             this.topbar1.TextSize = 19;
             // 
@@ -61,7 +61,7 @@
             this.customLabel1.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel1.FontSize = 12F;
             this.customLabel1.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel1.Location = new System.Drawing.Point(281, 127);
+            this.customLabel1.Location = new System.Drawing.Point(310, 129);
             this.customLabel1.Name = "customLabel1";
             this.customLabel1.Size = new System.Drawing.Size(130, 24);
             this.customLabel1.TabIndex = 1;
@@ -99,7 +99,7 @@
             this.textBoxSubject.PasswordChar = false;
             this.textBoxSubject.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxSubject.PlaceholderText = "";
-            this.textBoxSubject.Size = new System.Drawing.Size(377, 36);
+            this.textBoxSubject.Size = new System.Drawing.Size(440, 36);
             this.textBoxSubject.TabIndex = 3;
             this.textBoxSubject.Texts = "";
             this.textBoxSubject.UnderlinedStyle = false;
@@ -136,7 +136,7 @@
             this.textBoxDescription.PasswordChar = false;
             this.textBoxDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxDescription.PlaceholderText = "";
-            this.textBoxDescription.Size = new System.Drawing.Size(377, 86);
+            this.textBoxDescription.Size = new System.Drawing.Size(440, 86);
             this.textBoxDescription.TabIndex = 3;
             this.textBoxDescription.Texts = "";
             this.textBoxDescription.UnderlinedStyle = false;
@@ -148,9 +148,9 @@
             this.panel1.Controls.Add(this.customButton1);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 461);
+            this.panel1.Location = new System.Drawing.Point(0, 483);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(671, 68);
+            this.panel1.Size = new System.Drawing.Size(734, 68);
             this.panel1.TabIndex = 5;
             // 
             // btnCancel
@@ -190,7 +190,7 @@
             this.customButton1.FontStyle = System.Drawing.FontStyle.Regular;
             this.customButton1.ForeColor = System.Drawing.Color.White;
             this.customButton1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.undo_arrow;
-            this.customButton1.Location = new System.Drawing.Point(516, 12);
+            this.customButton1.Location = new System.Drawing.Point(528, 12);
             this.customButton1.Name = "customButton1";
             this.customButton1.Size = new System.Drawing.Size(63, 44);
             this.customButton1.TabIndex = 0;
@@ -212,7 +212,7 @@
             this.btnSave.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.diskette__1_;
-            this.btnSave.Location = new System.Drawing.Point(602, 12);
+            this.btnSave.Location = new System.Drawing.Point(614, 12);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(63, 44);
             this.btnSave.TabIndex = 0;
@@ -234,6 +234,8 @@
             // 
             // borderedPanel1
             // 
+            this.borderedPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.borderedPanel1.BackColor = System.Drawing.Color.White;
             this.borderedPanel1.BorderColor = System.Drawing.Color.DodgerBlue;
             this.borderedPanel1.BorderRadius = 0;
@@ -243,7 +245,7 @@
             this.borderedPanel1.Location = new System.Drawing.Point(192, 342);
             this.borderedPanel1.Name = "borderedPanel1";
             this.borderedPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.borderedPanel1.Size = new System.Drawing.Size(377, 96);
+            this.borderedPanel1.Size = new System.Drawing.Size(440, 111);
             this.borderedPanel1.TabIndex = 6;
             // 
             // checkedListLevels
@@ -254,14 +256,14 @@
             this.checkedListLevels.Location = new System.Drawing.Point(10, 10);
             this.checkedListLevels.MultiColumn = true;
             this.checkedListLevels.Name = "checkedListLevels";
-            this.checkedListLevels.Size = new System.Drawing.Size(357, 76);
+            this.checkedListLevels.Size = new System.Drawing.Size(420, 91);
             this.checkedListLevels.TabIndex = 0;
             // 
             // AddSubjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 529);
+            this.ClientSize = new System.Drawing.Size(734, 551);
             this.Controls.Add(this.borderedPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBoxDescription);
