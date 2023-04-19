@@ -16,7 +16,6 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 {
     public partial class SubjectsTabComponent : CustomTab
     {
-
         private enum FetchDirection
         {
             forward,

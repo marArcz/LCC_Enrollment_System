@@ -163,5 +163,10 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         {
             LoadRows();
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            PdfPTable pTable;
+        }
     }
 }

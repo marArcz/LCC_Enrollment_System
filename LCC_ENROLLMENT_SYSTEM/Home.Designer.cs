@@ -42,6 +42,7 @@
             this.menuButton5 = new LCC_ENROLLMENT_SYSTEM.CustomControls.MenuButton();
             this.menuButton6 = new LCC_ENROLLMENT_SYSTEM.CustomControls.MenuButton();
             this.menuButton8 = new LCC_ENROLLMENT_SYSTEM.CustomControls.MenuButton();
+            this.menuButton9 = new LCC_ENROLLMENT_SYSTEM.CustomControls.MenuButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.customLabel3 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.customLabel1 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
@@ -69,6 +70,8 @@
             this.juniorHighEnrollmentTab1 = new LCC_ENROLLMENT_SYSTEM.Components.JuniorHighEnrollmentTab();
             this.seniorHighTab = new System.Windows.Forms.TabPage();
             this.seniorHighEnrollmentTab1 = new LCC_ENROLLMENT_SYSTEM.Components.SeniorHighEnrollmentTab();
+            this.specializedCoursesTab = new System.Windows.Forms.TabPage();
+            this.specializedCoursesTab1 = new LCC_ENROLLMENT_SYSTEM.Components.SpecializedCoursesTab();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sidebarPanel.SuspendLayout();
             this.sidemenuPanel.SuspendLayout();
@@ -84,6 +87,7 @@
             this.sectionTab.SuspendLayout();
             this.juniorHighEnrollmentTab.SuspendLayout();
             this.seniorHighTab.SuspendLayout();
+            this.specializedCoursesTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -123,6 +127,7 @@
             this.sidemenuPanel.Controls.Add(this.menuButton7);
             this.sidemenuPanel.Controls.Add(this.EnrollmentMenuLayout);
             this.sidemenuPanel.Controls.Add(this.menuButton8);
+            this.sidemenuPanel.Controls.Add(this.menuButton9);
             this.sidemenuPanel.Location = new System.Drawing.Point(0, 96);
             this.sidemenuPanel.Name = "sidemenuPanel";
             this.sidemenuPanel.Size = new System.Drawing.Size(210, 675);
@@ -139,7 +144,7 @@
             this.menuButton1.DefaultBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.menuButton1.FontSize = 10F;
             this.menuButton1.FontStyle = System.Drawing.FontStyle.Regular;
-            this.menuButton1.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.dashboard__4_;
+            this.menuButton1.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.speedometer;
             this.menuButton1.IndicatorPos = LCC_ENROLLMENT_SYSTEM.CustomControls.MenuButton.borderPosition.start;
             this.menuButton1.Location = new System.Drawing.Point(3, 3);
             this.menuButton1.Name = "menuButton1";
@@ -160,7 +165,7 @@
             this.menuButton2.DefaultBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.menuButton2.FontSize = 10F;
             this.menuButton2.FontStyle = System.Drawing.FontStyle.Regular;
-            this.menuButton2.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.graduation;
+            this.menuButton2.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.graduating_student__1_;
             this.menuButton2.IndicatorPos = LCC_ENROLLMENT_SYSTEM.CustomControls.MenuButton.borderPosition.start;
             this.menuButton2.Location = new System.Drawing.Point(3, 58);
             this.menuButton2.Name = "menuButton2";
@@ -182,7 +187,7 @@
             this.menuButton3.DefaultBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.menuButton3.FontSize = 10F;
             this.menuButton3.FontStyle = System.Drawing.FontStyle.Regular;
-            this.menuButton3.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.book__1_;
+            this.menuButton3.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.book_stack__1_;
             this.menuButton3.IndicatorPos = LCC_ENROLLMENT_SYSTEM.CustomControls.MenuButton.borderPosition.start;
             this.menuButton3.Location = new System.Drawing.Point(3, 113);
             this.menuButton3.Name = "menuButton3";
@@ -203,7 +208,7 @@
             this.menuButton7.DefaultBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.menuButton7.FontSize = 10F;
             this.menuButton7.FontStyle = System.Drawing.FontStyle.Regular;
-            this.menuButton7.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.blackboard;
+            this.menuButton7.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.presentation;
             this.menuButton7.IndicatorPos = LCC_ENROLLMENT_SYSTEM.CustomControls.MenuButton.borderPosition.start;
             this.menuButton7.Location = new System.Drawing.Point(3, 168);
             this.menuButton7.Name = "menuButton7";
@@ -235,7 +240,7 @@
             this.enrollmentMenuToggler.DefaultBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.enrollmentMenuToggler.FontSize = 10F;
             this.enrollmentMenuToggler.FontStyle = System.Drawing.FontStyle.Regular;
-            this.enrollmentMenuToggler.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.student;
+            this.enrollmentMenuToggler.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.licensing;
             this.enrollmentMenuToggler.IndicatorPos = LCC_ENROLLMENT_SYSTEM.CustomControls.MenuButton.borderPosition.start;
             this.enrollmentMenuToggler.Location = new System.Drawing.Point(3, 3);
             this.enrollmentMenuToggler.Name = "enrollmentMenuToggler";
@@ -332,6 +337,27 @@
             this.menuButton8.Tab1 = "strandTab";
             this.menuButton8.TabIndex = 5;
             // 
+            // menuButton9
+            // 
+            this.menuButton9.Active = false;
+            this.menuButton9.ActiveBgColor = System.Drawing.Color.Gray;
+            this.menuButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.menuButton9.BorderColor = System.Drawing.Color.Green;
+            this.menuButton9.BorderSize = 5;
+            this.menuButton9.BtnText = "Specialized Courses";
+            this.menuButton9.DefaultBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.menuButton9.FontSize = 10F;
+            this.menuButton9.FontStyle = System.Drawing.FontStyle.Regular;
+            this.menuButton9.Icon = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.homework__1_1;
+            this.menuButton9.IndicatorPos = LCC_ENROLLMENT_SYSTEM.CustomControls.MenuButton.borderPosition.start;
+            this.menuButton9.Location = new System.Drawing.Point(3, 515);
+            this.menuButton9.Name = "menuButton9";
+            this.menuButton9.OnClickHandler = null;
+            this.menuButton9.Padding = new System.Windows.Forms.Padding(7);
+            this.menuButton9.Size = new System.Drawing.Size(204, 49);
+            this.menuButton9.Tab1 = "specializedCoursesTab";
+            this.menuButton9.TabIndex = 6;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
@@ -350,26 +376,26 @@
             // 
             this.customLabel3.AutoSize = true;
             this.customLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel3.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel3.FontSize = 12F;
             this.customLabel3.FontStyle = System.Drawing.FontStyle.Regular;
             this.customLabel3.ForeColor = System.Drawing.Color.White;
             this.customLabel3.Location = new System.Drawing.Point(78, 25);
             this.customLabel3.Name = "customLabel3";
-            this.customLabel3.Size = new System.Drawing.Size(39, 24);
+            this.customLabel3.Size = new System.Drawing.Size(40, 20);
             this.customLabel3.TabIndex = 4;
             this.customLabel3.Text = "LCC";
             // 
             // customLabel1
             // 
             this.customLabel1.AutoSize = true;
-            this.customLabel1.Font = new System.Drawing.Font("Heebo", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.customLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.customLabel1.FontSize = 14F;
             this.customLabel1.FontStyle = System.Drawing.FontStyle.Bold;
             this.customLabel1.ForeColor = System.Drawing.Color.White;
             this.customLabel1.Location = new System.Drawing.Point(79, 22);
             this.customLabel1.Name = "customLabel1";
-            this.customLabel1.Size = new System.Drawing.Size(18, 28);
+            this.customLabel1.Size = new System.Drawing.Size(16, 24);
             this.customLabel1.TabIndex = 3;
             this.customLabel1.Text = " ";
             // 
@@ -459,6 +485,7 @@
             this.tabControl.Controls.Add(this.sectionTab);
             this.tabControl.Controls.Add(this.juniorHighEnrollmentTab);
             this.tabControl.Controls.Add(this.seniorHighTab);
+            this.tabControl.Controls.Add(this.specializedCoursesTab);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl.ItemSize = new System.Drawing.Size(0, 1);
@@ -626,6 +653,24 @@
             this.seniorHighEnrollmentTab1.Size = new System.Drawing.Size(862, 762);
             this.seniorHighEnrollmentTab1.TabIndex = 0;
             // 
+            // specializedCoursesTab
+            // 
+            this.specializedCoursesTab.Controls.Add(this.specializedCoursesTab1);
+            this.specializedCoursesTab.Location = new System.Drawing.Point(4, 5);
+            this.specializedCoursesTab.Name = "specializedCoursesTab";
+            this.specializedCoursesTab.Size = new System.Drawing.Size(862, 762);
+            this.specializedCoursesTab.TabIndex = 13;
+            this.specializedCoursesTab.Text = "tabPage1";
+            this.specializedCoursesTab.UseVisualStyleBackColor = true;
+            // 
+            // specializedCoursesTab1
+            // 
+            this.specializedCoursesTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.specializedCoursesTab1.Location = new System.Drawing.Point(0, 0);
+            this.specializedCoursesTab1.Name = "specializedCoursesTab1";
+            this.specializedCoursesTab1.Size = new System.Drawing.Size(862, 762);
+            this.specializedCoursesTab1.TabIndex = 0;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -657,6 +702,7 @@
             this.sectionTab.ResumeLayout(false);
             this.juniorHighEnrollmentTab.ResumeLayout(false);
             this.seniorHighTab.ResumeLayout(false);
+            this.specializedCoursesTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -709,5 +755,8 @@
         private Components.ElementaryTab elementaryTab1;
         private TabPage seniorHighTab;
         private Components.SeniorHighEnrollmentTab seniorHighEnrollmentTab1;
+        private TabPage specializedCoursesTab;
+        private CustomControls.MenuButton menuButton9;
+        private Components.SpecializedCoursesTab specializedCoursesTab1;
     }
 }

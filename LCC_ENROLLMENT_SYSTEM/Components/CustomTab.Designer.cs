@@ -33,6 +33,7 @@
             this.customLabel4 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.comboBoxRows = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.customLabel3 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRefresh = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -141,6 +141,28 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(956, 42);
             this.panel5.TabIndex = 13;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRefresh.BorderRadius = 0;
+            this.btnRefresh.BorderSize = 0;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRefresh.FontSize = 8F;
+            this.btnRefresh.FontStyle = System.Drawing.FontStyle.Regular;
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.refresh__2_;
+            this.btnRefresh.Location = new System.Drawing.Point(710, 2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(56, 37);
+            this.btnRefresh.TabIndex = 12;
+            this.btnRefresh.TextColor = System.Drawing.Color.White;
+            this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // customLabel3
             // 
@@ -321,28 +343,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 74);
             this.panel1.TabIndex = 11;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnRefresh.BorderRadius = 0;
-            this.btnRefresh.BorderSize = 0;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRefresh.FontSize = 8F;
-            this.btnRefresh.FontStyle = System.Drawing.FontStyle.Regular;
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.refresh__2_;
-            this.btnRefresh.Location = new System.Drawing.Point(710, 2);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(56, 37);
-            this.btnRefresh.TabIndex = 12;
-            this.btnRefresh.TextColor = System.Drawing.Color.White;
-            this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // CustomTab
             // 

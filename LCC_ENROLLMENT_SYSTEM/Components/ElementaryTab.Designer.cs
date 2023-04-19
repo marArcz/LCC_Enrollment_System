@@ -108,11 +108,11 @@
             // 
             // panel4
             // 
-            this.panel4.Size = new System.Drawing.Size(365, 45);
+            this.panel4.Size = new System.Drawing.Size(398, 45);
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Size = new System.Drawing.Size(340, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(373, 22);
             // 
             // btnDelete
             // 
@@ -137,6 +137,7 @@
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPrint.Location = new System.Drawing.Point(829, 0);
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnRefresh
             // 

@@ -209,6 +209,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             enrollment.trackId = Tracks.ElementAt(comboBoxTracks.SelectedIndex).Id;
             enrollment.strandId = Tracks.ElementAt(comboBoxStrands.SelectedIndex).Id;
             enrollment.specializedCourseId = SpecializedCourses.ElementAt(comboBoxCourses.SelectedIndex).Id;
+            enrollment.schoolYearId = schoolYears.ElementAt(comboBoxSchoolYears.SelectedIndex).Id;
             db.Enrollments.Add(enrollment);
 
             db.SaveChanges();
