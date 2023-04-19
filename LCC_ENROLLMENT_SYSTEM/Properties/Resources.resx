@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="settings (5)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings (5)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="refresh (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="multiple-users-silhouette" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\multiple-users-silhouette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="undo-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\undo-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="correct (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\correct (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -144,6 +144,9 @@
   </data>
   <data name="training" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\training.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="polygon-scatter-haikei" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\polygon-scatter-haikei.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="remove (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -165,6 +168,9 @@
   </data>
   <data name="logout (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stacked-waves-haikei (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stacked-waves-haikei (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logout (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,9 +232,6 @@
   <data name="correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\correct.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="edit (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="user (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -243,9 +246,6 @@
   </data>
   <data name="down-chevron (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\down-chevron (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="low-poly-grid-haikei1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\low-poly-grid-haikei1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="backward-track (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backward-track (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,11 +280,17 @@
   <data name="logout1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\undo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diskette" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diskette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="right-chevron" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\right-chevron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="patterns (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\patterns (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -298,6 +304,9 @@
   <data name="diskette (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diskette (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="stacked-waves-haikei" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stacked-waves-haikei.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="profile-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -310,8 +319,8 @@
   <data name="logout (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="refresh (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="edit (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chevron_d" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chevron_d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,14 +337,17 @@
   <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="undo-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\undo-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="low-poly-grid-haikei1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\low-poly-grid-haikei1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="student (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\student (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user (6)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user (6)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stacked-waves-haikei (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stacked-waves-haikei (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="graduation (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\graduation (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cap (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cap (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,8 +355,8 @@
   <data name="graduation (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\graduation (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="graduation (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\graduation (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user (6)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user (6)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="check (4)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check (4)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -352,8 +364,8 @@
   <data name="user (6)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (6)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="right-chevron" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\right-chevron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settings (5)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings (5)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="check (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -364,11 +376,14 @@
   <data name="next (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\next (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="low-poly-grid-haikei2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\low-poly-grid-haikei2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user (5)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (5)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="refresh (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dashboard (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -385,7 +400,7 @@
   <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="low-poly-grid-haikei2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\low-poly-grid-haikei2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settings (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

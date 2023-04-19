@@ -114,6 +114,7 @@
             this.sidemenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.sidemenuPanel.AutoScroll = true;
             this.sidemenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.sidemenuPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.sidemenuPanel.Controls.Add(this.menuButton1);
@@ -406,6 +407,7 @@
             // 
             this.dashboardTab.AutoScroll = true;
             this.dashboardTab.BackColor = System.Drawing.SystemColors.Window;
+            this.dashboardTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dashboardTab.Controls.Add(this.dashboardCard3);
             this.dashboardTab.Controls.Add(this.dashboardCard1);
             this.dashboardTab.Location = new System.Drawing.Point(4, 5);

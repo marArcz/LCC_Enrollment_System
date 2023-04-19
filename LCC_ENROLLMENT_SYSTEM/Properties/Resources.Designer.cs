@@ -683,6 +683,16 @@ namespace LCC_ENROLLMENT_SYSTEM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap polygon_scatter_haikei {
+            get {
+                object obj = ResourceManager.GetObject("polygon-scatter-haikei", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap prev {
             get {
                 object obj = ResourceManager.GetObject("prev", resourceCulture);
@@ -843,6 +853,16 @@ namespace LCC_ENROLLMENT_SYSTEM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap settings__7_ {
+            get {
+                object obj = ResourceManager.GetObject("settings (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap show {
             get {
                 object obj = ResourceManager.GetObject("show", resourceCulture);
@@ -856,6 +876,36 @@ namespace LCC_ENROLLMENT_SYSTEM.Properties {
         internal static System.Drawing.Bitmap show__1_ {
             get {
                 object obj = ResourceManager.GetObject("show (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stacked_waves_haikei {
+            get {
+                object obj = ResourceManager.GetObject("stacked-waves-haikei", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stacked_waves_haikei__1_ {
+            get {
+                object obj = ResourceManager.GetObject("stacked-waves-haikei (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stacked_waves_haikei__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("stacked-waves-haikei (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
