@@ -46,73 +46,81 @@
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(990, 74);
+            this.panel1.Size = new System.Drawing.Size(1026, 74);
             // 
             // panel5
             // 
-            this.panel5.Size = new System.Drawing.Size(989, 42);
+            this.panel5.Size = new System.Drawing.Size(1025, 42);
             // 
             // customButton3
             // 
             this.customButton3.FlatAppearance.BorderSize = 0;
-            this.customButton3.Location = new System.Drawing.Point(1566, 3);
+            this.customButton3.Location = new System.Drawing.Point(1602, 3);
             // 
             // customButton2
             // 
             this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.Location = new System.Drawing.Point(1633, 2);
+            this.customButton2.Location = new System.Drawing.Point(1669, 2);
             // 
             // customLabel4
             // 
             this.customLabel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.customLabel4.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel4.Location = new System.Drawing.Point(570, 11);
+            this.customLabel4.Location = new System.Drawing.Point(588, 11);
             this.customLabel4.Size = new System.Drawing.Size(45, 21);
             // 
             // customLabel3
             // 
             this.customLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.customLabel3.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel3.Location = new System.Drawing.Point(406, 10);
+            this.customLabel3.Location = new System.Drawing.Point(424, 10);
             this.customLabel3.Size = new System.Drawing.Size(48, 21);
             // 
             // comboBoxRows
             // 
             this.comboBoxRows.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBoxRows.Location = new System.Drawing.Point(462, 7);
+            this.comboBoxRows.Items.AddRange(new object[] {
+            "10",
+            "25",
+            "50",
+            "100",
+            "10",
+            "25",
+            "50",
+            "100"});
+            this.comboBoxRows.Location = new System.Drawing.Point(480, 7);
             // 
             // btnPrev
             // 
             this.btnPrev.FlatAppearance.BorderSize = 0;
             this.btnPrev.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPrev.Location = new System.Drawing.Point(910, 3);
+            this.btnPrev.Location = new System.Drawing.Point(891, 3);
             // 
             // btnNext
             // 
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNext.Location = new System.Drawing.Point(977, 2);
+            this.btnNext.Location = new System.Drawing.Point(958, 2);
             // 
             // panel3
             // 
-            this.panel3.Size = new System.Drawing.Size(923, 74);
+            this.panel3.Size = new System.Drawing.Size(959, 74);
             // 
             // btnSearch
             // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(743, 15);
+            this.btnSearch.Location = new System.Drawing.Point(770, 15);
             this.btnSearch.Size = new System.Drawing.Size(80, 45);
             // 
             // panel4
             // 
-            this.panel4.Size = new System.Drawing.Size(398, 45);
+            this.panel4.Size = new System.Drawing.Size(402, 45);
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Size = new System.Drawing.Size(373, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(377, 22);
+            this.textBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearch_KeyPress);
             // 
             // btnDelete
             // 
@@ -136,14 +144,14 @@
             // 
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPrint.Location = new System.Drawing.Point(829, 0);
+            this.btnPrint.Location = new System.Drawing.Point(865, 0);
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnRefresh
             // 
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRefresh.Location = new System.Drawing.Point(833, 3);
+            this.btnRefresh.Location = new System.Drawing.Point(814, 3);
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // customLabel1
@@ -174,7 +182,7 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowTemplate.Height = 25;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(990, 483);
+            this.dataGridView.Size = new System.Drawing.Size(1026, 483);
             this.dataGridView.TabIndex = 11;
             this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
@@ -226,7 +234,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView);
             this.Name = "ElementaryTab";
-            this.Size = new System.Drawing.Size(990, 600);
+            this.Size = new System.Drawing.Size(1026, 600);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
             this.Controls.SetChildIndex(this.dataGridView, 0);

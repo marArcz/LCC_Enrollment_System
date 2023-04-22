@@ -207,5 +207,11 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
                 LoadSections();
             }
         }
+
+        private void comboBoxLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSections();
+            LoadSubjects();
+        }
     }
 }

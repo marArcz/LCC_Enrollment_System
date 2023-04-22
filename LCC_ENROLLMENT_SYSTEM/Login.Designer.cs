@@ -1,6 +1,6 @@
 ﻿namespace LCC_ENROLLMENT_SYSTEM
 {
-    partial class btnLogin
+    partial class Login
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.customLabel2 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.customLabel1 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
@@ -156,7 +156,7 @@
             this.passwordBox.TextBoxInputType = LCC_ENROLLMENT_SYSTEM.CustomControls.ElegantTextBox.InputType.Password;
             this.passwordBox.TextContent = "";
             // 
-            // btnLogin
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -170,10 +170,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "btnLogin";
+            this.Name = "Login";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOG IN";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

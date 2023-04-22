@@ -139,5 +139,10 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             btnUpdate.Enabled = dataGridView.SelectedRows.Count == 1;
             btnDelete.Enabled = dataGridView.SelectedRows.Count > 0;
         }
+
+        private void textBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            LoadRows();
+        }
     }
 }

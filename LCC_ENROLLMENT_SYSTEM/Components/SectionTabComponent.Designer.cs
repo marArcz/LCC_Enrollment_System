@@ -77,7 +77,8 @@
             // textBoxSearch
             // 
             this.textBoxSearch.PlaceholderText = "Search for section name";
-            this.textBoxSearch.Size = new System.Drawing.Size(150, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(353, 22);
+            this.textBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearch_KeyPress);
             // 
             // btnDelete
             // 
@@ -101,7 +102,7 @@
             // 
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(725, 13);
+            this.btnSearch.Location = new System.Drawing.Point(748, 13);
             // 
             // panel4
             // 
@@ -152,13 +153,13 @@
             // 
             // Section
             // 
-            this.Section.HeaderText = "Section";
+            this.Section.HeaderText = "SECTION";
             this.Section.Name = "Section";
             this.Section.ReadOnly = true;
             // 
             // Level
             // 
-            this.Level.HeaderText = "Level";
+            this.Level.HeaderText = "LEVEL";
             this.Level.Name = "Level";
             this.Level.ReadOnly = true;
             // 

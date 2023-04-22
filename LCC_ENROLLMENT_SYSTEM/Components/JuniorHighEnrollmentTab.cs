@@ -137,6 +137,13 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (dataGridView.SelectedRows.Count > 0)
+            {
+                int id = (int) dataGridView.SelectedRows[0].Cells["id"].Value;
+                UpdateJuniorHighEnrollment updateJuniorHigh = new(id);
+                updateJuniorHigh.ShowDialog();
+                LoadRows(); 
+            }
 
         }
 
@@ -163,6 +170,21 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
                     LoadRows();
                 }
             }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            //GeneratePdfFromTable(dataGridView,"Junior Highschool Enrollment");
+            if (dataGridView.SelectedRows.Count > 0)
+            {
+                int id = (int)dataGridView.SelectedRows[0].Cells["id"].Value;
+                GenerateCertificate(id);
+            }
+        }
+
+        private void textBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            LoadRows();
         }
     }
 }

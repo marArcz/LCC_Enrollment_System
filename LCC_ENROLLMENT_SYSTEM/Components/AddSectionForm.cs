@@ -51,8 +51,6 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

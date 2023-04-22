@@ -190,7 +190,7 @@
             this.customButton1.FontStyle = System.Drawing.FontStyle.Regular;
             this.customButton1.ForeColor = System.Drawing.Color.White;
             this.customButton1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.undo_arrow;
-            this.customButton1.Location = new System.Drawing.Point(528, 12);
+            this.customButton1.Location = new System.Drawing.Point(564, 12);
             this.customButton1.Name = "customButton1";
             this.customButton1.Size = new System.Drawing.Size(63, 44);
             this.customButton1.TabIndex = 0;
@@ -212,7 +212,7 @@
             this.btnSave.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.diskette__1_;
-            this.btnSave.Location = new System.Drawing.Point(614, 12);
+            this.btnSave.Location = new System.Drawing.Point(650, 12);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(63, 44);
             this.btnSave.TabIndex = 0;

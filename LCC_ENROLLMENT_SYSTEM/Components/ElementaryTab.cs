@@ -10,7 +10,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using iText;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using LCC_ENROLLMENT_SYSTEM.Properties;
+using System.IO;
 
 namespace LCC_ENROLLMENT_SYSTEM.Components
 {
@@ -166,7 +170,17 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            PdfPTable pTable;
+            //GeneratePdfFromTable(dataGridView, "Elementary Enrollment");
+            if(dataGridView.SelectedRows.Count > 0)
+            {
+                int id = (int)dataGridView.SelectedRows[0].Cells["id"].Value;
+                GenerateCertificate(id);
+            }
+        }
+
+        private void textBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            LoadRows();
         }
     }
 }

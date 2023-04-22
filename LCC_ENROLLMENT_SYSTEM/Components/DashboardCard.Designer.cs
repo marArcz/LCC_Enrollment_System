@@ -71,6 +71,7 @@
             // 
             // lblValue
             // 
+            this.lblValue.BackColor = System.Drawing.Color.White;
             this.lblValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblValue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -87,6 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.mainPanel);
             this.Name = "DashboardCard";

@@ -136,5 +136,10 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             addJuniorHighEnrollmentForm.ShowDialog();
             LoadRows();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

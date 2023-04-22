@@ -70,6 +70,7 @@
             this.ClientSize = new System.Drawing.Size(308, 151);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.labelMessage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoadingForm";

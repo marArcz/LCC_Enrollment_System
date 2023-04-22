@@ -26,5 +26,11 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
                 this.Refresh();
             }
         }
+
+        private void Topbar_Resize(object sender, EventArgs e)
+        {
+            int h = pictureBox1.Height;
+            pictureBox1.Width = h;
+        }
     }
 }

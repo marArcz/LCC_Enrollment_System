@@ -76,7 +76,7 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Size = new System.Drawing.Size(332, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(300, 22);
             // 
             // btnDelete
             // 
@@ -87,6 +87,7 @@
             // 
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -98,7 +99,7 @@
             // 
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(723, 13);
+            this.btnSearch.Location = new System.Drawing.Point(739, 13);
             // 
             // panel4
             // 

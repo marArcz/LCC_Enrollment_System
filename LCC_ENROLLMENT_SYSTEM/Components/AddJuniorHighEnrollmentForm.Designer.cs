@@ -334,6 +334,7 @@
             this.comboBoxLevel.Name = "comboBoxLevel";
             this.comboBoxLevel.Size = new System.Drawing.Size(191, 25);
             this.comboBoxLevel.TabIndex = 1;
+            this.comboBoxLevel.SelectedIndexChanged += new System.EventHandler(this.comboBoxLevel_SelectedIndexChanged);
             // 
             // customLabel5
             // 
@@ -402,6 +403,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "AddJuniorHighEnrollmentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddJuniorHighEnrollmentForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

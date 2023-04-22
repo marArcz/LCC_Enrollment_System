@@ -44,12 +44,17 @@ namespace LCC_ENROLLMENT_SYSTEM
             /*studentsTabComponent.LoadStudents();*/
 
             enrollmentMenuToggler.OnToggle = enrollmentMenuToggler_Click;
+            LoadDashboard();
         }
 
         private void tabLink_Click(object sender, EventArgs e)
         {
             MenuButton btn = (MenuButton)sender;
-
+            if(btn == btnLogout)
+            {
+                this.Logout();
+                return;
+            }
             string targetTab = btn.Tab1;
             tabControl.SelectedTab = tabControl.TabPages[targetTab];
 
@@ -60,7 +65,25 @@ namespace LCC_ENROLLMENT_SYSTEM
             studentsTabComponent1.LoadStudents();
             strandsComponentTab1.LoadRows();
             sectionTabComponent2.LoadRows();
+            elementaryTab1.LoadRows();
+            juniorHighEnrollmentTab1.LoadRows();
+            seniorHighEnrollmentTab1.LoadRows();
+            settingsTabComponent1.LoadUser();
+            specializedCoursesTab1.LoadRows();
+            reportsTabComponents1.LoadAll();
+            manageUsers1.LoadRows();
+        }
 
+        private void LoadDashboard()
+        {
+            AppDbContext db = new();
+            int enrolled = db.Enrollments.Count();
+            int elementaryId = db.SchoolLevels.Where(s => s.Description.ToLower().Equals("elementary")).First().Id;
+            int juniorId = db.SchoolLevels.Where(s => s.Description.ToLower().Equals("senior highschool")).First().Id;
+            int seniorId = db.SchoolLevels.Where(s => s.Description.ToLower().Equals("junior highschool")).First().Id;
+            int elementary = db.Enrollments.Where(s => s.schoolLevelId == elementaryId).Count();
+            //int elementary = db.Enrollments.Where(s => s.schoolLevelId == elementaryId).Count();
+            //int elementary = db.Enrollments.Where(s => s.schoolLevelId == elementaryId).Count();
         }
 
         private void ClearActiveTabLink()
@@ -267,6 +290,37 @@ namespace LCC_ENROLLMENT_SYSTEM
         }
 
         private void subjectsTabComponent1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportsTabComponents1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnLogout_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnLogout_MouseClick(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void Logout()
+        {
+            var result = MessageBox.Show("Do you really want to log out?", "Confirm log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Login login = new();
+                this.Hide();
+                login.Show();
+            }
+        }
+
+        private void borderedPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

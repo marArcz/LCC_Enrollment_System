@@ -75,6 +75,7 @@
             this.textBoxDescription.PasswordChar = false;
             this.textBoxDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxDescription.PlaceholderText = "";
+            this.textBoxDescription.ReadOnly = false;
             this.textBoxDescription.Size = new System.Drawing.Size(391, 129);
             this.textBoxDescription.TabIndex = 7;
             this.textBoxDescription.Texts = "";
@@ -110,6 +111,7 @@
             this.textBoxName.PasswordChar = false;
             this.textBoxName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxName.PlaceholderText = "";
+            this.textBoxName.ReadOnly = false;
             this.textBoxName.Size = new System.Drawing.Size(391, 40);
             this.textBoxName.TabIndex = 8;
             this.textBoxName.Texts = "";
@@ -153,6 +155,7 @@
             this.Controls.Add(this.formFooter1);
             this.Controls.Add(this.topbar1);
             this.Name = "UpdateSpecializedCourse";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateSpecializedCourse";
             this.ResumeLayout(false);
             this.PerformLayout();

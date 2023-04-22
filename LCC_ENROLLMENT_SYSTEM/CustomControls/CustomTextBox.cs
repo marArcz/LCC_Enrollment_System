@@ -31,6 +31,8 @@ namespace LCC_ENROLLMENT_SYSTEM.CustomControls
         private float fontSize = 10F;
         private FontStyle fontStyle = FontStyle.Regular;
 
+        private bool readOnly = false;
+
         //Events
         public event EventHandler _TextChanged;
 
@@ -98,7 +100,7 @@ namespace LCC_ENROLLMENT_SYSTEM.CustomControls
             {
                 isPasswordChar = value;
                 if (!isPlaceholder)
-                    textBox1.UseSystemPasswordChar = value;
+                    textBox1.PasswordChar = isPasswordChar ? '*' :'\0';
             }
         }
 
@@ -207,6 +209,14 @@ namespace LCC_ENROLLMENT_SYSTEM.CustomControls
             {
                 fontStyle = value;
                 updateFont();
+            }
+        }
+
+        public bool ReadOnly { get => readOnly;
+            set
+            {
+                readOnly = value;
+                textBox1.ReadOnly = readOnly;
             }
         }
 

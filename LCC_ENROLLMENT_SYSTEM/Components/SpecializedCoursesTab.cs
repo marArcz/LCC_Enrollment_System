@@ -146,5 +146,11 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
             }
         }
+
+        private void dataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            btnUpdate.Enabled = dataGridView.SelectedRows.Count == 1;
+            btnDelete.Enabled = dataGridView.SelectedRows.Count > 0;
+        }
     }
 }

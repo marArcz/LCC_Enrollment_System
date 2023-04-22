@@ -97,6 +97,7 @@
             this.textBoxSubject.PasswordChar = false;
             this.textBoxSubject.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxSubject.PlaceholderText = "";
+            this.textBoxSubject.ReadOnly = false;
             this.textBoxSubject.Size = new System.Drawing.Size(460, 36);
             this.textBoxSubject.TabIndex = 3;
             this.textBoxSubject.Texts = "";
@@ -132,6 +133,7 @@
             this.textBoxDescription.PasswordChar = false;
             this.textBoxDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxDescription.PlaceholderText = "";
+            this.textBoxDescription.ReadOnly = false;
             this.textBoxDescription.Size = new System.Drawing.Size(460, 107);
             this.textBoxDescription.TabIndex = 3;
             this.textBoxDescription.Texts = "";
@@ -267,6 +269,7 @@
             this.Controls.Add(this.customLabel1);
             this.Controls.Add(this.topbar1);
             this.Name = "UpdateSubjectForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateSubjectForm";
             this.Load += new System.EventHandler(this.UpdateSubjectForm_Load);
             this.panel1.ResumeLayout(false);

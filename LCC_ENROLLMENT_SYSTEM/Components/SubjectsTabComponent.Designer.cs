@@ -69,6 +69,11 @@
             // 
             this.pictureBox1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.book_24;
             // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.PlaceholderText = "Search...";
+            this.textBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearch_KeyPress);
+            // 
             // btnDelete
             // 
             this.btnDelete.FlatAppearance.BorderSize = 0;

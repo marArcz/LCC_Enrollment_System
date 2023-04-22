@@ -44,16 +44,6 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Admins");
-
-                    b.HasData(
-                        new
-                        {
-                            id = 1,
-                            email = "admin@gmail.com",
-                            fullname = "admin",
-                            password = "admin",
-                            username = "admin"
-                        });
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Enrollment", b =>
@@ -505,6 +495,53 @@ namespace LCC_ENROLLMENT_SYSTEM.Migrations
                             Id = 3,
                             Name = "GAS"
                         });
+                });
+
+            modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            FullName = "Admin",
+                            Password = "admin",
+                            Username = "admin"
+                        });
+                });
+
+            modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.UserType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserTypes");
                 });
 
             modelBuilder.Entity("LCC_ENROLLMENT_SYSTEM.Models.Enrollment", b =>

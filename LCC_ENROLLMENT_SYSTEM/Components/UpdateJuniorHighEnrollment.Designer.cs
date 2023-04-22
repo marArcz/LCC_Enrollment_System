@@ -194,6 +194,7 @@
             this.btnAddSection.Text = "New";
             this.btnAddSection.TextColor = System.Drawing.Color.Green;
             this.btnAddSection.UseVisualStyleBackColor = false;
+            this.btnAddSection.Click += new System.EventHandler(this.btnAddSection_Click);
             // 
             // comboBoxSection
             // 
@@ -248,6 +249,7 @@
             this.comboBoxLevel.Name = "comboBoxLevel";
             this.comboBoxLevel.Size = new System.Drawing.Size(319, 25);
             this.comboBoxLevel.TabIndex = 1;
+            this.comboBoxLevel.SelectedIndexChanged += new System.EventHandler(this.comboBoxLevel_SelectedIndexChanged);
             // 
             // customLabel5
             // 
@@ -316,6 +318,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.topbar1);
             this.Name = "UpdateJuniorHighEnrollment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateJuniorHighEnrollment";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

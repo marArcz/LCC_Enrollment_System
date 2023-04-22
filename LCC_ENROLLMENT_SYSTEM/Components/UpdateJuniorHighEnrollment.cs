@@ -28,7 +28,10 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             InitializeComponent();
             AppDbContext db = new();
             enrollmentId = id;
-            enrollment = db.Enrollments.Find(id);
+            enrollment = db.Enrollments
+                            .Include(e => e.student)
+                            .Where(e => e.id == id)
+                            .First();
 
             LoadGradeLevels();
             LoadSections();
@@ -157,6 +160,23 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             checkedListSubjects.ClearSelected();
             if (comboBoxLevel.Items.Count > 0) comboBoxLevel.SelectedIndex = 0;
             if (comboBoxSection.Items.Count > 0) comboBoxSection.SelectedIndex = 0;
+        }
+
+        private void comboBoxLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSections();
+            LoadSubjects();
+        }
+
+        private void btnAddSection_Click(object sender, EventArgs e)
+        {
+            int gradeLevelId = gradeLevels.ElementAt(comboBoxLevel.SelectedIndex).Id;
+            AddSectionForm addSectionForm = new(gradeLevelId);
+            var result = addSectionForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                LoadSections();
+            }
         }
     }
 }

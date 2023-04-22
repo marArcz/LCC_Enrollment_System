@@ -87,7 +87,7 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Size = new System.Drawing.Size(329, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(313, 22);
             this.textBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearch_KeyPress);
             // 
             // btnDelete
@@ -112,11 +112,11 @@
             // 
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(763, 13);
+            this.btnSearch.Location = new System.Drawing.Point(755, 13);
             // 
             // panel4
             // 
-            this.panel4.Size = new System.Drawing.Size(392, 45);
+            this.panel4.Size = new System.Drawing.Size(384, 45);
             // 
             // panel3
             // 

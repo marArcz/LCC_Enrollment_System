@@ -81,6 +81,7 @@
             this.textBoxStrand.PasswordChar = false;
             this.textBoxStrand.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxStrand.PlaceholderText = "";
+            this.textBoxStrand.ReadOnly = false;
             this.textBoxStrand.Size = new System.Drawing.Size(476, 40);
             this.textBoxStrand.TabIndex = 8;
             this.textBoxStrand.Texts = "";
@@ -183,6 +184,7 @@
             this.Controls.Add(this.topbar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "UpdateStrandForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateStrandForm";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

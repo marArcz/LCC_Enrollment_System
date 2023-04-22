@@ -149,5 +149,29 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             addSeniorHigh.ShowDialog();
             LoadRows();
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (dataGridView.SelectedRows.Count > 0)
+            {
+                int id = (int)dataGridView.SelectedRows[0].Cells["id"].Value;
+                GenerateCertificate(id);
+            }
+        }
+
+        private void dataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            btnUpdate.Enabled = dataGridView.SelectedRows.Count == 1;
+            btnDelete.Enabled = dataGridView.SelectedRows.Count > 0;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            int id = (int)dataGridView.SelectedRows[0].Cells["id"].Value;
+            UpdateSeniorHighEnrollment updateSeniorHigh = new(id);
+            updateSeniorHigh.ShowDialog();
+
+            LoadRows();
+        }
     }
 }

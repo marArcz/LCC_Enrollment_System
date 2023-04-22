@@ -25,6 +25,8 @@ namespace LCC_ENROLLMENT_SYSTEM.Data
         public DbSet<SchoolLevel> SchoolLevels { get; set; }
         public DbSet<SubjectGroup> SubjectGroups { get; set; }
         public DbSet<SchoolYear> SchoolYears { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<UserType> UserTypes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySql(ConfigurationManager.ConnectionStrings["mysql_connection"].ConnectionString,new MySqlServerVersion("10.4.25"));
@@ -32,8 +34,8 @@ namespace LCC_ENROLLMENT_SYSTEM.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Admin>().HasData(
-                new Admin() { id=1,email = "admin@gmail.com", fullname = "admin", username = "admin", password="admin" }    
+            modelBuilder.Entity<User>().HasData(
+                new User() { Id=1, FullName = "Admin",Username = "admin", Password="admin"}
             );
             modelBuilder.Entity<GradeLevel>().HasData(GetGradeLevels());
             modelBuilder.Entity<Track>().HasData(GetTracks());
@@ -76,6 +78,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Data
                 new SchoolLevel(){ Id=3,Description="Senior Highschool" },
             };
         }
+
 
     }
 }

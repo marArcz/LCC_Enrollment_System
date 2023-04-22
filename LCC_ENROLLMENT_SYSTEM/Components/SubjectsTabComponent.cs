@@ -186,5 +186,10 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         {
             LoadRows();
         }
+
+        private void textBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            LoadRows();
+        }
     }
 }

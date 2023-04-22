@@ -66,6 +66,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Topbar";
             this.Size = new System.Drawing.Size(798, 131);
+            this.Resize += new System.EventHandler(this.Topbar_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -73,7 +74,7 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private CustomControls.CustomLabel label;
+        public PictureBox pictureBox1;
+        public CustomControls.CustomLabel label;
     }
 }

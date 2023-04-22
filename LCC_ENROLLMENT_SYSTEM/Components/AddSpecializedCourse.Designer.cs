@@ -90,6 +90,7 @@
             this.textBoxName.PasswordChar = false;
             this.textBoxName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxName.PlaceholderText = "";
+            this.textBoxName.ReadOnly = false;
             this.textBoxName.Size = new System.Drawing.Size(391, 40);
             this.textBoxName.TabIndex = 3;
             this.textBoxName.Texts = "";
@@ -125,6 +126,7 @@
             this.textBoxDescription.PasswordChar = false;
             this.textBoxDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxDescription.PlaceholderText = "";
+            this.textBoxDescription.ReadOnly = false;
             this.textBoxDescription.Size = new System.Drawing.Size(391, 129);
             this.textBoxDescription.TabIndex = 3;
             this.textBoxDescription.Texts = "";
@@ -155,6 +157,7 @@
             this.Controls.Add(this.topbar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AddSpecializedCourse";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddSpecializedCourse";
             this.ResumeLayout(false);
             this.PerformLayout();

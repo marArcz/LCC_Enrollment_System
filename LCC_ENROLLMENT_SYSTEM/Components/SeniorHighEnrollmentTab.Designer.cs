@@ -48,21 +48,21 @@
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(970, 74);
+            this.panel1.Size = new System.Drawing.Size(958, 74);
             // 
             // panel5
             // 
-            this.panel5.Size = new System.Drawing.Size(969, 42);
+            this.panel5.Size = new System.Drawing.Size(957, 42);
             // 
             // customButton3
             // 
             this.customButton3.FlatAppearance.BorderSize = 0;
-            this.customButton3.Location = new System.Drawing.Point(1494, 3);
+            this.customButton3.Location = new System.Drawing.Point(1482, 3);
             // 
             // customButton2
             // 
             this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.Location = new System.Drawing.Point(1561, 2);
+            this.customButton2.Location = new System.Drawing.Point(1549, 2);
             // 
             // customLabel4
             // 
@@ -78,31 +78,32 @@
             // 
             this.btnPrev.FlatAppearance.BorderSize = 0;
             this.btnPrev.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPrev.Location = new System.Drawing.Point(838, 3);
+            this.btnPrev.Location = new System.Drawing.Point(826, 3);
             // 
             // btnNext
             // 
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNext.Location = new System.Drawing.Point(905, 2);
+            this.btnNext.Location = new System.Drawing.Point(893, 2);
             // 
             // panel3
             // 
-            this.panel3.Size = new System.Drawing.Size(903, 74);
+            this.panel3.Size = new System.Drawing.Size(891, 74);
             // 
             // btnSearch
             // 
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(722, 15);
+            this.btnSearch.Location = new System.Drawing.Point(717, 15);
+            this.btnSearch.Size = new System.Drawing.Size(77, 45);
             // 
             // panel4
             // 
-            this.panel4.Size = new System.Drawing.Size(354, 45);
+            this.panel4.Size = new System.Drawing.Size(349, 45);
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Size = new System.Drawing.Size(329, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(324, 22);
             // 
             // btnDelete
             // 
@@ -114,6 +115,7 @@
             // 
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -125,20 +127,22 @@
             // 
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPrint.Location = new System.Drawing.Point(809, 0);
+            this.btnPrint.Location = new System.Drawing.Point(797, 0);
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnRefresh
             // 
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.Font = new System.Drawing.Font("Heebo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRefresh.Location = new System.Drawing.Point(761, 3);
+            this.btnRefresh.Location = new System.Drawing.Point(749, 3);
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // customLabel1
             // 
-            this.customLabel1.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel1.Size = new System.Drawing.Size(13, 21);
-            this.customLabel1.Text = " ";
+            this.customLabel1.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.customLabel1.FontStyle = System.Drawing.FontStyle.Bold;
+            this.customLabel1.Size = new System.Drawing.Size(224, 21);
+            this.customLabel1.Text = " Senior Highschool Enrollment";
             // 
             // dataGridView
             // 
@@ -160,11 +164,13 @@
             this.Track,
             this.Strand,
             this.a_year});
-            this.dataGridView.Location = new System.Drawing.Point(0, 115);
+            this.dataGridView.Location = new System.Drawing.Point(1, 116);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowTemplate.Height = 25;
-            this.dataGridView.Size = new System.Drawing.Size(970, 518);
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView.Size = new System.Drawing.Size(958, 518);
             this.dataGridView.TabIndex = 16;
+            this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
             // id
             // 
@@ -225,7 +231,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView);
             this.Name = "SeniorHighEnrollmentTab";
-            this.Size = new System.Drawing.Size(970, 633);
+            this.Size = new System.Drawing.Size(958, 633);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
             this.Controls.SetChildIndex(this.dataGridView, 0);
