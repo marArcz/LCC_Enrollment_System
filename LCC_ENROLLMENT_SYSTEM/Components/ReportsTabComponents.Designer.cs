@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnChart = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
@@ -47,6 +47,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.borderedPanel1 = new LCC_ENROLLMENT_SYSTEM.CustomControls.BorderedPanel();
             this.tabControl = new System.Windows.Forms.TabControl();
+            this.totalTab = new System.Windows.Forms.TabPage();
+            this.textTotalStudentTotal = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
+            this.customLabel11 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
+            this.textSchoolYearTotal = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
+            this.customLabel12 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
+            this.textSectionTotal = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
+            this.customLabel10 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
+            this.textGradeLevelTotal = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
+            this.customLabel9 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
+            this.customLabel8 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.ListTab = new System.Windows.Forms.TabPage();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.index = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,16 +75,6 @@
             this.textGradeLevel = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.customLabel5 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.customLabel4 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
-            this.totalTab = new System.Windows.Forms.TabPage();
-            this.textTotalStudentTotal = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
-            this.customLabel11 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
-            this.textSchoolYearTotal = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
-            this.customLabel12 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
-            this.textSectionTotal = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
-            this.customLabel10 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
-            this.textGradeLevelTotal = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
-            this.customLabel9 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
-            this.customLabel8 = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomLabel();
             this.chartTab = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnChange = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
@@ -86,9 +86,9 @@
             this.panel3.SuspendLayout();
             this.borderedPanel1.SuspendLayout();
             this.tabControl.SuspendLayout();
+            this.totalTab.SuspendLayout();
             this.ListTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.totalTab.SuspendLayout();
             this.chartTab.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
@@ -315,225 +315,6 @@
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.TabIndex = 0;
             // 
-            // ListTab
-            // 
-            this.ListTab.BackColor = System.Drawing.Color.White;
-            this.ListTab.Controls.Add(this.dataGridView);
-            this.ListTab.Controls.Add(this.textSection);
-            this.ListTab.Controls.Add(this.customLabel7);
-            this.ListTab.Controls.Add(this.textTotalStudents);
-            this.ListTab.Controls.Add(this.btnPrint);
-            this.ListTab.Controls.Add(this.lbl2);
-            this.ListTab.Controls.Add(this.textSchoolYear);
-            this.ListTab.Controls.Add(this.customLabel6);
-            this.ListTab.Controls.Add(this.textGradeLevel);
-            this.ListTab.Controls.Add(this.customLabel5);
-            this.ListTab.Controls.Add(this.customLabel4);
-            this.ListTab.Location = new System.Drawing.Point(4, 5);
-            this.ListTab.Name = "ListTab";
-            this.ListTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ListTab.Size = new System.Drawing.Size(768, 577);
-            this.ListTab.TabIndex = 0;
-            this.ListTab.Text = "tabPage1";
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.AllowUserToAddRows = false;
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.index,
-            this.Lastname,
-            this.Firstname,
-            this.MiddleInitial,
-            this.GradeLevel,
-            this.Section});
-            this.dataGridView.Location = new System.Drawing.Point(32, 198);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowTemplate.Height = 25;
-            this.dataGridView.Size = new System.Drawing.Size(651, 314);
-            this.dataGridView.TabIndex = 2;
-            // 
-            // index
-            // 
-            this.index.HeaderText = "#";
-            this.index.Name = "index";
-            // 
-            // Lastname
-            // 
-            this.Lastname.HeaderText = "Lastname";
-            this.Lastname.Name = "Lastname";
-            this.Lastname.ReadOnly = true;
-            // 
-            // Firstname
-            // 
-            this.Firstname.HeaderText = "Firstname";
-            this.Firstname.Name = "Firstname";
-            this.Firstname.ReadOnly = true;
-            // 
-            // MiddleInitial
-            // 
-            this.MiddleInitial.HeaderText = "Middle Initial";
-            this.MiddleInitial.Name = "MiddleInitial";
-            this.MiddleInitial.ReadOnly = true;
-            // 
-            // GradeLevel
-            // 
-            this.GradeLevel.HeaderText = "Grade Level";
-            this.GradeLevel.Name = "GradeLevel";
-            this.GradeLevel.ReadOnly = true;
-            // 
-            // Section
-            // 
-            this.Section.HeaderText = "Section";
-            this.Section.Name = "Section";
-            this.Section.ReadOnly = true;
-            // 
-            // textSection
-            // 
-            this.textSection.AutoSize = true;
-            this.textSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textSection.FontSize = 10F;
-            this.textSection.FontStyle = System.Drawing.FontStyle.Regular;
-            this.textSection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textSection.Location = new System.Drawing.Point(361, 62);
-            this.textSection.Name = "textSection";
-            this.textSection.Size = new System.Drawing.Size(58, 17);
-            this.textSection.TabIndex = 1;
-            this.textSection.Text = "Makopa";
-            this.textSection.Click += new System.EventHandler(this.customLabel6_Click);
-            // 
-            // customLabel7
-            // 
-            this.customLabel7.AutoSize = true;
-            this.customLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel7.FontSize = 10F;
-            this.customLabel7.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel7.Location = new System.Drawing.Point(296, 62);
-            this.customLabel7.Name = "customLabel7";
-            this.customLabel7.Size = new System.Drawing.Size(59, 17);
-            this.customLabel7.TabIndex = 1;
-            this.customLabel7.Text = "Section:";
-            // 
-            // textTotalStudents
-            // 
-            this.textTotalStudents.AutoSize = true;
-            this.textTotalStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textTotalStudents.FontSize = 10F;
-            this.textTotalStudents.FontStyle = System.Drawing.FontStyle.Regular;
-            this.textTotalStudents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textTotalStudents.Location = new System.Drawing.Point(195, 159);
-            this.textTotalStudents.Name = "textTotalStudents";
-            this.textTotalStudents.Size = new System.Drawing.Size(24, 17);
-            this.textTotalStudents.TabIndex = 1;
-            this.textTotalStudents.Text = "49";
-            this.textTotalStudents.Click += new System.EventHandler(this.customLabel6_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrint.BackColor = System.Drawing.Color.Gray;
-            this.btnPrint.BackgroundColor = System.Drawing.Color.Gray;
-            this.btnPrint.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnPrint.BorderRadius = 0;
-            this.btnPrint.BorderSize = 0;
-            this.btnPrint.FlatAppearance.BorderSize = 0;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPrint.FontSize = 10F;
-            this.btnPrint.FontStyle = System.Drawing.FontStyle.Regular;
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(558, 530);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(125, 40);
-            this.btnPrint.TabIndex = 2;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.TextColor = System.Drawing.Color.White;
-            this.btnPrint.UseVisualStyleBackColor = false;
-            // 
-            // lbl2
-            // 
-            this.lbl2.AutoSize = true;
-            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl2.FontSize = 10F;
-            this.lbl2.FontStyle = System.Drawing.FontStyle.Regular;
-            this.lbl2.Location = new System.Drawing.Point(32, 159);
-            this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(160, 17);
-            this.lbl2.TabIndex = 1;
-            this.lbl2.Text = "Total Enrolled Students:";
-            // 
-            // textSchoolYear
-            // 
-            this.textSchoolYear.AutoSize = true;
-            this.textSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textSchoolYear.FontSize = 10F;
-            this.textSchoolYear.FontStyle = System.Drawing.FontStyle.Regular;
-            this.textSchoolYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textSchoolYear.Location = new System.Drawing.Point(124, 111);
-            this.textSchoolYear.Name = "textSchoolYear";
-            this.textSchoolYear.Size = new System.Drawing.Size(77, 17);
-            this.textSchoolYear.TabIndex = 1;
-            this.textSchoolYear.Text = "2022-2023";
-            this.textSchoolYear.Click += new System.EventHandler(this.customLabel6_Click);
-            // 
-            // customLabel6
-            // 
-            this.customLabel6.AutoSize = true;
-            this.customLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel6.FontSize = 10F;
-            this.customLabel6.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel6.Location = new System.Drawing.Point(32, 111);
-            this.customLabel6.Name = "customLabel6";
-            this.customLabel6.Size = new System.Drawing.Size(89, 17);
-            this.customLabel6.TabIndex = 1;
-            this.customLabel6.Text = "School Year:";
-            // 
-            // textGradeLevel
-            // 
-            this.textGradeLevel.AutoSize = true;
-            this.textGradeLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textGradeLevel.FontSize = 10F;
-            this.textGradeLevel.FontStyle = System.Drawing.FontStyle.Regular;
-            this.textGradeLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textGradeLevel.Location = new System.Drawing.Point(121, 62);
-            this.textGradeLevel.Name = "textGradeLevel";
-            this.textGradeLevel.Size = new System.Drawing.Size(60, 17);
-            this.textGradeLevel.TabIndex = 1;
-            this.textGradeLevel.Text = "Grade 7";
-            this.textGradeLevel.Click += new System.EventHandler(this.customLabel6_Click);
-            // 
-            // customLabel5
-            // 
-            this.customLabel5.AutoSize = true;
-            this.customLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel5.FontSize = 10F;
-            this.customLabel5.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel5.Location = new System.Drawing.Point(32, 62);
-            this.customLabel5.Name = "customLabel5";
-            this.customLabel5.Size = new System.Drawing.Size(90, 17);
-            this.customLabel5.TabIndex = 1;
-            this.customLabel5.Text = "Grade Level:";
-            // 
-            // customLabel4
-            // 
-            this.customLabel4.AutoSize = true;
-            this.customLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customLabel4.FontSize = 10F;
-            this.customLabel4.FontStyle = System.Drawing.FontStyle.Regular;
-            this.customLabel4.ForeColor = System.Drawing.Color.Gray;
-            this.customLabel4.Location = new System.Drawing.Point(20, 21);
-            this.customLabel4.Name = "customLabel4";
-            this.customLabel4.Size = new System.Drawing.Size(106, 17);
-            this.customLabel4.TabIndex = 0;
-            this.customLabel4.Text = "List of Students";
-            // 
             // totalTab
             // 
             this.totalTab.Controls.Add(this.textTotalStudentTotal);
@@ -661,6 +442,226 @@
             this.customLabel8.TabIndex = 0;
             this.customLabel8.Text = "Total Enrollees per Grade Level and Section";
             // 
+            // ListTab
+            // 
+            this.ListTab.BackColor = System.Drawing.Color.White;
+            this.ListTab.Controls.Add(this.dataGridView);
+            this.ListTab.Controls.Add(this.textSection);
+            this.ListTab.Controls.Add(this.customLabel7);
+            this.ListTab.Controls.Add(this.textTotalStudents);
+            this.ListTab.Controls.Add(this.btnPrint);
+            this.ListTab.Controls.Add(this.lbl2);
+            this.ListTab.Controls.Add(this.textSchoolYear);
+            this.ListTab.Controls.Add(this.customLabel6);
+            this.ListTab.Controls.Add(this.textGradeLevel);
+            this.ListTab.Controls.Add(this.customLabel5);
+            this.ListTab.Controls.Add(this.customLabel4);
+            this.ListTab.Location = new System.Drawing.Point(4, 5);
+            this.ListTab.Name = "ListTab";
+            this.ListTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ListTab.Size = new System.Drawing.Size(768, 577);
+            this.ListTab.TabIndex = 0;
+            this.ListTab.Text = "tabPage1";
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.index,
+            this.Lastname,
+            this.Firstname,
+            this.MiddleInitial,
+            this.GradeLevel,
+            this.Section});
+            this.dataGridView.Location = new System.Drawing.Point(32, 198);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowTemplate.Height = 25;
+            this.dataGridView.Size = new System.Drawing.Size(702, 314);
+            this.dataGridView.TabIndex = 2;
+            // 
+            // index
+            // 
+            this.index.HeaderText = "#";
+            this.index.Name = "index";
+            // 
+            // Lastname
+            // 
+            this.Lastname.HeaderText = "Lastname";
+            this.Lastname.Name = "Lastname";
+            this.Lastname.ReadOnly = true;
+            // 
+            // Firstname
+            // 
+            this.Firstname.HeaderText = "Firstname";
+            this.Firstname.Name = "Firstname";
+            this.Firstname.ReadOnly = true;
+            // 
+            // MiddleInitial
+            // 
+            this.MiddleInitial.HeaderText = "Middle Initial";
+            this.MiddleInitial.Name = "MiddleInitial";
+            this.MiddleInitial.ReadOnly = true;
+            // 
+            // GradeLevel
+            // 
+            this.GradeLevel.HeaderText = "Grade Level";
+            this.GradeLevel.Name = "GradeLevel";
+            this.GradeLevel.ReadOnly = true;
+            // 
+            // Section
+            // 
+            this.Section.HeaderText = "Section";
+            this.Section.Name = "Section";
+            this.Section.ReadOnly = true;
+            // 
+            // textSection
+            // 
+            this.textSection.AutoSize = true;
+            this.textSection.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textSection.FontSize = 10F;
+            this.textSection.FontStyle = System.Drawing.FontStyle.Regular;
+            this.textSection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textSection.Location = new System.Drawing.Point(361, 62);
+            this.textSection.Name = "textSection";
+            this.textSection.Size = new System.Drawing.Size(61, 21);
+            this.textSection.TabIndex = 1;
+            this.textSection.Text = "Makopa";
+            this.textSection.Click += new System.EventHandler(this.customLabel6_Click);
+            // 
+            // customLabel7
+            // 
+            this.customLabel7.AutoSize = true;
+            this.customLabel7.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel7.FontSize = 10F;
+            this.customLabel7.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customLabel7.Location = new System.Drawing.Point(296, 62);
+            this.customLabel7.Name = "customLabel7";
+            this.customLabel7.Size = new System.Drawing.Size(59, 21);
+            this.customLabel7.TabIndex = 1;
+            this.customLabel7.Text = "Section:";
+            // 
+            // textTotalStudents
+            // 
+            this.textTotalStudents.AutoSize = true;
+            this.textTotalStudents.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textTotalStudents.FontSize = 10F;
+            this.textTotalStudents.FontStyle = System.Drawing.FontStyle.Regular;
+            this.textTotalStudents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textTotalStudents.Location = new System.Drawing.Point(195, 159);
+            this.textTotalStudents.Name = "textTotalStudents";
+            this.textTotalStudents.Size = new System.Drawing.Size(26, 21);
+            this.textTotalStudents.TabIndex = 1;
+            this.textTotalStudents.Text = "49";
+            this.textTotalStudents.Click += new System.EventHandler(this.customLabel6_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.BackColor = System.Drawing.Color.Gray;
+            this.btnPrint.BackgroundColor = System.Drawing.Color.Gray;
+            this.btnPrint.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPrint.BorderRadius = 0;
+            this.btnPrint.BorderSize = 0;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPrint.FontSize = 10F;
+            this.btnPrint.FontStyle = System.Drawing.FontStyle.Regular;
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(609, 518);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(125, 40);
+            this.btnPrint.TabIndex = 2;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.TextColor = System.Drawing.Color.White;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl2.FontSize = 10F;
+            this.lbl2.FontStyle = System.Drawing.FontStyle.Regular;
+            this.lbl2.Location = new System.Drawing.Point(32, 159);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(157, 21);
+            this.lbl2.TabIndex = 1;
+            this.lbl2.Text = "Total Enrolled Students:";
+            // 
+            // textSchoolYear
+            // 
+            this.textSchoolYear.AutoSize = true;
+            this.textSchoolYear.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textSchoolYear.FontSize = 10F;
+            this.textSchoolYear.FontStyle = System.Drawing.FontStyle.Regular;
+            this.textSchoolYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textSchoolYear.Location = new System.Drawing.Point(124, 111);
+            this.textSchoolYear.Name = "textSchoolYear";
+            this.textSchoolYear.Size = new System.Drawing.Size(78, 21);
+            this.textSchoolYear.TabIndex = 1;
+            this.textSchoolYear.Text = "2022-2023";
+            this.textSchoolYear.Click += new System.EventHandler(this.customLabel6_Click);
+            // 
+            // customLabel6
+            // 
+            this.customLabel6.AutoSize = true;
+            this.customLabel6.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel6.FontSize = 10F;
+            this.customLabel6.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customLabel6.Location = new System.Drawing.Point(32, 111);
+            this.customLabel6.Name = "customLabel6";
+            this.customLabel6.Size = new System.Drawing.Size(86, 21);
+            this.customLabel6.TabIndex = 1;
+            this.customLabel6.Text = "School Year:";
+            // 
+            // textGradeLevel
+            // 
+            this.textGradeLevel.AutoSize = true;
+            this.textGradeLevel.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textGradeLevel.FontSize = 10F;
+            this.textGradeLevel.FontStyle = System.Drawing.FontStyle.Regular;
+            this.textGradeLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textGradeLevel.Location = new System.Drawing.Point(121, 62);
+            this.textGradeLevel.Name = "textGradeLevel";
+            this.textGradeLevel.Size = new System.Drawing.Size(59, 21);
+            this.textGradeLevel.TabIndex = 1;
+            this.textGradeLevel.Text = "Grade 7";
+            this.textGradeLevel.Click += new System.EventHandler(this.customLabel6_Click);
+            // 
+            // customLabel5
+            // 
+            this.customLabel5.AutoSize = true;
+            this.customLabel5.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel5.FontSize = 10F;
+            this.customLabel5.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customLabel5.Location = new System.Drawing.Point(32, 62);
+            this.customLabel5.Name = "customLabel5";
+            this.customLabel5.Size = new System.Drawing.Size(86, 21);
+            this.customLabel5.TabIndex = 1;
+            this.customLabel5.Text = "Grade Level:";
+            // 
+            // customLabel4
+            // 
+            this.customLabel4.AutoSize = true;
+            this.customLabel4.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel4.FontSize = 10F;
+            this.customLabel4.FontStyle = System.Drawing.FontStyle.Regular;
+            this.customLabel4.ForeColor = System.Drawing.Color.Gray;
+            this.customLabel4.Location = new System.Drawing.Point(20, 21);
+            this.customLabel4.Name = "customLabel4";
+            this.customLabel4.Size = new System.Drawing.Size(108, 21);
+            this.customLabel4.TabIndex = 0;
+            this.customLabel4.Text = "List of Students";
+            // 
             // chartTab
             // 
             this.chartTab.BackColor = System.Drawing.Color.White;
@@ -694,7 +695,7 @@
             this.btnChange.BorderSize = 0;
             this.btnChange.FlatAppearance.BorderSize = 0;
             this.btnChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChange.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnChange.FontSize = 10F;
             this.btnChange.FontStyle = System.Drawing.FontStyle.Regular;
             this.btnChange.ForeColor = System.Drawing.Color.White;
@@ -711,12 +712,12 @@
             // 
             this.textSchoolYearChart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textSchoolYearChart.AutoSize = true;
-            this.textSchoolYearChart.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textSchoolYearChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textSchoolYearChart.FontSize = 10F;
             this.textSchoolYearChart.FontStyle = System.Drawing.FontStyle.Bold;
             this.textSchoolYearChart.Location = new System.Drawing.Point(237, 16);
             this.textSchoolYearChart.Name = "textSchoolYearChart";
-            this.textSchoolYearChart.Size = new System.Drawing.Size(87, 21);
+            this.textSchoolYearChart.Size = new System.Drawing.Size(86, 17);
             this.textSchoolYearChart.TabIndex = 3;
             this.textSchoolYearChart.Text = "2015-2023";
             // 
@@ -724,12 +725,12 @@
             // 
             this.customLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.customLabel13.AutoSize = true;
-            this.customLabel13.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel13.FontSize = 10F;
             this.customLabel13.FontStyle = System.Drawing.FontStyle.Regular;
             this.customLabel13.Location = new System.Drawing.Point(149, 16);
             this.customLabel13.Name = "customLabel13";
-            this.customLabel13.Size = new System.Drawing.Size(86, 21);
+            this.customLabel13.Size = new System.Drawing.Size(89, 17);
             this.customLabel13.TabIndex = 4;
             this.customLabel13.Text = "School Year:";
             // 
@@ -741,28 +742,28 @@
             this.chart.BorderlineColor = System.Drawing.Color.DimGray;
             this.chart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
             this.chart.BorderlineWidth = 2;
-            chartArea4.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart.Legends.Add(legend2);
             this.chart.Location = new System.Drawing.Point(61, 27);
             this.chart.Name = "chart";
             this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.MediumAquamarine};
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.LegendText = "Number of Students";
-            series4.Name = "Enrollees";
-            this.chart.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.LegendText = "Number of Students";
+            series2.Name = "Enrollees";
+            this.chart.Series.Add(series2);
             this.chart.Size = new System.Drawing.Size(642, 379);
             this.chart.TabIndex = 0;
             this.chart.Text = " ";
-            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            title4.ForeColor = System.Drawing.Color.MediumAquamarine;
-            title4.Name = "Title1";
-            title4.Text = "LCC ENROLLMENT REPORT";
-            this.chart.Titles.Add(title4);
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            title2.ForeColor = System.Drawing.Color.MediumAquamarine;
+            title2.Name = "Title1";
+            title2.Text = "LCC ENROLLMENT REPORT";
+            this.chart.Titles.Add(title2);
             // 
             // topbar1
             // 
@@ -786,11 +787,11 @@
             this.panel3.ResumeLayout(false);
             this.borderedPanel1.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
+            this.totalTab.ResumeLayout(false);
+            this.totalTab.PerformLayout();
             this.ListTab.ResumeLayout(false);
             this.ListTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.totalTab.ResumeLayout(false);
-            this.totalTab.PerformLayout();
             this.chartTab.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

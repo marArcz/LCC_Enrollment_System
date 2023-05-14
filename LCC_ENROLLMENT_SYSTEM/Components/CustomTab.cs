@@ -15,6 +15,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         public CustomTab()
         {
             InitializeComponent();
+            comboBoxRows.Text = "10";
         }
     }
 }

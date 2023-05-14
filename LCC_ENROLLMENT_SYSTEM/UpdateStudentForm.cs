@@ -25,6 +25,7 @@ namespace LCC_ENROLLMENT_SYSTEM
         {
             InitializeComponent();
             successDialog = new();
+            this.id = studentId;
             LoadData(studentId);
         }
 
@@ -156,6 +157,16 @@ namespace LCC_ENROLLMENT_SYSTEM
         private void textBoxSchoolYear_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            LoadData(this.id);
         }
     }
 }

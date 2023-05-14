@@ -519,26 +519,26 @@
             // 
             this.customLabel3.AutoSize = true;
             this.customLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.customLabel3.Font = new System.Drawing.Font("Heebo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customLabel3.FontSize = 12F;
             this.customLabel3.FontStyle = System.Drawing.FontStyle.Regular;
             this.customLabel3.ForeColor = System.Drawing.Color.White;
             this.customLabel3.Location = new System.Drawing.Point(78, 25);
             this.customLabel3.Name = "customLabel3";
-            this.customLabel3.Size = new System.Drawing.Size(39, 24);
+            this.customLabel3.Size = new System.Drawing.Size(40, 20);
             this.customLabel3.TabIndex = 4;
             this.customLabel3.Text = "LCC";
             // 
             // customLabel1
             // 
             this.customLabel1.AutoSize = true;
-            this.customLabel1.Font = new System.Drawing.Font("Heebo", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.customLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.customLabel1.FontSize = 14F;
             this.customLabel1.FontStyle = System.Drawing.FontStyle.Bold;
             this.customLabel1.ForeColor = System.Drawing.Color.White;
             this.customLabel1.Location = new System.Drawing.Point(79, 22);
             this.customLabel1.Name = "customLabel1";
-            this.customLabel1.Size = new System.Drawing.Size(18, 28);
+            this.customLabel1.Size = new System.Drawing.Size(16, 24);
             this.customLabel1.TabIndex = 3;
             this.customLabel1.Text = " ";
             // 
@@ -593,7 +593,7 @@
             this.borderedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.borderedPanel4.BorderColor = System.Drawing.Color.Gray;
             this.borderedPanel4.BorderRadius = 0;
-            this.borderedPanel4.BorderSize = 1;
+            this.borderedPanel4.BorderSize = 0;
             this.borderedPanel4.Controls.Add(this.pictureBox5);
             this.borderedPanel4.Controls.Add(this.textSenior);
             this.borderedPanel4.Controls.Add(this.customLabel10);
@@ -648,7 +648,7 @@
             this.borderedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.borderedPanel3.BorderColor = System.Drawing.Color.Gray;
             this.borderedPanel3.BorderRadius = 0;
-            this.borderedPanel3.BorderSize = 1;
+            this.borderedPanel3.BorderSize = 0;
             this.borderedPanel3.Controls.Add(this.pictureBox4);
             this.borderedPanel3.Controls.Add(this.textHighschool);
             this.borderedPanel3.Controls.Add(this.customLabel8);
@@ -703,7 +703,7 @@
             this.borderedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.borderedPanel2.BorderColor = System.Drawing.Color.Gray;
             this.borderedPanel2.BorderRadius = 0;
-            this.borderedPanel2.BorderSize = 1;
+            this.borderedPanel2.BorderSize = 0;
             this.borderedPanel2.Controls.Add(this.pictureBox3);
             this.borderedPanel2.Controls.Add(this.textElementary);
             this.borderedPanel2.Controls.Add(this.customLabel6);
@@ -758,7 +758,7 @@
             this.borderedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.borderedPanel1.BorderColor = System.Drawing.Color.Gray;
             this.borderedPanel1.BorderRadius = 0;
-            this.borderedPanel1.BorderSize = 1;
+            this.borderedPanel1.BorderSize = 0;
             this.borderedPanel1.Controls.Add(this.pictureBox2);
             this.borderedPanel1.Controls.Add(this.textEnrolled);
             this.borderedPanel1.Controls.Add(this.customLabel4);
@@ -773,7 +773,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.graduated__1_;
+            this.pictureBox2.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.graduate;
             this.pictureBox2.Location = new System.Drawing.Point(5, 35);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(209, 116);

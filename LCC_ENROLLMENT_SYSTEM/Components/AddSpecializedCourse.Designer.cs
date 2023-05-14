@@ -140,6 +140,7 @@
             this.formFooter1.Size = new System.Drawing.Size(675, 58);
             this.formFooter1.TabIndex = 4;
             this.formFooter1.onBtnSaveClicked += new System.EventHandler(this.formFooter1_onBtnSaveClicked);
+            this.formFooter1.onBtnResetClicked += new System.EventHandler(this.formFooter1_onBtnResetClicked);
             this.formFooter1.onBtnCancelClicked += new System.EventHandler(this.formFooter1_onBtnCancelClicked);
             this.formFooter1.Load += new System.EventHandler(this.formFooter1_Load);
             // 

@@ -216,7 +216,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
                 pdf.RasterizeToImageFiles(photoFileName);
                 // Extract all pages as AnyBitmap objects
                 AnyBitmap[] pdfBitmaps = pdf.ToBitmap();
-                CertificatePreview preview = new(pdfBitmaps[0]);
+                PrintPreviewForm preview = new(pdfBitmaps[0]);
                 //CertificatePreview preview = new(photoFileName);
                 DialogResult dialogResult =  preview.ShowDialog();
 
@@ -244,13 +244,14 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
                 this.UseWaitCursor = false;
         }
-
-        private PdfPCell NewCell(string text,float fontSize=10,int fontStyle=iTextSharp.text.Font.NORMAL,int PaddingBottom = 5)
+        
+        private PdfPCell NewCell(string text,float fontSize=10,int fontStyle=iTextSharp.text.Font.NORMAL,int PaddingBottom = 5, int Colspan = 1)
         {
             iTextSharp.text.Font font = new(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, fontSize,fontStyle);
-            
+
             PdfPCell cell = new(new Phrase(text, font))
             {
+                Colspan = Colspan,
                 Padding = 5,
                 PaddingBottom = PaddingBottom,
                 BackgroundColor = BaseColor.WHITE,

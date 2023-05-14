@@ -1,6 +1,10 @@
-﻿using LCC_ENROLLMENT_SYSTEM.Data;
+﻿using iText.Layout.Element;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using LCC_ENROLLMENT_SYSTEM.Data;
 using LCC_ENROLLMENT_SYSTEM.Models;
 using Microsoft.EntityFrameworkCore;
+using MySqlX.XDevAPI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,13 +14,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace LCC_ENROLLMENT_SYSTEM.Components
 {
     public partial class ReportsTabComponents : UserControl
     {
         List<GradeLevel> GradeLevels;
-        List<Section> Sections;
+        List<Models.Section> Sections;
         List<Enrollment> Enrollments;
         List<SchoolYear> SchoolYears;
         int from = 2000;
@@ -34,7 +39,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         private void customButton2_Click(object sender, EventArgs e)
         {
             tabControl.SelectTab("ListTab");
-            LoadAll();
+            LoadRows();
         }
 
         private void customLabel6_Click(object sender, EventArgs e)
@@ -96,41 +101,47 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
         public void LoadEnrollments()
         {
-            AppDbContext db = new();
-            int sectionId = Sections.ElementAt(comboBoxSection.SelectedIndex).Id;
-            int schoolYearId = SchoolYears.ElementAt(comboBoxSchoolYear.SelectedIndex).Id;
-            Enrollments = db.Enrollments
-                .Include(e => e.student)
-                .Where(e => e.sectionId == sectionId && e.schoolYearId == schoolYearId)
-                .ToList();
+            if (Sections.Count > 0)
+            {
+                AppDbContext db = new();
+                int sectionId = Sections.ElementAt(comboBoxSection.SelectedIndex).Id;
+                int schoolYearId = SchoolYears.ElementAt(comboBoxSchoolYear.SelectedIndex).Id;
+                Enrollments = db.Enrollments
+                    .Include(e => e.student)
+                    .Where(e => e.sectionId == sectionId && e.schoolYearId == schoolYearId)
+                    .ToList();
+            }
         }
 
         public void LoadRows()
         {
-            LoadEnrollments();
-            int index = 0;
-
-            var level = comboBoxGradeLevel.Text;
-            var section = comboBoxSection.Text;
-            var schoolYear = comboBoxSchoolYear.Text;
-            textGradeLevelTotal.Text = textGradeLevel.Text = $"Grade {level}";
-            textSectionTotal.Text = textSection.Text = section;
-            textSchoolYearTotal.Text = textSchoolYear.Text = schoolYear;
-
-            textTotalStudentTotal.Text = textTotalStudents.Text = Enrollments.Count().ToString();
-
-            dataGridView.Rows.Clear();
-            Enrollments.ForEach((e) =>
+            if (Sections.Count > 0)
             {
-                dataGridView.Rows.Add(
-                   ++index,
-                   e.student.lastname,
-                   e.student.firstname,
-                   (e.student.middlename.Length > 0 ? e.student.middlename[0]:""),
-                   $"Grade {level}",
-                   section
-                );
-            });
+                LoadEnrollments();
+                int index = 0;
+
+                var level = comboBoxGradeLevel.Text;
+                var section = comboBoxSection.Text;
+                var schoolYear = comboBoxSchoolYear.Text;
+                textGradeLevelTotal.Text = textGradeLevel.Text = $"Grade {level}";
+                textSectionTotal.Text = textSection.Text = section;
+                textSchoolYearTotal.Text = textSchoolYear.Text = schoolYear;
+
+                textTotalStudentTotal.Text = textTotalStudents.Text = Convert.ToString(Enrollments.Count());
+
+                dataGridView.Rows.Clear();
+                Enrollments.ForEach((e) =>
+                {
+                    dataGridView.Rows.Add(
+                       ++index,
+                       e.student.lastname,
+                       e.student.firstname,
+                       (e.student.middlename.Length > 0 ? e.student.middlename[0] : ""),
+                       $"Grade {level}",
+                       section
+                    );
+                });
+            }
         }
 
         private void comboBoxGradeLevel_SelectedIndexChanged(object sender, EventArgs e)
@@ -161,12 +172,12 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         private void btnTotalEnrollees_Click_1(object sender, EventArgs e)
         {
             tabControl.SelectTab("totalTab");
-            LoadAll();
+            LoadRows();
         }
 
         private void btnChart_Click(object sender, EventArgs e)
         {
-            LoadAll();
+            LoadRows();
             LoadChart();
             tabControl.SelectTab("chartTab");
         }
@@ -202,6 +213,132 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
             textSchoolYearChart.Text = $"{from}-{to}";
             LoadChart();
+        }
+
+        private void printReport(DataGridView dataGridView, string title)
+        {
+            PrintDialog printDialog = new();
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                this.UseWaitCursor = true;
+
+                string fileDirectory = "Pdf/";
+                string fileName = $"{fileDirectory}{title}.pdf";
+                Directory.CreateDirectory(fileDirectory);
+
+                float margin = 40f;
+
+                PdfDocument document = new PdfDocument(PageSize.LETTER, margin, margin, margin, margin);
+
+                var fileStream = new FileStream(fileName, FileMode.Create);
+                var pdfWriter = PdfWriter.GetInstance(document, fileStream);
+                document.Open();
+                var Image1 = iTextSharp.text.Image.GetInstance(ImageToByte(Properties.Resources.LCC_64));
+                Image1.SetAbsolutePosition(document.GetLeft(10f), document.GetTop(margin) * 0.95f);
+
+
+                //add header
+
+                document.AddSpaces(Image1.Height / 2f);
+                document.AddParagraph("LEGACY COLLEGE OF COMPOSTELLA", 16, iTextSharp.text.Font.BOLD);
+                document.AddParagraph("Dagohoy Street, Poblacion, Compostela, Davao de Oro", 10);
+                document.Add(Image1);
+                //end of header
+
+                document.AddSpaces(Image1.Height * 0.85f);
+
+
+                //document.AddParagraph(title, 14, Element.ALIGN_LEFT);
+
+                document.AddSpaces(10,PdfDocument.Spacing.Before);
+
+                PdfPTable pTable = new PdfPTable(2);
+                pTable.HorizontalAlignment = Element.ALIGN_LEFT;
+                pTable.WidthPercentage = 50;
+                pTable.AddCell(NewCell($"Grade Level: {textGradeLevel.Text}",12));
+                pTable.AddCell(NewCell($"Section: {textSection.Text}", 12));
+                pTable.AddCell(NewCell($"School Year: {textSchoolYear.Text}", 12,0,5,2));
+                document.Add(pTable);
+                //create table;
+                int colCount = dataGridView.ColumnCount - 1;
+                document.CreateTable(colCount);
+
+                //add table header
+                foreach (DataGridViewColumn column in dataGridView.Columns)
+                {
+                    if (column.Index == 0) continue;
+                    string text = column.HeaderText;
+                    document.AddTableCell(text);
+                }
+
+                //add table rows
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.ColumnIndex == 0) continue;
+                        document.AddTableCell(cell.Value.ToString());
+                    }
+                }
+
+                document.DrawTable();
+                document.Close();
+                pdfWriter.Close();
+
+                IronPdf.ChromePdfRenderer renderer = new();
+                IronPdf.PdfDocument doc = new(fileName);
+
+                var printDocument = doc.GetPrintDocument();
+                printDocument.PrinterSettings = printDialog.PrinterSettings;
+
+                printDocument.DefaultPageSettings.Margins.Top = 0;
+                printDocument.DefaultPageSettings.Margins.Bottom = 0;
+                printDocument.DefaultPageSettings.Margins.Left = 0;
+                printDocument.DefaultPageSettings.Margins.Right = 0;
+
+                PrintPreviewDialog previewDialog = new();
+                previewDialog.Document = printDocument;
+
+                previewDialog.ShowDialog();
+
+
+
+                this.UseWaitCursor = false;
+            }
+        }
+        private PdfPCell NewCell(string text, float fontSize = 10, int fontStyle = iTextSharp.text.Font.NORMAL, int PaddingBottom = 5, int Colspan=1, int Alignment = Element.ALIGN_LEFT)
+        {
+            iTextSharp.text.Font font = new(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, fontSize, fontStyle);
+
+            PdfPCell cell = new(new Phrase(text, font))
+            {
+                Padding = 5,
+                Colspan=Colspan,
+                PaddingBottom = PaddingBottom,
+                BackgroundColor = BaseColor.WHITE,
+                Border = iTextSharp.text.Rectangle.NO_BORDER,
+                BorderWidth = 0,
+                HorizontalAlignment = Alignment,
+                VerticalAlignment = Element.ALIGN_CENTER
+            };
+
+            return cell;
+        }
+
+        public static byte[] ImageToByte(System.Drawing.Image img)
+        {
+            using (var stream = new MemoryStream())
+            {
+                img.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                return stream.ToArray();
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            printReport(dataGridView, "List of Students");
         }
     }
 }

@@ -66,7 +66,7 @@ namespace LCC_ENROLLMENT_SYSTEM
                 BackgroundColor = BaseColor.WHITE,
                 Border = iTextSharp.text.Rectangle.BOX,
                 BorderWidth = 1f,
-                HorizontalAlignment = Element.ALIGN_CENTER,
+                HorizontalAlignment = Element.ALIGN_LEFT,
                 VerticalAlignment = Element.ALIGN_CENTER
             };
 

@@ -39,6 +39,7 @@
             this.checkBoxPicture = new System.Windows.Forms.CheckBox();
             this.checkBoxReportCard = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxSchoolYear = new System.Windows.Forms.TextBox();
             this.textBoxLastSchool = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.btnCancel = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.btnReset = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
             this.btnSave = new LCC_ENROLLMENT_SYSTEM.CustomControls.CustomButton();
-            this.textBoxSchoolYear = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -230,6 +230,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(755, 484);
             this.panel1.TabIndex = 0;
+            // 
+            // textBoxSchoolYear
+            // 
+            this.textBoxSchoolYear.Location = new System.Drawing.Point(480, 406);
+            this.textBoxSchoolYear.Name = "textBoxSchoolYear";
+            this.textBoxSchoolYear.Size = new System.Drawing.Size(250, 25);
+            this.textBoxSchoolYear.TabIndex = 26;
+            this.textBoxSchoolYear.TextChanged += new System.EventHandler(this.textBoxSchoolYear_TextChanged);
             // 
             // textBoxLastSchool
             // 
@@ -592,6 +600,7 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.TextColor = System.Drawing.Color.White;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnReset
             // 
@@ -614,6 +623,7 @@
             this.btnReset.TabIndex = 2;
             this.btnReset.TextColor = System.Drawing.Color.White;
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnSave
             // 
@@ -637,14 +647,6 @@
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // textBoxSchoolYear
-            // 
-            this.textBoxSchoolYear.Location = new System.Drawing.Point(480, 406);
-            this.textBoxSchoolYear.Name = "textBoxSchoolYear";
-            this.textBoxSchoolYear.Size = new System.Drawing.Size(250, 25);
-            this.textBoxSchoolYear.TabIndex = 26;
-            this.textBoxSchoolYear.TextChanged += new System.EventHandler(this.textBoxSchoolYear_TextChanged);
             // 
             // UpdateStudentForm
             // 

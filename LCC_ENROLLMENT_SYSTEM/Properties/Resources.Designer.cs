@@ -423,16 +423,6 @@ namespace LCC_ENROLLMENT_SYSTEM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap doe {
-            get {
-                object obj = ResourceManager.GetObject("doe", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap down_chevron__1_ {
             get {
                 object obj = ResourceManager.GetObject("down-chevron (1)", resourceCulture);
@@ -466,6 +456,16 @@ namespace LCC_ENROLLMENT_SYSTEM.Properties {
         internal static System.Drawing.Bitmap edit__3_ {
             get {
                 object obj = ResourceManager.GetObject("edit (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap graduate {
+            get {
+                object obj = ResourceManager.GetObject("graduate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -616,6 +616,16 @@ namespace LCC_ENROLLMENT_SYSTEM.Properties {
         internal static System.Drawing.Bitmap homework__1_1 {
             get {
                 object obj = ResourceManager.GetObject("homework (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap homework__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("homework (1)2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -953,6 +963,16 @@ namespace LCC_ENROLLMENT_SYSTEM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap printer__6_ {
+            get {
+                object obj = ResourceManager.GetObject("printer (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap profile_user {
             get {
                 object obj = ResourceManager.GetObject("profile-user", resourceCulture);
@@ -1153,6 +1173,26 @@ namespace LCC_ENROLLMENT_SYSTEM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap settings__11_ {
+            get {
+                object obj = ResourceManager.GetObject("settings (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings__11_1 {
+            get {
+                object obj = ResourceManager.GetObject("settings (11)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap settings__5_ {
             get {
                 object obj = ResourceManager.GetObject("settings (5)", resourceCulture);
@@ -1276,6 +1316,16 @@ namespace LCC_ENROLLMENT_SYSTEM.Properties {
         internal static System.Drawing.Bitmap student__1_ {
             get {
                 object obj = ResourceManager.GetObject("student (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap students {
+            get {
+                object obj = ResourceManager.GetObject("students", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

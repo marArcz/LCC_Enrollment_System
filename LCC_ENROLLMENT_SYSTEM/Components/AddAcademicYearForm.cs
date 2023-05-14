@@ -51,5 +51,10 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         {
             this.Close();
         }
+
+        private void formFooter1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

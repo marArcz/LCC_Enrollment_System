@@ -28,7 +28,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         public StudentsTabComponent()
         {
             InitializeComponent();
-            /*comboBoxRows.SelectedIndex = 0;*/
+            comboBoxRows.Text = "10";
         }
 
         private void customButton6_Click(object sender, EventArgs e)

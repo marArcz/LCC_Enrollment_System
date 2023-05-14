@@ -73,6 +73,10 @@
             "10",
             "25",
             "50",
+            "100",
+            "10",
+            "25",
+            "50",
             "100"});
             this.comboBoxRows.Location = new System.Drawing.Point(60, 7);
             // 
@@ -83,12 +87,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.graduation__1_;
+            this.pictureBox1.Image = global::LCC_ENROLLMENT_SYSTEM.Properties.Resources.homework__1_2;
             // 
             // textBoxSearch
             // 
             this.textBoxSearch.PlaceholderText = "Search for strands";
-            this.textBoxSearch.Size = new System.Drawing.Size(376, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(357, 22);
             this.textBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearch_KeyPress);
             // 
             // btnDelete

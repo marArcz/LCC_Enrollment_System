@@ -33,7 +33,7 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
             InitializeComponent();
             AppDbContext db = new();
             enrollmentId = id;
-            enrollment = db.Enrollments.Find(id);
+            enrollment = db.Enrollments.Include(e => e.student).Where(e => e.id == id).First();
 
             LoadGradeLevels();
             LoadSections();
@@ -260,6 +260,11 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.Clear();
+        }
+
+        private void comboBoxLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSections();
         }
     }
 }

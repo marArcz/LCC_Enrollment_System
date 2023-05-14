@@ -82,8 +82,13 @@ namespace LCC_ENROLLMENT_SYSTEM
             int juniorId = db.SchoolLevels.Where(s => s.Description.ToLower().Equals("senior highschool")).First().Id;
             int seniorId = db.SchoolLevels.Where(s => s.Description.ToLower().Equals("junior highschool")).First().Id;
             int elementary = db.Enrollments.Where(s => s.schoolLevelId == elementaryId).Count();
-            //int elementary = db.Enrollments.Where(s => s.schoolLevelId == elementaryId).Count();
-            //int elementary = db.Enrollments.Where(s => s.schoolLevelId == elementaryId).Count();
+            int seniorHigh = db.Enrollments.Where(s => s.schoolLevelId == seniorId).Count();
+            int juniorHigh = db.Enrollments.Where(s => s.schoolLevelId == juniorId).Count();
+
+            textEnrolled.Text = enrolled.ToString();
+            textElementary.Text = elementary.ToString();
+            textHighschool.Text = juniorHigh.ToString();
+            textSenior.Text = seniorHigh.ToString();
         }
 
         private void ClearActiveTabLink()

@@ -12,16 +12,16 @@ using System.Windows.Forms;
 
 namespace LCC_ENROLLMENT_SYSTEM.Components
 {
-    public partial class CertificatePreview : Form
+    public partial class PrintPreviewForm : Form
     {
 
-        public CertificatePreview(IronSoftware.Drawing.AnyBitmap pdfBitmap)
+        public PrintPreviewForm(IronSoftware.Drawing.AnyBitmap pdfBitmap)
         {
             InitializeComponent();
             pictureBox1.Image = pdfBitmap.Clone(new Rectangle(0,0,pdfBitmap.Width,pdfBitmap.Height));
         }
 
-        public CertificatePreview(string photoFileName)
+        public PrintPreviewForm(string photoFileName)
         {
             InitializeComponent();
             pictureBox1.Image = Image.FromFile(photoFileName);
@@ -30,6 +30,12 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         private void customButton1_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void printSettingsMenuItem_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Retry;
             this.Close();
         }
     }

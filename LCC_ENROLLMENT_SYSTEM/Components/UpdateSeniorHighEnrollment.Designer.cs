@@ -322,6 +322,7 @@
             this.comboBoxLevel.Name = "comboBoxLevel";
             this.comboBoxLevel.Size = new System.Drawing.Size(343, 25);
             this.comboBoxLevel.TabIndex = 1;
+            this.comboBoxLevel.SelectedIndexChanged += new System.EventHandler(this.comboBoxLevel_SelectedIndexChanged);
             // 
             // customLabel5
             // 

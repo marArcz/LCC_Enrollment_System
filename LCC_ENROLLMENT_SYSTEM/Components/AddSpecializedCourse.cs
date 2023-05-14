@@ -44,6 +44,11 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
 
         private void formFooter1_Load(object sender, EventArgs e)
         {
+           
+        }
+
+        private void formFooter1_onBtnResetClicked(object sender, EventArgs e)
+        {
             textBoxName.Texts = "";
             textBoxDescription.Texts = "";
         }
