@@ -77,6 +77,10 @@
             "10",
             "25",
             "50",
+            "100",
+            "10",
+            "25",
+            "50",
             "100"});
             this.comboBoxRows.Location = new System.Drawing.Point(60, 7);
             // 
@@ -92,13 +96,14 @@
             // textBoxSearch
             // 
             this.textBoxSearch.PlaceholderText = "Search for strands";
-            this.textBoxSearch.Size = new System.Drawing.Size(357, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(338, 22);
             this.textBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearch_KeyPress);
             // 
             // btnDelete
             // 
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.Font = new System.Drawing.Font("Heebo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 

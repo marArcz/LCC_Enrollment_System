@@ -182,7 +182,7 @@
             this.Controls.Add(this.customLabel2);
             this.Controls.Add(this.customLabel1);
             this.Controls.Add(this.topbar1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "UpdateStrandForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateStrandForm";

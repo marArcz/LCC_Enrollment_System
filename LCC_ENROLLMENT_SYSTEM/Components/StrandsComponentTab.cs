@@ -144,5 +144,31 @@ namespace LCC_ENROLLMENT_SYSTEM.Components
         {
             LoadRows();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure to delete selected strand(s)?", "Confirm Action", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                AppDbContext db = new();
+
+                var selectedRows = dataGridView.SelectedRows;
+                foreach (DataGridViewRow row in selectedRows)
+                {
+                    int id = (int)row.Cells["id"].Value;
+                    var strand = db.Strands.Find(id);
+                    if (strand != null) db.Strands.Remove(strand);
+                }
+                if (db.SaveChanges() <= 0)
+                {
+                    MessageBox.Show("Something went wrong!", "An error occured please try again later.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    LoadRows();
+                }
+
+            }
+        }
     }
 }

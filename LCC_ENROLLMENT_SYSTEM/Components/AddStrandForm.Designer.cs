@@ -117,6 +117,7 @@
             this.textBoxStrand.PasswordChar = false;
             this.textBoxStrand.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxStrand.PlaceholderText = "";
+            this.textBoxStrand.ReadOnly = false;
             this.textBoxStrand.Size = new System.Drawing.Size(476, 40);
             this.textBoxStrand.TabIndex = 4;
             this.textBoxStrand.Texts = "";
@@ -214,6 +215,7 @@
             this.Controls.Add(this.customLabel2);
             this.Controls.Add(this.customLabel1);
             this.Controls.Add(this.topbar1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddStrandForm";
             this.Text = "AddStrandForm";
             this.panel1.ResumeLayout(false);
